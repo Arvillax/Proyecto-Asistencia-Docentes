@@ -84,5 +84,130 @@ namespace Proyecto_DesarrolloSoftware
         {
             showsubmenu(panelsemana);
         }
+
+        private void btn_sem1_Click(object sender, EventArgs e)
+        {
+            int idempleado = Convert.ToInt32(txt_usu_docente.Text);
+            int dia = 2;
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+            SqlCommand cmd = new SqlCommand("VerAsistenciaDocente_1 ", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", idempleado);
+            cmd.Parameters.AddWithValue("@Dia", dia);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            con.mostrar_semanas(idempleado , dia, dataGridView1);
+            conectar.Close();
+        }
+
+        private void btn_sem2_Click(object sender, EventArgs e)
+        {
+            int idempleado = Convert.ToInt32(txt_usu_docente.Text);
+            int dia = 8;
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+            SqlCommand cmd = new SqlCommand("VerAsistenciaDocente_1 ", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", idempleado);
+            cmd.Parameters.AddWithValue("@Dia", dia);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            con.mostrar_semanas(idempleado, dia, dataGridView1);
+            conectar.Close();
+        }
+
+        private void btn_sem3_Click(object sender, EventArgs e)
+        {
+            int idempleado = Convert.ToInt32(txt_usu_docente.Text);
+            int dia = 15;
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+            SqlCommand cmd = new SqlCommand("VerAsistenciaDocente_1 ", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", idempleado);
+            cmd.Parameters.AddWithValue("@Dia", dia);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            con.mostrar_semanas(idempleado, dia, dataGridView1);
+            conectar.Close();
+        }
+
+        private void btn_sem4_Click(object sender, EventArgs e)
+        {
+            int idempleado = Convert.ToInt32(txt_usu_docente.Text);
+            int dia = 22;
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+            SqlCommand cmd = new SqlCommand("VerAsistenciaDocente_1 ", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", idempleado);
+            cmd.Parameters.AddWithValue("@Dia", dia);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            con.mostrar_semanas(idempleado, dia, dataGridView1);
+            conectar.Close();
+        }
+
+        private void btn_sem5_Click(object sender, EventArgs e)
+        {
+            int idempleado = Convert.ToInt32(txt_usu_docente.Text);
+            int dia = 29;
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+            SqlCommand cmd = new SqlCommand("VerAsistenciaDocente_1 ", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", idempleado);
+            cmd.Parameters.AddWithValue("@Dia", dia);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            con.mostrar_semanas(idempleado, dia, dataGridView1);
+            conectar.Close();
+        }
     }
 }

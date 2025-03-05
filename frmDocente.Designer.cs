@@ -93,6 +93,7 @@
             this.btn_sem5.Text = "Semana #5";
             this.btn_sem5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sem5.UseVisualStyleBackColor = false;
+            this.btn_sem5.Click += new System.EventHandler(this.btn_sem5_Click);
             // 
             // btn_sem4
             // 
@@ -106,6 +107,7 @@
             this.btn_sem4.Text = "Semana #4";
             this.btn_sem4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sem4.UseVisualStyleBackColor = false;
+            this.btn_sem4.Click += new System.EventHandler(this.btn_sem4_Click);
             // 
             // btn_sem3
             // 
@@ -119,6 +121,7 @@
             this.btn_sem3.Text = "Semana #3";
             this.btn_sem3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sem3.UseVisualStyleBackColor = false;
+            this.btn_sem3.Click += new System.EventHandler(this.btn_sem3_Click);
             // 
             // btn_sem2
             // 
@@ -132,6 +135,7 @@
             this.btn_sem2.Text = "Semana #2";
             this.btn_sem2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sem2.UseVisualStyleBackColor = false;
+            this.btn_sem2.Click += new System.EventHandler(this.btn_sem2_Click);
             // 
             // btn_sem1
             // 
@@ -145,6 +149,7 @@
             this.btn_sem1.Text = "Semana #1";
             this.btn_sem1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sem1.UseVisualStyleBackColor = false;
+            this.btn_sem1.Click += new System.EventHandler(this.btn_sem1_Click);
             // 
             // btn_semana
             // 

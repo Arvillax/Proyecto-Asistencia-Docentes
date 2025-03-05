@@ -48,6 +48,7 @@ namespace Proyecto_DesarrolloSoftware
                     break;
 
                 case "SUPERVISOR":
+
                     frmSupervisor supervisorForm = new frmSupervisor();
                     supervisorForm.Show();
                     this.Hide();

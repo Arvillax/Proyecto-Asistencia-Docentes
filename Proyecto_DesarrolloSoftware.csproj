@@ -117,6 +117,12 @@
     <Compile Include="frmNueva_Contraseña.Designer.cs">
       <DependentUpon>frmNueva_Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmObservacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObservacion.Designer.cs">
+      <DependentUpon>frmObservacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRecuperacion_De_Contraseñas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNueva_Contraseña.resx">
       <DependentUpon>frmNueva_Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObservacion.resx">
+      <DependentUpon>frmObservacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperacion_De_Contraseñas.resx">
       <DependentUpon>frmRecuperacion_De_Contraseñas.cs</DependentUpon>
