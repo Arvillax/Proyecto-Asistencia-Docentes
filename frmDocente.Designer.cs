@@ -130,10 +130,10 @@
             // txt_usu_docente
             // 
             this.txt_usu_docente.Enabled = false;
-            this.txt_usu_docente.Location = new System.Drawing.Point(289, 468);
+            this.txt_usu_docente.Location = new System.Drawing.Point(265, 468);
             this.txt_usu_docente.Name = "txt_usu_docente";
             this.txt_usu_docente.ReadOnly = true;
-            this.txt_usu_docente.Size = new System.Drawing.Size(151, 20);
+            this.txt_usu_docente.Size = new System.Drawing.Size(175, 20);
             this.txt_usu_docente.TabIndex = 15;
             this.txt_usu_docente.Visible = false;
             // 

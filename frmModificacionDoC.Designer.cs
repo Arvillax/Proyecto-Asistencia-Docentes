@@ -63,7 +63,6 @@
             this.txt_existencia_aula = new System.Windows.Forms.TextBox();
             this.cmb_filtro = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pan_modificardatos.SuspendLayout();
@@ -579,6 +578,5 @@
         private System.Windows.Forms.TextBox txt_existencia_usuario;
         private System.Windows.Forms.ComboBox cmb_filtro;
         private System.Windows.Forms.Label label10;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

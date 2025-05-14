@@ -12,6 +12,7 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmRecuperacion_De_Contraseñas : Form
     {
+        //INICIADOR DE FORMULARIO 
         clsrecuperacion rec = new clsrecuperacion();
         public frmRecuperacion_De_Contraseñas()
         {
@@ -19,13 +20,14 @@ namespace Proyecto_DesarrolloSoftware
             btnIngresarCod.Enabled = false;
         }
 
+        // boton de regresar
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Form1 frmLogin = new Form1();
             frmLogin.Show();
             this.Hide();
         }
-
+        // boton de ingresar codigo
         private void btnIngresarCod_Click(object sender, EventArgs e)
         {
             int idUsuario = Convert.ToInt32(txtUsuario.Text);
@@ -38,30 +40,30 @@ namespace Proyecto_DesarrolloSoftware
         {
 
         }
-
+        // enviar solicitud 
         private async void btnEnviarSoli_Click(object sender, EventArgs e)
         {
-           
+           //conversion de usuario a entero
             if (!int.TryParse(txtUsuario.Text, out int idUsuario))
             {
                 MessageBox.Show("Ingrese un ID de usuario válido.");
                 return;
             }
-
-            if (!rec.ValidarUsuario(idUsuario))
+            // si el usuario no existe mensaje de error
+            if (!rec.ValidarUsuario(idUsuario))/*verifica el  id*/
             {
                 MessageBox.Show("El usuario no existe.");
                 return;
             }
 
-            string codigo = rec.GenerarCodigo(idUsuario);
-
+            string codigo = rec.GenerarCodigo(idUsuario);// crea codigo de recuperacion
+            //mensajes posibles para las diferentes casos 
             if (string.IsNullOrEmpty(codigo))
             {
                 MessageBox.Show("Hubo un error al generar el código de recuperación.");
                 return;
             }
-
+            //
             try
             {
                 await rec.EnviarCorreoAsync(codigo);
