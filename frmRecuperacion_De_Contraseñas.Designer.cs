@@ -32,7 +32,7 @@
             this.lbmensaje = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btn_regrsar = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEnviarSoli = new System.Windows.Forms.Button();
@@ -85,7 +85,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.panel1.Controls.Add(this.btnRegresar);
+            this.panel1.Controls.Add(this.btn_regrsar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -93,18 +93,24 @@
             this.panel1.Size = new System.Drawing.Size(604, 55);
             this.panel1.TabIndex = 30;
             // 
-            // btnRegresar
+            // btn_regrsar
             // 
-            this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(487, 12);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(92, 37);
-            this.btnRegresar.TabIndex = 26;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            this.btn_regrsar.BackColor = System.Drawing.Color.Khaki;
+            this.btn_regrsar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_regrsar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btn_regrsar.IconColor = System.Drawing.Color.Black;
+            this.btn_regrsar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_regrsar.IconSize = 35;
+            this.btn_regrsar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_regrsar.Location = new System.Drawing.Point(482, 11);
+            this.btn_regrsar.Name = "btn_regrsar";
+            this.btn_regrsar.Size = new System.Drawing.Size(105, 37);
+            this.btn_regrsar.TabIndex = 34;
+            this.btn_regrsar.Text = "Regresar";
+            this.btn_regrsar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_regrsar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_regrsar.UseVisualStyleBackColor = false;
+            this.btn_regrsar.Click += new System.EventHandler(this.btn_regrsar_Click);
             // 
             // pictureBox1
             // 
@@ -195,10 +201,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEnviarSoli;
         private System.Windows.Forms.TextBox txtUsuario;
+        private FontAwesome.Sharp.IconButton btn_regrsar;
     }
 }

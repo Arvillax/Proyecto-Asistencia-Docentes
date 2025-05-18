@@ -28,38 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocente));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelsemana = new System.Windows.Forms.Panel();
-            this.btn_sem5 = new System.Windows.Forms.Button();
-            this.btn_sem4 = new System.Windows.Forms.Button();
-            this.btn_sem3 = new System.Windows.Forms.Button();
-            this.btn_sem2 = new System.Windows.Forms.Button();
-            this.btn_sem1 = new System.Windows.Forms.Button();
-            this.btn_semana = new System.Windows.Forms.Button();
+            this.btn_cierre_sesion = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_busqueda = new System.Windows.Forms.TextBox();
-            this.btn_cierre = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_usu_docente = new System.Windows.Forms.TextBox();
-            this.pruebitaDataSet = new Proyecto_DesarrolloSoftware.pruebitaDataSet();
-            this.vdocenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.v_docenteTableAdapter = new Proyecto_DesarrolloSoftware.pruebitaDataSetTableAdapters.v_docenteTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_busqueda = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmb_filtro = new System.Windows.Forms.ComboBox();
+            this.btn_recargar = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panelsemana.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pruebitaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vdocenteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.panelsemana);
-            this.panel1.Controls.Add(this.btn_semana);
+            this.panel1.Controls.Add(this.btn_cierre_sesion);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -67,105 +58,26 @@
             this.panel1.Size = new System.Drawing.Size(250, 500);
             this.panel1.TabIndex = 13;
             // 
-            // panelsemana
+            // btn_cierre_sesion
             // 
-            this.panelsemana.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panelsemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelsemana.Controls.Add(this.btn_sem5);
-            this.panelsemana.Controls.Add(this.btn_sem4);
-            this.panelsemana.Controls.Add(this.btn_sem3);
-            this.panelsemana.Controls.Add(this.btn_sem2);
-            this.panelsemana.Controls.Add(this.btn_sem1);
-            this.panelsemana.Location = new System.Drawing.Point(0, 145);
-            this.panelsemana.Name = "panelsemana";
-            this.panelsemana.Size = new System.Drawing.Size(250, 356);
-            this.panelsemana.TabIndex = 10;
-            // 
-            // btn_sem5
-            // 
-            this.btn_sem5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_sem5.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem5.Location = new System.Drawing.Point(0, 159);
-            this.btn_sem5.Name = "btn_sem5";
-            this.btn_sem5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem5.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem5.TabIndex = 4;
-            this.btn_sem5.Text = "Semana #5";
-            this.btn_sem5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem5.UseVisualStyleBackColor = false;
-            this.btn_sem5.Click += new System.EventHandler(this.btn_sem5_Click);
-            // 
-            // btn_sem4
-            // 
-            this.btn_sem4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_sem4.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem4.Location = new System.Drawing.Point(0, 119);
-            this.btn_sem4.Name = "btn_sem4";
-            this.btn_sem4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem4.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem4.TabIndex = 3;
-            this.btn_sem4.Text = "Semana #4";
-            this.btn_sem4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem4.UseVisualStyleBackColor = false;
-            this.btn_sem4.Click += new System.EventHandler(this.btn_sem4_Click);
-            // 
-            // btn_sem3
-            // 
-            this.btn_sem3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_sem3.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem3.Location = new System.Drawing.Point(0, 80);
-            this.btn_sem3.Name = "btn_sem3";
-            this.btn_sem3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem3.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem3.TabIndex = 2;
-            this.btn_sem3.Text = "Semana #3";
-            this.btn_sem3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem3.UseVisualStyleBackColor = false;
-            this.btn_sem3.Click += new System.EventHandler(this.btn_sem3_Click);
-            // 
-            // btn_sem2
-            // 
-            this.btn_sem2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_sem2.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem2.Location = new System.Drawing.Point(0, 40);
-            this.btn_sem2.Name = "btn_sem2";
-            this.btn_sem2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem2.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem2.TabIndex = 1;
-            this.btn_sem2.Text = "Semana #2";
-            this.btn_sem2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem2.UseVisualStyleBackColor = false;
-            this.btn_sem2.Click += new System.EventHandler(this.btn_sem2_Click);
-            // 
-            // btn_sem1
-            // 
-            this.btn_sem1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_sem1.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem1.Location = new System.Drawing.Point(0, 0);
-            this.btn_sem1.Name = "btn_sem1";
-            this.btn_sem1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem1.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem1.TabIndex = 0;
-            this.btn_sem1.Text = "Semana #1";
-            this.btn_sem1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem1.UseVisualStyleBackColor = false;
-            this.btn_sem1.Click += new System.EventHandler(this.btn_sem1_Click);
-            // 
-            // btn_semana
-            // 
-            this.btn_semana.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_semana.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btn_semana.FlatAppearance.BorderSize = 0;
-            this.btn_semana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_semana.Location = new System.Drawing.Point(0, 100);
-            this.btn_semana.Name = "btn_semana";
-            this.btn_semana.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_semana.Size = new System.Drawing.Size(250, 45);
-            this.btn_semana.TabIndex = 9;
-            this.btn_semana.Text = "Semana(Marzo)";
-            this.btn_semana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_semana.UseVisualStyleBackColor = false;
-            this.btn_semana.Click += new System.EventHandler(this.btn_semana_Click);
+            this.btn_cierre_sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cierre_sesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_cierre_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cierre_sesion.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cierre_sesion.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btn_cierre_sesion.IconColor = System.Drawing.Color.Black;
+            this.btn_cierre_sesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_cierre_sesion.IconSize = 40;
+            this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 460);
+            this.btn_cierre_sesion.Name = "btn_cierre_sesion";
+            this.btn_cierre_sesion.Size = new System.Drawing.Size(250, 40);
+            this.btn_cierre_sesion.TabIndex = 57;
+            this.btn_cierre_sesion.Text = "Cerrar Sesión";
+            this.btn_cierre_sesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cierre_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cierre_sesion.UseVisualStyleBackColor = false;
+            this.btn_cierre_sesion.Click += new System.EventHandler(this.btn_cierre_sesion_Click);
             // 
             // panel2
             // 
@@ -193,22 +105,12 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_busqueda.Location = new System.Drawing.Point(289, 48);
+            this.txt_busqueda.Location = new System.Drawing.Point(335, 48);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(727, 20);
+            this.txt_busqueda.Size = new System.Drawing.Size(599, 20);
             this.txt_busqueda.TabIndex = 10;
             this.txt_busqueda.Text = "escriba los caracteres para empezar la busqueda";
-            // 
-            // btn_cierre
-            // 
-            this.btn_cierre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cierre.Location = new System.Drawing.Point(924, 12);
-            this.btn_cierre.Name = "btn_cierre";
-            this.btn_cierre.Size = new System.Drawing.Size(92, 30);
-            this.btn_cierre.TabIndex = 8;
-            this.btn_cierre.Text = "Cerrar Sesión";
-            this.btn_cierre.UseVisualStyleBackColor = true;
-            this.btn_cierre.Click += new System.EventHandler(this.btn_cierre_Click);
+            this.txt_busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_busqueda_KeyPress);
             // 
             // label3
             // 
@@ -228,32 +130,99 @@
             // txt_usu_docente
             // 
             this.txt_usu_docente.Enabled = false;
-            this.txt_usu_docente.Location = new System.Drawing.Point(265, 468);
+            this.txt_usu_docente.Location = new System.Drawing.Point(289, 468);
             this.txt_usu_docente.Name = "txt_usu_docente";
-            this.txt_usu_docente.Size = new System.Drawing.Size(175, 20);
+            this.txt_usu_docente.ReadOnly = true;
+            this.txt_usu_docente.Size = new System.Drawing.Size(151, 20);
             this.txt_usu_docente.TabIndex = 15;
-            // 
-            // pruebitaDataSet
-            // 
-            this.pruebitaDataSet.DataSetName = "pruebitaDataSet";
-            this.pruebitaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vdocenteBindingSource
-            // 
-            this.vdocenteBindingSource.DataMember = "v_docente";
-            this.vdocenteBindingSource.DataSource = this.pruebitaDataSet;
-            // 
-            // v_docenteTableAdapter
-            // 
-            this.v_docenteTableAdapter.ClearBeforeFill = true;
+            this.txt_usu_docente.Visible = false;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(289, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(289, 139);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(706, 308);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(706, 289);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // btn_busqueda
+            // 
+            this.btn_busqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_busqueda.IconColor = System.Drawing.Color.Black;
+            this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_busqueda.IconSize = 18;
+            this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_busqueda.Location = new System.Drawing.Point(969, 46);
+            this.btn_busqueda.Name = "btn_busqueda";
+            this.btn_busqueda.Size = new System.Drawing.Size(26, 23);
+            this.btn_busqueda.TabIndex = 36;
+            this.btn_busqueda.UseVisualStyleBackColor = true;
+            this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkBlue;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(286, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Buscar:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DarkBlue;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(286, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Filtrar por:";
+            // 
+            // cmb_filtro
+            // 
+            this.cmb_filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_filtro.FormattingEnabled = true;
+            this.cmb_filtro.Items.AddRange(new object[] {
+            "clase",
+            "fecha"});
+            this.cmb_filtro.Location = new System.Drawing.Point(341, 91);
+            this.cmb_filtro.Name = "cmb_filtro";
+            this.cmb_filtro.Size = new System.Drawing.Size(121, 21);
+            this.cmb_filtro.TabIndex = 39;
+            this.cmb_filtro.SelectedIndexChanged += new System.EventHandler(this.cmb_filtro_SelectedIndexChanged);
+            // 
+            // btn_recargar
+            // 
+            this.btn_recargar.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
+            this.btn_recargar.IconColor = System.Drawing.Color.Black;
+            this.btn_recargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_recargar.IconSize = 20;
+            this.btn_recargar.Location = new System.Drawing.Point(940, 46);
+            this.btn_recargar.Name = "btn_recargar";
+            this.btn_recargar.Size = new System.Drawing.Size(23, 23);
+            this.btn_recargar.TabIndex = 57;
+            this.btn_recargar.UseVisualStyleBackColor = true;
+            this.btn_recargar.Click += new System.EventHandler(this.btn_recargar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(335, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 13);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Ejemplo de Fecha: 2025-04-10";
             // 
             // frmDocente
             // 
@@ -262,20 +231,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1025, 500);
             this.ControlBox = false;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btn_recargar);
+            this.Controls.Add(this.cmb_filtro);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_busqueda);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_usu_docente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_busqueda);
-            this.Controls.Add(this.btn_cierre);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDocente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDocente";
             this.panel1.ResumeLayout(false);
-            this.panelsemana.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pruebitaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vdocenteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,22 +257,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelsemana;
-        private System.Windows.Forms.Button btn_sem5;
-        private System.Windows.Forms.Button btn_sem4;
-        private System.Windows.Forms.Button btn_sem3;
-        private System.Windows.Forms.Button btn_sem2;
-        private System.Windows.Forms.Button btn_sem1;
-        private System.Windows.Forms.Button btn_semana;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_busqueda;
-        private System.Windows.Forms.Button btn_cierre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_usu_docente;
-        private System.Windows.Forms.BindingSource vdocenteBindingSource;
-        private pruebitaDataSet pruebitaDataSet;
-        private pruebitaDataSetTableAdapters.v_docenteTableAdapter v_docenteTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton btn_cierre_sesion;
+        private FontAwesome.Sharp.IconButton btn_busqueda;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmb_filtro;
+        private FontAwesome.Sharp.IconButton btn_recargar;
+        private System.Windows.Forms.Label label5;
     }
 }

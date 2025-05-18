@@ -121,9 +121,9 @@ namespace Proyecto_DesarrolloSoftware
             try
             {
                 var client = new SendGridClient("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");
-                var from = new EmailAddress("administracion@ditechonduras.com", "Hector Mendoza");
+                var from = new EmailAddress("administracion@ditechonduras.com", "Administracion");
                 var subject = "Código de recuperación";
-                var to = new EmailAddress("fernandogofu04@gmail.com", "Usuario");
+                var to = new EmailAddress("arvillax05@gmail.com", "Usuario");
                 var plainTextContent = "El código de recuperación es: " + codigo;
                 var htmlContent = "<strong>El código de recuperación es: " + codigo + "</strong>";
                 var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);

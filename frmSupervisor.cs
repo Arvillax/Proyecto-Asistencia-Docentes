@@ -15,37 +15,23 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmSupervisor : Form
     {
-        string server = "Data Source = LAPTOP-U0ITJDJB\\SQLEXPRESS; Initial Catalog = pruebita; Integrated Security=True";
+        
         SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
+        Validaciones vali = new Validaciones();
 
         public frmSupervisor()
         {
             InitializeComponent();
             customdesign();
             mtabla_supervisor();
-            rbOb.Enabled = false;
+            escondertablas();
         }
 
         public void mtabla_supervisor()
         {
             int idrol = 4;
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_vs", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_rol", idrol);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_supervisor(idrol,dataGridView1);
             conectar.Close();
         }
@@ -77,467 +63,289 @@ namespace Proyecto_DesarrolloSoftware
             showsubmenu(panel_btn_edificios);
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        
+            txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void txt_idasis_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmSupervisor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cierre_sesion_Click(object sender, EventArgs e)
         {
             Form1 frmLogin = new Form1();
             frmLogin.Show();
             this.Hide();
         }
 
-        private void btn_j_Click(object sender, EventArgs e)
+        private void panel_btn_edificios_Paint(object sender, PaintEventArgs e)
         {
-            int id = 2;
-            txt_edificios.Text = "2";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
+        }
 
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            string id = "A";
+            txt_edificios.Text = "A";
+
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_c_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
-            int id = 3;
-            txt_edificios.Text = "3";
+            string id = "B";
+            txt_edificios.Text = "B";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
+            con.mostrar_edificios(id, dataGridView1);
+             
+            
+            conectar.Close();
+        }
 
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            string id = "C";
+            txt_edificios.Text = "C";
+
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_i_Click(object sender, EventArgs e)
+        private void iconButton4_Click(object sender, EventArgs e)
         {
-            int id = 4;
-            txt_edificios.Text = "4";
+            string id = "D";
+            txt_edificios.Text = "D";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_d_Click(object sender, EventArgs e)
+        private void iconButton5_Click(object sender, EventArgs e)
         {
-            int id = 5;
-            txt_edificios.Text = "5";
+            string id = "E";
+            txt_edificios.Text = "E";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_g_Click(object sender, EventArgs e)
+        private void iconButton6_Click(object sender, EventArgs e)
         {
-            int id = 6;
-            txt_edificios.Text = "6";
+            string id = "F";
+            txt_edificios.Text = "F";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_h_Click(object sender, EventArgs e)
+        private void iconButton7_Click(object sender, EventArgs e)
         {
-            int id = 7;
-            txt_edificios.Text = "7";
+            string id = "G";
+            txt_edificios.Text = "G";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_f_Click(object sender, EventArgs e)
+        private void iconButton8_Click(object sender, EventArgs e)
         {
-            int id = 8;
-            txt_edificios.Text = "8";
+            string id = "H";
+            txt_edificios.Text = "H";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_k_Click(object sender, EventArgs e)
+        private void iconButton9_Click(object sender, EventArgs e)
         {
-            int id = 10;
-            txt_edificios.Text = "10";
+            string id = "I";
+            txt_edificios.Text = "I";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_a_Click(object sender, EventArgs e)
+        private void iconButton10_Click(object sender, EventArgs e)
         {
-            int id = 1;
-            txt_edificios.Text = "1";
+            string id = "J";
+            txt_edificios.Text = "J";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_I_Click_1(object sender, EventArgs e)
+        private void iconButton11_Click(object sender, EventArgs e)
         {
-            int id = 9;
-            txt_edificios.Text = "9";
+            string id = "K";
+            txt_edificios.Text = "K";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_k_Click_1(object sender, EventArgs e)
+        private void iconButton12_Click(object sender, EventArgs e)
         {
-            int id = 11;
-            txt_edificios.Text = "11";
+            string id = "L";
+            txt_edificios.Text = "L";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_L_Click(object sender, EventArgs e)
+        private void iconButton13_Click(object sender, EventArgs e)
         {
-            int id = 12;
-            txt_edificios.Text = "12";
+            string id = "M";
+            txt_edificios.Text = "M";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_m_Click(object sender, EventArgs e)
+        private void iconButton14_Click(object sender, EventArgs e)
         {
-            int id = 13;
-            txt_edificios.Text = "13";
+            string id = "ND";
+            txt_edificios.Text = "ND";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_p_Click(object sender, EventArgs e)
+        private void iconButton15_Click(object sender, EventArgs e)
         {
-            int id = 14;
-            txt_edificios.Text = "14";
+            string id = "P";
+            txt_edificios.Text = "P";
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
             con.mostrar_edificios(id, dataGridView1);
             conectar.Close();
         }
 
-        private void btn_s_Click(object sender, EventArgs e)
-        {
-            int id = 15;
-            txt_edificios.Text = "15";
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("c_edificio", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_edificio", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void iconButton16_Click(object sender, EventArgs e)
         {
-            string est_asis = "P";
-            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-            int id_edificio = Convert.ToInt32(txt_edificios.Text);
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_marcasis ", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@estado_asistencia", est_asis);
-            cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
-            cmd.Parameters.AddWithValue("@id_edificio", id_edificio);
-
-            try
+            if (string.IsNullOrEmpty(txt_busqueda.Text))
             {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            con.marcar_asistencia(est_asis, id_asistencia,id_edificio, dataGridView1);
-            conectar.Close();
+                MessageBox.Show("La busqueda no puede estar vacía");
 
-            rbOb.Enabled = true;
+            }
+            else if (string.IsNullOrEmpty(txt_edificios.Text))
+            {
+                MessageBox.Show("Seleccione un edificio para empezar la busqueda");
+            }
+            else
+            {
+                string edificio = txt_edificios.Text;
+                string busqueda = txt_busqueda.Text;
+
+                if (cmb_filtro.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Escoja un filtro para empezar la busqueda");
+                }
+                else if (cmb_filtro.SelectedIndex == 0)
+                {
+                    
+                    con.busqueda_supervisor_nombre(edificio,busqueda,dataGridView1);
+                }
+
+               
+            }
 
         }
 
-        private void rdb_retirar_asis_CheckedChanged(object sender, EventArgs e)
+        private void iconButton16_Click_1(object sender, EventArgs e)
         {
-            string est_asis = "A";
-            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-            int id_edificio = Convert.ToInt32(txt_edificios.Text);
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_marcasis ", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@estado_asistencia", est_asis);
-            cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
-            cmd.Parameters.AddWithValue("@id_edificio", id_edificio);
-
-            try
+            if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Escoga un edificio para marcar o quitar asistencia");
             }
-            catch (SqlException ex)
+            else if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show(ex.ToString());
-                throw;
+                MessageBox.Show("Asegurese de que se haya seleccionado un registro");
             }
-            con.marcar_asistencia(est_asis, id_asistencia,id_edificio, dataGridView1);
-            conectar.Close();
-
-            rbOb.Enabled = true;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
+            else
             {
-                txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            }
-            catch
-            {
+
+                string est_asis = "P";
+                int id_asistencia = Convert.ToInt32(txt_idasis.Text);
+                string id_edificio = txt_edificios.Text;
                 
+                con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
+                conectar.Close();
             }
+            
             
         }
 
-        private void rbOb_CheckedChanged(object sender, EventArgs e)
+        private void btn_noasistio_Click(object sender, EventArgs e)
         {
-            if (rbOb.Checked)
+            if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                frmObservacion obsForm = new frmObservacion(this); // Pasamos una referencia de frmSupervisor
+                MessageBox.Show("Escoga un edificio para marcar o quitar asistencia");
+            }
+            else if (string.IsNullOrEmpty(txt_idasis.Text))
+            {
+                MessageBox.Show("Asegurese de que se haya seleccionado un registro");
+            }
+            else 
+            {
+                string est_asis = "A";
+                int id_asistencia = Convert.ToInt32(txt_idasis.Text);
+                string id_edificio = txt_edificios.Text;
+                
+                con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
+                conectar.Close();
+
+            }
+
+        }
+
+        private void btn_observacion_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_edificios.Text))
+            {
+                MessageBox.Show("Escoga un edificio y seleccione un registro para agregar una observacion");
+            }
+            else if (string.IsNullOrEmpty(txt_idasis.Text))
+            {
+                MessageBox.Show("Asegurese de que se haya seleccionado un registro");
+            }
+            else
+            {
+                frmObservacion obsForm = new frmObservacion(this);
                 obsForm.ShowDialog();
-            }
+            }    
         }
 
-        public int ObtenerIDSeleccionado()
+        private void btn_recargar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                return Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
-            }
-            return -1; // Si no hay una fila seleccionada, devuelve -1
+            mtabla_supervisor();
         }
 
+        private void txt_busqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.solonletras(e);
+        }
+
+        public void escondertablas()
+        {
+            dataGridView1.Columns[0].Visible = false;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

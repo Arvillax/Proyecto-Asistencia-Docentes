@@ -30,22 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMigracion));
             this.pnMenuLateral = new System.Windows.Forms.Panel();
-            this.btnMMigra = new System.Windows.Forms.Button();
-            this.btnMCierre = new System.Windows.Forms.Button();
-            this.btnMdatos = new System.Windows.Forms.Button();
-            this.btnMGestion = new System.Windows.Forms.Button();
+            this.btn_cierre_sesion = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.UsuarioId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContraUsu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PermUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FacuUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnImportar = new FontAwesome.Sharp.IconButton();
+            this.btn_AgregarP = new FontAwesome.Sharp.IconButton();
+            this.lb_fechaI = new System.Windows.Forms.Label();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.lb_fechaF = new System.Windows.Forms.Label();
+            this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
+            this.lb_descr = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.btnGuardarP = new FontAwesome.Sharp.IconButton();
             this.pnMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,173 +56,137 @@
             this.pnMenuLateral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnMenuLateral.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnMenuLateral.Controls.Add(this.btnMMigra);
-            this.pnMenuLateral.Controls.Add(this.btnMCierre);
-            this.pnMenuLateral.Controls.Add(this.btnMdatos);
-            this.pnMenuLateral.Controls.Add(this.btnMGestion);
+            this.pnMenuLateral.Controls.Add(this.btn_cierre_sesion);
+            this.pnMenuLateral.Controls.Add(this.iconButton5);
+            this.pnMenuLateral.Controls.Add(this.iconButton4);
+            this.pnMenuLateral.Controls.Add(this.iconButton3);
+            this.pnMenuLateral.Controls.Add(this.iconButton2);
             this.pnMenuLateral.Controls.Add(this.panelLogo);
             this.pnMenuLateral.Location = new System.Drawing.Point(0, 0);
-            this.pnMenuLateral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMenuLateral.Margin = new System.Windows.Forms.Padding(2);
             this.pnMenuLateral.Name = "pnMenuLateral";
-            this.pnMenuLateral.Size = new System.Drawing.Size(167, 372);
+            this.pnMenuLateral.Size = new System.Drawing.Size(167, 429);
             this.pnMenuLateral.TabIndex = 30;
             // 
-            // btnMMigra
+            // btn_cierre_sesion
             // 
-            this.btnMMigra.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnMMigra.BackColor = System.Drawing.Color.Khaki;
-            this.btnMMigra.Location = new System.Drawing.Point(0, 153);
-            this.btnMMigra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMMigra.Name = "btnMMigra";
-            this.btnMMigra.Size = new System.Drawing.Size(167, 29);
-            this.btnMMigra.TabIndex = 14;
-            this.btnMMigra.Text = "Migración de Datos";
-            this.btnMMigra.UseVisualStyleBackColor = false;
-            this.btnMMigra.Click += new System.EventHandler(this.btnMMigra_Click);
+            this.btn_cierre_sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cierre_sesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_cierre_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cierre_sesion.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cierre_sesion.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btn_cierre_sesion.IconColor = System.Drawing.Color.Black;
+            this.btn_cierre_sesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_cierre_sesion.IconSize = 40;
+            this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 389);
+            this.btn_cierre_sesion.Name = "btn_cierre_sesion";
+            this.btn_cierre_sesion.Size = new System.Drawing.Size(167, 40);
+            this.btn_cierre_sesion.TabIndex = 64;
+            this.btn_cierre_sesion.Text = "Cerrar Sesión";
+            this.btn_cierre_sesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cierre_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cierre_sesion.UseVisualStyleBackColor = false;
+            this.btn_cierre_sesion.Click += new System.EventHandler(this.btn_cierre_sesion_Click);
             // 
-            // btnMCierre
+            // iconButton5
             // 
-            this.btnMCierre.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnMCierre.BackColor = System.Drawing.Color.Khaki;
-            this.btnMCierre.Location = new System.Drawing.Point(0, 124);
-            this.btnMCierre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMCierre.Name = "btnMCierre";
-            this.btnMCierre.Size = new System.Drawing.Size(167, 29);
-            this.btnMCierre.TabIndex = 13;
-            this.btnMCierre.Text = "Cierre Período";
-            this.btnMCierre.UseVisualStyleBackColor = false;
-            this.btnMCierre.Click += new System.EventHandler(this.btnMCierre_Click);
+            this.iconButton5.BackColor = System.Drawing.Color.Khaki;
+            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.iconButton5.IconColor = System.Drawing.Color.Black;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 40;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(0, 185);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton5.Size = new System.Drawing.Size(167, 40);
+            this.iconButton5.TabIndex = 63;
+            this.iconButton5.Text = "Migración Datos";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = false;
             // 
-            // btnMdatos
+            // iconButton4
             // 
-            this.btnMdatos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnMdatos.BackColor = System.Drawing.Color.Khaki;
-            this.btnMdatos.Location = new System.Drawing.Point(0, 94);
-            this.btnMdatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMdatos.Name = "btnMdatos";
-            this.btnMdatos.Size = new System.Drawing.Size(167, 29);
-            this.btnMdatos.TabIndex = 12;
-            this.btnMdatos.Text = "Modificación Datos";
-            this.btnMdatos.UseVisualStyleBackColor = false;
-            this.btnMdatos.Click += new System.EventHandler(this.btnMdatos_Click);
+            this.iconButton4.BackColor = System.Drawing.Color.Khaki;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 40;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(0, 145);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton4.Size = new System.Drawing.Size(167, 40);
+            this.iconButton4.TabIndex = 62;
+            this.iconButton4.Text = "Cierre Periodo";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // btnMGestion
+            // iconButton3
             // 
-            this.btnMGestion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnMGestion.BackColor = System.Drawing.Color.Khaki;
-            this.btnMGestion.Location = new System.Drawing.Point(0, 65);
-            this.btnMGestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMGestion.Name = "btnMGestion";
-            this.btnMGestion.Size = new System.Drawing.Size(167, 29);
-            this.btnMGestion.TabIndex = 11;
-            this.btnMGestion.Text = "Gestión Usuarios";
-            this.btnMGestion.UseVisualStyleBackColor = false;
-            this.btnMGestion.Click += new System.EventHandler(this.btnMGestion_Click);
+            this.iconButton3.BackColor = System.Drawing.Color.Khaki;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Landmark;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 40;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(0, 105);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton3.Size = new System.Drawing.Size(167, 40);
+            this.iconButton3.TabIndex = 61;
+            this.iconButton3.Text = "Modificación Datos";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.Khaki;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 40;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 65);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton2.Size = new System.Drawing.Size(167, 40);
+            this.iconButton2.TabIndex = 60;
+            this.iconButton2.Text = "Gestión Usuarios";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // panelLogo
             // 
-            this.panelLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLogo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(167, 65);
             this.panelLogo.TabIndex = 10;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UsuarioId,
-            this.NomUsuario,
-            this.ContraUsu,
-            this.PermUsuario,
-            this.FacuUsuario});
-            this.dataGridView1.Location = new System.Drawing.Point(206, 127);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(516, 196);
-            this.dataGridView1.TabIndex = 29;
-            // 
-            // UsuarioId
-            // 
-            this.UsuarioId.HeaderText = "Referencia";
-            this.UsuarioId.MinimumWidth = 8;
-            this.UsuarioId.Name = "UsuarioId";
-            this.UsuarioId.Width = 150;
-            // 
-            // NomUsuario
-            // 
-            this.NomUsuario.HeaderText = "Curso";
-            this.NomUsuario.MinimumWidth = 8;
-            this.NomUsuario.Name = "NomUsuario";
-            this.NomUsuario.Width = 150;
-            // 
-            // ContraUsu
-            // 
-            this.ContraUsu.HeaderText = "Sección";
-            this.ContraUsu.MinimumWidth = 8;
-            this.ContraUsu.Name = "ContraUsu";
-            this.ContraUsu.Width = 150;
-            // 
-            // PermUsuario
-            // 
-            this.PermUsuario.HeaderText = "Aula";
-            this.PermUsuario.MinimumWidth = 8;
-            this.PermUsuario.Name = "PermUsuario";
-            this.PermUsuario.Width = 150;
-            // 
-            // FacuUsuario
-            // 
-            this.FacuUsuario.HeaderText = "Empleado";
-            this.FacuUsuario.MinimumWidth = 8;
-            this.FacuUsuario.Name = "FacuUsuario";
-            this.FacuUsuario.Width = 150;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(202, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Búsqueda: ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(296, 98);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(389, 23);
-            this.textBox1.TabIndex = 27;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(218, 53);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(101, 29);
-            this.button7.TabIndex = 26;
-            this.button7.Text = "Importar Excel";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -239,36 +204,133 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Migración Nuevo Período";
             // 
-            // button4
+            // dataGridView1
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(628, 7);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 29);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Cerrar Sesión";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(206, 83);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(499, 301);
+            this.dataGridView1.TabIndex = 32;
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnImportar.IconColor = System.Drawing.Color.Black;
+            this.btnImportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportar.Location = new System.Drawing.Point(206, 53);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(75, 23);
+            this.btnImportar.TabIndex = 33;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            // 
+            // btn_AgregarP
+            // 
+            this.btn_AgregarP.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_AgregarP.IconColor = System.Drawing.Color.Black;
+            this.btn_AgregarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_AgregarP.Location = new System.Drawing.Point(554, 53);
+            this.btn_AgregarP.Name = "btn_AgregarP";
+            this.btn_AgregarP.Size = new System.Drawing.Size(151, 23);
+            this.btn_AgregarP.TabIndex = 34;
+            this.btn_AgregarP.Text = "Agregar Nuevo Periodo";
+            this.btn_AgregarP.UseVisualStyleBackColor = true;
+            this.btn_AgregarP.Click += new System.EventHandler(this.btn_AgregarP_Click);
+            // 
+            // lb_fechaI
+            // 
+            this.lb_fechaI.AutoSize = true;
+            this.lb_fechaI.ForeColor = System.Drawing.SystemColors.Control;
+            this.lb_fechaI.Location = new System.Drawing.Point(738, 83);
+            this.lb_fechaI.Name = "lb_fechaI";
+            this.lb_fechaI.Size = new System.Drawing.Size(80, 13);
+            this.lb_fechaI.TabIndex = 35;
+            this.lb_fechaI.Text = "Fecha de Inicio";
+            this.lb_fechaI.Visible = false;
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Location = new System.Drawing.Point(741, 105);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaInicio.TabIndex = 36;
+            this.dtpFechaInicio.Visible = false;
+            // 
+            // lb_fechaF
+            // 
+            this.lb_fechaF.AutoSize = true;
+            this.lb_fechaF.ForeColor = System.Drawing.SystemColors.Control;
+            this.lb_fechaF.Location = new System.Drawing.Point(741, 145);
+            this.lb_fechaF.Name = "lb_fechaF";
+            this.lb_fechaF.Size = new System.Drawing.Size(69, 13);
+            this.lb_fechaF.TabIndex = 37;
+            this.lb_fechaF.Text = "Fecha de Fin";
+            this.lb_fechaF.Visible = false;
+            // 
+            // dtpFechaFinal
+            // 
+            this.dtpFechaFinal.Location = new System.Drawing.Point(741, 165);
+            this.dtpFechaFinal.Name = "dtpFechaFinal";
+            this.dtpFechaFinal.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaFinal.TabIndex = 38;
+            this.dtpFechaFinal.Visible = false;
+            // 
+            // lb_descr
+            // 
+            this.lb_descr.AutoSize = true;
+            this.lb_descr.Location = new System.Drawing.Point(741, 192);
+            this.lb_descr.Name = "lb_descr";
+            this.lb_descr.Size = new System.Drawing.Size(63, 13);
+            this.lb_descr.TabIndex = 39;
+            this.lb_descr.Text = "Descripción";
+            this.lb_descr.Visible = false;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(741, 209);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.TabIndex = 40;
+            this.txtDescripcion.Visible = false;
+            // 
+            // btnGuardarP
+            // 
+            this.btnGuardarP.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGuardarP.IconColor = System.Drawing.Color.Black;
+            this.btnGuardarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardarP.Location = new System.Drawing.Point(741, 245);
+            this.btnGuardarP.Name = "btnGuardarP";
+            this.btnGuardarP.Size = new System.Drawing.Size(100, 23);
+            this.btnGuardarP.TabIndex = 41;
+            this.btnGuardarP.Text = "Guardar Periodo";
+            this.btnGuardarP.UseVisualStyleBackColor = true;
+            this.btnGuardarP.Visible = false;
+            this.btnGuardarP.Click += new System.EventHandler(this.btnGuardarP_Click);
             // 
             // frmMigracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(740, 372);
-            this.Controls.Add(this.pnMenuLateral);
+            this.ClientSize = new System.Drawing.Size(961, 429);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnGuardarP);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.lb_descr);
+            this.Controls.Add(this.dtpFechaFinal);
+            this.Controls.Add(this.lb_fechaF);
+            this.Controls.Add(this.dtpFechaInicio);
+            this.Controls.Add(this.lb_fechaI);
+            this.Controls.Add(this.btn_AgregarP);
+            this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pnMenuLateral);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMigracion";
-            this.Text = "frmMigracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Migracion del Nuevo Periodo";
             this.pnMenuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -279,21 +341,22 @@
         #endregion
 
         private System.Windows.Forms.Panel pnMenuLateral;
-        private System.Windows.Forms.Button btnMMigra;
-        private System.Windows.Forms.Button btnMCierre;
-        private System.Windows.Forms.Button btnMdatos;
-        private System.Windows.Forms.Button btnMGestion;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContraUsu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PermUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FacuUsuario;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btn_cierre_sesion;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton btnImportar;
+        private FontAwesome.Sharp.IconButton btn_AgregarP;
+        private System.Windows.Forms.Label lb_fechaI;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.Label lb_fechaF;
+        private System.Windows.Forms.DateTimePicker dtpFechaFinal;
+        private System.Windows.Forms.Label lb_descr;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private FontAwesome.Sharp.IconButton btnGuardarP;
     }
 }

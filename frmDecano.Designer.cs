@@ -30,130 +30,58 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDecano));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel_sem = new System.Windows.Forms.Panel();
-            this.btn_sem5 = new System.Windows.Forms.Button();
-            this.btn_sem4 = new System.Windows.Forms.Button();
-            this.btn_sem3 = new System.Windows.Forms.Button();
-            this.btn_sem2 = new System.Windows.Forms.Button();
-            this.btn_sem1 = new System.Windows.Forms.Button();
-            this.btn_most_sem = new System.Windows.Forms.Button();
+            this.btn_cierre_sesion = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_cierre = new System.Windows.Forms.Button();
+            this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_observacion = new FontAwesome.Sharp.IconButton();
+            this.btn_nojustificado = new FontAwesome.Sharp.IconButton();
+            this.btn_justificado = new FontAwesome.Sharp.IconButton();
+            this.txt_idasis = new System.Windows.Forms.TextBox();
+            this.txt_usu_decano = new System.Windows.Forms.TextBox();
+            this.cmb_filtro = new System.Windows.Forms.ComboBox();
+            this.btn_recargar = new FontAwesome.Sharp.IconButton();
+            this.btn_busqueda = new FontAwesome.Sharp.IconButton();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel_sem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.panel_sem);
-            this.panel1.Controls.Add(this.btn_most_sem);
+            this.panel1.Controls.Add(this.btn_cierre_sesion);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 531);
+            this.panel1.Size = new System.Drawing.Size(233, 570);
             this.panel1.TabIndex = 18;
             // 
-            // panel_sem
+            // btn_cierre_sesion
             // 
-            this.panel_sem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel_sem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel_sem.Controls.Add(this.btn_sem5);
-            this.panel_sem.Controls.Add(this.btn_sem4);
-            this.panel_sem.Controls.Add(this.btn_sem3);
-            this.panel_sem.Controls.Add(this.btn_sem2);
-            this.panel_sem.Controls.Add(this.btn_sem1);
-            this.panel_sem.Location = new System.Drawing.Point(0, 145);
-            this.panel_sem.Name = "panel_sem";
-            this.panel_sem.Size = new System.Drawing.Size(250, 387);
-            this.panel_sem.TabIndex = 2;
-            // 
-            // btn_sem5
-            // 
-            this.btn_sem5.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_sem5.Location = new System.Drawing.Point(0, 160);
-            this.btn_sem5.Name = "btn_sem5";
-            this.btn_sem5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem5.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem5.TabIndex = 3;
-            this.btn_sem5.Text = "Semana #5";
-            this.btn_sem5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem5.UseVisualStyleBackColor = false;
-            // 
-            // btn_sem4
-            // 
-            this.btn_sem4.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_sem4.Location = new System.Drawing.Point(0, 120);
-            this.btn_sem4.Name = "btn_sem4";
-            this.btn_sem4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem4.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem4.TabIndex = 5;
-            this.btn_sem4.Text = "Semana #4";
-            this.btn_sem4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem4.UseVisualStyleBackColor = false;
-            // 
-            // btn_sem3
-            // 
-            this.btn_sem3.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_sem3.Location = new System.Drawing.Point(0, 80);
-            this.btn_sem3.Name = "btn_sem3";
-            this.btn_sem3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem3.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem3.TabIndex = 1;
-            this.btn_sem3.Text = "Semana #3";
-            this.btn_sem3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem3.UseVisualStyleBackColor = false;
-            // 
-            // btn_sem2
-            // 
-            this.btn_sem2.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_sem2.Location = new System.Drawing.Point(0, 40);
-            this.btn_sem2.Name = "btn_sem2";
-            this.btn_sem2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem2.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem2.TabIndex = 2;
-            this.btn_sem2.Text = "Semana #2";
-            this.btn_sem2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem2.UseVisualStyleBackColor = false;
-            // 
-            // btn_sem1
-            // 
-            this.btn_sem1.BackColor = System.Drawing.Color.Khaki;
-            this.btn_sem1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_sem1.Location = new System.Drawing.Point(0, 0);
-            this.btn_sem1.Name = "btn_sem1";
-            this.btn_sem1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_sem1.Size = new System.Drawing.Size(250, 40);
-            this.btn_sem1.TabIndex = 4;
-            this.btn_sem1.Text = "Seamana #1";
-            this.btn_sem1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sem1.UseVisualStyleBackColor = false;
-            // 
-            // btn_most_sem
-            // 
-            this.btn_most_sem.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btn_most_sem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_most_sem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_most_sem.Location = new System.Drawing.Point(0, 100);
-            this.btn_most_sem.Name = "btn_most_sem";
-            this.btn_most_sem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_most_sem.Size = new System.Drawing.Size(250, 45);
-            this.btn_most_sem.TabIndex = 1;
-            this.btn_most_sem.Text = "Mostrar semanas(Marzo)";
-            this.btn_most_sem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_most_sem.UseVisualStyleBackColor = false;
-            this.btn_most_sem.Click += new System.EventHandler(this.btn_most_sem_Click_1);
+            this.btn_cierre_sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cierre_sesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_cierre_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cierre_sesion.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cierre_sesion.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btn_cierre_sesion.IconColor = System.Drawing.Color.Black;
+            this.btn_cierre_sesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_cierre_sesion.IconSize = 40;
+            this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 530);
+            this.btn_cierre_sesion.Name = "btn_cierre_sesion";
+            this.btn_cierre_sesion.Size = new System.Drawing.Size(233, 40);
+            this.btn_cierre_sesion.TabIndex = 55;
+            this.btn_cierre_sesion.Text = "Cerrar Sesión";
+            this.btn_cierre_sesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cierre_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cierre_sesion.UseVisualStyleBackColor = false;
+            this.btn_cierre_sesion.Click += new System.EventHandler(this.btn_cierre_sesion_Click);
             // 
             // panel2
             // 
@@ -162,7 +90,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 100);
+            this.panel2.Size = new System.Drawing.Size(233, 100);
             this.panel2.TabIndex = 0;
             // 
             // label3
@@ -174,7 +102,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(256, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(657, 23);
+            this.label3.Size = new System.Drawing.Size(991, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Justificación de Asistencias";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -191,56 +119,193 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Busqueda:";
             // 
-            // textBox1
+            // txt_busqueda
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(256, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(991, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "escriba los caracteres para empexar la busqueda";
-            // 
-            // btn_cierre
-            // 
-            this.btn_cierre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cierre.Location = new System.Drawing.Point(1266, 7);
-            this.btn_cierre.Name = "btn_cierre";
-            this.btn_cierre.Size = new System.Drawing.Size(92, 30);
-            this.btn_cierre.TabIndex = 19;
-            this.btn_cierre.Text = "Cerrar Sesión";
-            this.btn_cierre.UseVisualStyleBackColor = true;
-            this.btn_cierre.Click += new System.EventHandler(this.btn_cierre_Click);
+            this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_busqueda.Location = new System.Drawing.Point(256, 46);
+            this.txt_busqueda.Name = "txt_busqueda";
+            this.txt_busqueda.Size = new System.Drawing.Size(900, 20);
+            this.txt_busqueda.TabIndex = 15;
+            this.txt_busqueda.Text = "escriba los caracteres para empezar la busqueda";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(257, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(257, 121);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(990, 407);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(964, 359);
             this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Khaki;
+            this.groupBox1.Controls.Add(this.btn_observacion);
+            this.groupBox1.Controls.Add(this.btn_nojustificado);
+            this.groupBox1.Controls.Add(this.btn_justificado);
+            this.groupBox1.Location = new System.Drawing.Point(1237, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(121, 127);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            // 
+            // btn_observacion
+            // 
+            this.btn_observacion.BackColor = System.Drawing.Color.Aquamarine;
+            this.btn_observacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_observacion.ForeColor = System.Drawing.Color.Black;
+            this.btn_observacion.IconChar = FontAwesome.Sharp.IconChar.Pencil;
+            this.btn_observacion.IconColor = System.Drawing.Color.Black;
+            this.btn_observacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_observacion.IconSize = 35;
+            this.btn_observacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_observacion.Location = new System.Drawing.Point(4, 66);
+            this.btn_observacion.Name = "btn_observacion";
+            this.btn_observacion.Size = new System.Drawing.Size(115, 55);
+            this.btn_observacion.TabIndex = 27;
+            this.btn_observacion.Text = "Observacion Justificación";
+            this.btn_observacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_observacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_observacion.UseVisualStyleBackColor = false;
+            this.btn_observacion.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btn_nojustificado
+            // 
+            this.btn_nojustificado.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_nojustificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nojustificado.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btn_nojustificado.IconColor = System.Drawing.Color.Black;
+            this.btn_nojustificado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_nojustificado.IconSize = 20;
+            this.btn_nojustificado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nojustificado.Location = new System.Drawing.Point(6, 37);
+            this.btn_nojustificado.Name = "btn_nojustificado";
+            this.btn_nojustificado.Size = new System.Drawing.Size(109, 23);
+            this.btn_nojustificado.TabIndex = 26;
+            this.btn_nojustificado.Text = "No Justificado";
+            this.btn_nojustificado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nojustificado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_nojustificado.UseVisualStyleBackColor = false;
+            this.btn_nojustificado.Click += new System.EventHandler(this.btn_nojustificado_Click);
+            // 
+            // btn_justificado
+            // 
+            this.btn_justificado.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_justificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_justificado.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btn_justificado.IconColor = System.Drawing.Color.Black;
+            this.btn_justificado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_justificado.IconSize = 20;
+            this.btn_justificado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_justificado.Location = new System.Drawing.Point(6, 11);
+            this.btn_justificado.Name = "btn_justificado";
+            this.btn_justificado.Size = new System.Drawing.Size(109, 23);
+            this.btn_justificado.TabIndex = 25;
+            this.btn_justificado.Text = "Justificado";
+            this.btn_justificado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_justificado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_justificado.UseVisualStyleBackColor = false;
+            this.btn_justificado.Click += new System.EventHandler(this.btn_justificado_Click);
+            // 
+            // txt_idasis
+            // 
+            this.txt_idasis.Location = new System.Drawing.Point(384, 491);
+            this.txt_idasis.Name = "txt_idasis";
+            this.txt_idasis.ReadOnly = true;
+            this.txt_idasis.Size = new System.Drawing.Size(100, 20);
+            this.txt_idasis.TabIndex = 23;
+            // 
+            // txt_usu_decano
+            // 
+            this.txt_usu_decano.Location = new System.Drawing.Point(384, 517);
+            this.txt_usu_decano.Name = "txt_usu_decano";
+            this.txt_usu_decano.ReadOnly = true;
+            this.txt_usu_decano.Size = new System.Drawing.Size(100, 20);
+            this.txt_usu_decano.TabIndex = 24;
+            this.txt_usu_decano.Visible = false;
+            // 
+            // cmb_filtro
+            // 
+            this.cmb_filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_filtro.FormattingEnabled = true;
+            this.cmb_filtro.Items.AddRange(new object[] {
+            "nombre de clase"});
+            this.cmb_filtro.Location = new System.Drawing.Point(256, 79);
+            this.cmb_filtro.Name = "cmb_filtro";
+            this.cmb_filtro.Size = new System.Drawing.Size(121, 21);
+            this.cmb_filtro.TabIndex = 59;
+            // 
+            // btn_recargar
+            // 
+            this.btn_recargar.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
+            this.btn_recargar.IconColor = System.Drawing.Color.Black;
+            this.btn_recargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_recargar.IconSize = 20;
+            this.btn_recargar.Location = new System.Drawing.Point(1166, 46);
+            this.btn_recargar.Name = "btn_recargar";
+            this.btn_recargar.Size = new System.Drawing.Size(23, 23);
+            this.btn_recargar.TabIndex = 58;
+            this.btn_recargar.UseVisualStyleBackColor = true;
+            this.btn_recargar.Click += new System.EventHandler(this.btn_recargar_Click);
+            // 
+            // btn_busqueda
+            // 
+            this.btn_busqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_busqueda.IconColor = System.Drawing.Color.Black;
+            this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_busqueda.IconSize = 18;
+            this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_busqueda.Location = new System.Drawing.Point(1195, 46);
+            this.btn_busqueda.Name = "btn_busqueda";
+            this.btn_busqueda.Size = new System.Drawing.Size(26, 23);
+            this.btn_busqueda.TabIndex = 37;
+            this.btn_busqueda.UseVisualStyleBackColor = true;
+            this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_id.Location = new System.Drawing.Point(262, 495);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(115, 13);
+            this.lbl_id.TabIndex = 63;
+            this.lbl_id.Text = "Registro seleccionado:";
             // 
             // frmDecano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1370, 531);
+            this.ClientSize = new System.Drawing.Size(1370, 570);
+            this.ControlBox = false;
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.cmb_filtro);
+            this.Controls.Add(this.btn_recargar);
+            this.Controls.Add(this.btn_busqueda);
+            this.Controls.Add(this.txt_usu_decano);
+            this.Controls.Add(this.txt_idasis);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_cierre);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_busqueda);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDecano";
-            this.Text = "frmDecano";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Decano";
             this.panel1.ResumeLayout(false);
-            this.panel_sem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,18 +314,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel_sem;
-        private System.Windows.Forms.Button btn_sem5;
-        private System.Windows.Forms.Button btn_sem4;
-        private System.Windows.Forms.Button btn_sem3;
-        private System.Windows.Forms.Button btn_sem2;
-        private System.Windows.Forms.Button btn_sem1;
-        private System.Windows.Forms.Button btn_most_sem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_cierre;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_busqueda;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_usu_decano;
+        private FontAwesome.Sharp.IconButton btn_cierre_sesion;
+        private FontAwesome.Sharp.IconButton btn_nojustificado;
+        private FontAwesome.Sharp.IconButton btn_justificado;
+        private FontAwesome.Sharp.IconButton btn_busqueda;
+        private FontAwesome.Sharp.IconButton btn_recargar;
+        private System.Windows.Forms.ComboBox cmb_filtro;
+        private FontAwesome.Sharp.IconButton btn_observacion;
+        public System.Windows.Forms.TextBox txt_idasis;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

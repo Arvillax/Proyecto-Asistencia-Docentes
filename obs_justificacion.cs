@@ -11,26 +11,28 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
-    public partial class frmObservacion: Form
+    public partial class obs_justificacion : Form
     {
-        private frmSupervisor supervisorForm;
+        public frmDecano decanoform;
         private clsConexion conexion;
-        public frmObservacion(frmSupervisor form)
+
+        public obs_justificacion(frmDecano form)
         {
             InitializeComponent();
-            supervisorForm = form;
+            decanoform = form;
             conexion = new clsConexion();
-            
+
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
+        private void btn_volver_Click(object sender, EventArgs e)
         {
+            this.Hide();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string observacion = txtObservacion.Text.Trim();
-            string idBuscado = supervisorForm.txt_idasis.Text.Trim(); // Obtener el ID del frmSupervisor
+            string idBuscado = decanoform.txt_idasis.Text.Trim(); // Obtener el ID del frmSupervisor
 
             if (string.IsNullOrEmpty(observacion))
             {
@@ -46,11 +48,11 @@ namespace Proyecto_DesarrolloSoftware
 
             // Buscar la fila en el DataGridView con el mismo ID
             bool filaEncontrada = false;
-            foreach (DataGridViewRow row in supervisorForm.dataGridView1.Rows)
+            foreach (DataGridViewRow row in decanoform.dataGridView1.Rows)
             {
                 if (row.Cells["idAsistencia"].Value != null && row.Cells["idAsistencia"].Value.ToString() == idBuscado)
                 {
-                    row.Cells["Observaciones"].Value = observacion; // Guardar la observación
+                    row.Cells["Obs_Justificaciones"].Value = observacion; // Guardar la observación
                     filaEncontrada = true;
                     break;
                 }
@@ -66,7 +68,7 @@ namespace Proyecto_DesarrolloSoftware
             using (SqlConnection conn = new SqlConnection(conexion.ConexionString))
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("sp_ActualizarObservacion", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_ActualizarObservacion_justificacion", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id", idBuscado); // Usar el ID del TextBox
@@ -78,21 +80,6 @@ namespace Proyecto_DesarrolloSoftware
 
             MessageBox.Show("Observación guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-        }
-
-        private void btn_volver_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void lbObservacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtObservacion_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

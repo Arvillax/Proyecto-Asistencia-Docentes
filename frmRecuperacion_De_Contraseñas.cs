@@ -16,6 +16,7 @@ namespace Proyecto_DesarrolloSoftware
         public frmRecuperacion_De_Contraseñas()
         {
             InitializeComponent();
+            btnIngresarCod.Enabled = false;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -40,6 +41,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private async void btnEnviarSoli_Click(object sender, EventArgs e)
         {
+           
             if (!int.TryParse(txtUsuario.Text, out int idUsuario))
             {
                 MessageBox.Show("Ingrese un ID de usuario válido.");
@@ -64,12 +66,26 @@ namespace Proyecto_DesarrolloSoftware
             {
                 await rec.EnviarCorreoAsync(codigo);
                 lbmensaje.Text = "Código de recuperación enviado a tu correo.";
+                btnIngresarCod.Enabled = true;
             }
             catch (Exception ex)
             {
                 lbmensaje.Text = "Error al enviar el correo. Inténtalo de nuevo más tarde.";
                 Console.WriteLine("Error al enviar el correo: " + ex.Message);
+                btnIngresarCod.Enabled = false;
             }
+        }
+
+        private void btn_regrsar_Click(object sender, EventArgs e)
+        {
+            Form1 frmLogin = new Form1();
+            frmLogin.Show();
+            this.Hide();
+        }
+
+        private async void btn_enviar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
