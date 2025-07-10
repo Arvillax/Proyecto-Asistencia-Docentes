@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
-    
+
 
     public partial class Form1 : Form
     {
@@ -20,13 +20,41 @@ namespace Proyecto_DesarrolloSoftware
         public Form1()
         {
             InitializeComponent();
+            // fijar pantalla
+            this.MinimumSize = new Size(1130, 761);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Resize += Form1_Resize;
         }
 
-        
+        private void Form1_Resize(object sender, EventArgs e)// forzar que la aventana conserve el tamaño
+        {
+            if (this.Width < 1130)
+                this.Width = 1130;
+
+            if (this.Height < 761)
+                this.Height = 761;
+        }
+        private bool contraseñaVisible = false;
+
+        private void btnMostrarContraseña_Click(object sender, EventArgs e)
+        {
+            contraseñaVisible = !contraseñaVisible;
+
+            if (contraseñaVisible)
+            {
+                txtContraseña.PasswordChar = '\0'; // Mostrar texto normal
+                btnMostrarContraseña.Text = "🙈";
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '*'; // Ocultar con asteriscos
+                btnMostrarContraseña.Text = "👁️";
+            }
+        }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
+
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
             {
                 MessageBox.Show("Ingrese usuario y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -94,7 +122,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
