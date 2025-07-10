@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T23:56:53.066Z",
               "EditorCaption": ""
@@ -78,8 +78,7 @@
               "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T23:56:48.219Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-09T23:56:48.219Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "clsrecuperacion.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T16:48:59.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T16:48:59.878Z"
             }
           ]
         }
