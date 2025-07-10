@@ -161,6 +161,12 @@
     <Compile Include="frmNueva_Contraseña.Designer.cs">
       <DependentUpon>frmNueva_Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevoPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoPeriodo.Designer.cs">
+      <DependentUpon>frmNuevoPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmObservacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </Compile>
     <Compile Include="frmSupervisor.Designer.cs">
       <DependentUpon>frmSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Admin_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Admin_Principal.Designer.cs">
+      <DependentUpon>frm_Admin_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_agregar_admin.cs">
       <SubType>Form</SubType>
@@ -243,6 +255,9 @@
     <EmbeddedResource Include="frmNueva_Contraseña.resx">
       <DependentUpon>frmNueva_Contraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoPeriodo.resx">
+      <DependentUpon>frmNuevoPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmObservacion.resx">
       <DependentUpon>frmObservacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupervisor.resx">
       <DependentUpon>frmSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Admin_Principal.resx">
+      <DependentUpon>frm_Admin_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_agregar_admin.resx">
       <DependentUpon>frm_agregar_admin.cs</DependentUpon>
