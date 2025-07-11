@@ -14,8 +14,9 @@ namespace Proyecto_DesarrolloSoftware
     public partial class frm_agregar_admin : Form
     {
         string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
-        SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
+        SqlConnection conectar = new SqlConnection();
+        
 
        
 
@@ -25,12 +26,6 @@ namespace Proyecto_DesarrolloSoftware
             cmb_permiso.DropDownStyle = ComboBoxStyle.DropDownList;
 
             
-        }
-
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -95,11 +90,6 @@ namespace Proyecto_DesarrolloSoftware
             this.Hide();
         }
 
-        private void btn_plo_Click(object sender, EventArgs e)
-        {
-            
 
-            
-        }
     }
 }

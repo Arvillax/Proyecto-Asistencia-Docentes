@@ -43,7 +43,6 @@
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.pnMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.PnlPadre.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMenuLateral
@@ -239,15 +238,14 @@
             // 
             // PnlPadre
             // 
-            this.PnlPadre.Controls.Add(this.btnMinimizar);
-            this.PnlPadre.Controls.Add(this.btnMaximizar);
-            this.PnlPadre.Location = new System.Drawing.Point(247, 0);
+            this.PnlPadre.Location = new System.Drawing.Point(247, 37);
             this.PnlPadre.Name = "PnlPadre";
-            this.PnlPadre.Size = new System.Drawing.Size(1311, 730);
+            this.PnlPadre.Size = new System.Drawing.Size(1311, 693);
             this.PnlPadre.TabIndex = 67;
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
@@ -256,7 +254,7 @@
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMinimizar.IconSize = 20;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimizar.Location = new System.Drawing.Point(1238, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1485, 0);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(38, 33);
@@ -268,6 +266,7 @@
             // 
             // btnMaximizar
             // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.ForeColor = System.Drawing.Color.White;
             this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -275,7 +274,7 @@
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMaximizar.IconSize = 25;
             this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaximizar.Location = new System.Drawing.Point(1273, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(1520, 0);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(38, 33);
@@ -292,12 +291,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1558, 730);
             this.ControlBox = false;
+            this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.PnlPadre);
+            this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.pnMenuLateral);
             this.Name = "frm_Admin_Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_Admin_Principal_Load);
             this.pnMenuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.PnlPadre.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

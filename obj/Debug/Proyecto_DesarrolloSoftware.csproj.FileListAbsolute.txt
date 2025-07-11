@@ -326,7 +326,6 @@ C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_Desarro
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frmSupervisor.resources
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frm_Admin_Principal.resources
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frm_agregar_admin.resources
-C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frm_modificar_admin.resources
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.obs_justificacion.resources
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.Properties.Resources.resources
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.csproj.GenerateResource.cache

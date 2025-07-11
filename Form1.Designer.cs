@@ -56,7 +56,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 65);
+            this.panel1.Size = new System.Drawing.Size(777, 65);
             this.panel1.TabIndex = 19;
             // 
             // btnMinimizar
@@ -70,7 +70,7 @@
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMinimizar.IconSize = 20;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimizar.Location = new System.Drawing.Point(662, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(700, 0);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(38, 33);
@@ -83,6 +83,7 @@
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.AutoSize = true;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.ForeColor = System.Drawing.Color.White;
             this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -90,7 +91,7 @@
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMaximizar.IconSize = 25;
             this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaximizar.Location = new System.Drawing.Point(697, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(735, 0);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(38, 33);
@@ -121,7 +122,7 @@
             this.btn_cerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cerrar.IconSize = 25;
             this.btn_cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cerrar.Location = new System.Drawing.Point(616, 398);
+            this.btn_cerrar.Location = new System.Drawing.Point(654, 405);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(119, 43);
@@ -137,7 +138,7 @@
             this.lnContraseña.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lnContraseña.AutoSize = true;
             this.lnContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnContraseña.Location = new System.Drawing.Point(251, 386);
+            this.lnContraseña.Location = new System.Drawing.Point(269, 393);
             this.lnContraseña.Name = "lnContraseña";
             this.lnContraseña.Size = new System.Drawing.Size(200, 18);
             this.lnContraseña.TabIndex = 18;
@@ -148,7 +149,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtContraseña.Location = new System.Drawing.Point(253, 286);
+            this.txtContraseña.Location = new System.Drawing.Point(272, 293);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -158,7 +159,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtUsuario.Location = new System.Drawing.Point(253, 225);
+            this.txtUsuario.Location = new System.Drawing.Point(272, 232);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(179, 22);
@@ -170,7 +171,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(251, 265);
+            this.label4.Location = new System.Drawing.Point(270, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 18);
             this.label4.TabIndex = 21;
@@ -181,7 +182,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(251, 206);
+            this.label3.Location = new System.Drawing.Point(270, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 20;
@@ -193,10 +194,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Proyecto_DesarrolloSoftware.Properties.Resources.NewLogo;
-            this.pictureBox2.Location = new System.Drawing.Point(233, 70);
+            this.pictureBox2.Location = new System.Drawing.Point(241, 70);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(231, 126);
+            this.pictureBox2.Size = new System.Drawing.Size(243, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -211,7 +212,7 @@
             this.btn_ingresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_ingresar.IconSize = 35;
             this.btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ingresar.Location = new System.Drawing.Point(275, 321);
+            this.btn_ingresar.Location = new System.Drawing.Point(294, 328);
             this.btn_ingresar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(139, 46);
@@ -227,7 +228,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(736, 442);
+            this.ClientSize = new System.Drawing.Size(774, 449);
             this.ControlBox = false;
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_ingresar);
@@ -243,6 +244,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

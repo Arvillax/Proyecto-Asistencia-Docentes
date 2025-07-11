@@ -33,7 +33,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.MinimumSize = new Size(800, 600);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -112,6 +112,7 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
                 btnMaximizar.Text = "🗖"; 
             }
             else

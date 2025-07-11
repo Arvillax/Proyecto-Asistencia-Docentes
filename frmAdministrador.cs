@@ -71,24 +71,6 @@ namespace Proyecto_DesarrolloSoftware
             cmb_estado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-
-
-            
-            txt_idempleado.Visible = false;
-            txt_nombre.Visible = false;
-            cmb_permiso.Visible = false;
-            cmb_estado.Visible = false;
-
-            lbl_estado.Visible = false;
-            lbl_id.Visible = false;
-            lbl_nombre.Visible = false;
-            lbl_permiso.Visible = false;
-
-            btn_guardarc.Visible = false;
-        }
-
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
             txt_idempleado.Visible = true;
@@ -184,10 +166,6 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void cmb_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_estado.SelectedIndex == 0)
@@ -202,19 +180,10 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void txt_estado_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_recargar_Click(object sender, EventArgs e)
         {
             m_tabla_usuarios_admin();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_busqueda_Click(object sender, EventArgs e)

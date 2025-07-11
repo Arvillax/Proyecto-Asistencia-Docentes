@@ -16,6 +16,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             InitializeComponent();
             btnMaximizar.Text = "🗖";
+            
         }
 
 
@@ -77,6 +78,7 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(1600, 700);
                 btnMaximizar.Text = "🗖";
             }
             else
@@ -91,5 +93,9 @@ namespace Proyecto_DesarrolloSoftware
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void frm_Admin_Principal_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(1600, 700);
+        }
     }
 }

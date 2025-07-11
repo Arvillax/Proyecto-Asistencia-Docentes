@@ -45,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_guardarc = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_busqueda = new FontAwesome.Sharp.IconButton();
             this.btn_recargar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -54,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_busqueda
@@ -65,24 +63,26 @@
             this.txt_busqueda.Location = new System.Drawing.Point(132, 61);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(802, 26);
+            this.txt_busqueda.Size = new System.Drawing.Size(829, 26);
             this.txt_busqueda.TabIndex = 13;
-            this.txt_busqueda.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txt_busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_busqueda_KeyPress);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 8);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 131);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1095, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(1108, 380);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -185,7 +185,6 @@
             this.txtpermiso.Size = new System.Drawing.Size(132, 22);
             this.txtpermiso.TabIndex = 54;
             this.txtpermiso.Visible = false;
-            this.txtpermiso.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txt_estado
             // 
@@ -195,7 +194,6 @@
             this.txt_estado.Size = new System.Drawing.Size(132, 22);
             this.txt_estado.TabIndex = 55;
             this.txt_estado.Visible = false;
-            this.txt_estado.TextChanged += new System.EventHandler(this.txt_estado_TextChanged);
             // 
             // cmb_filtro
             // 
@@ -209,7 +207,7 @@
             this.cmb_filtro.Location = new System.Drawing.Point(132, 99);
             this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
-            this.cmb_filtro.Size = new System.Drawing.Size(268, 24);
+            this.cmb_filtro.Size = new System.Drawing.Size(295, 24);
             this.cmb_filtro.TabIndex = 60;
             this.cmb_filtro.SelectedIndexChanged += new System.EventHandler(this.cmb_filtro_SelectedIndexChanged);
             // 
@@ -242,7 +240,7 @@
             this.panel1.Controls.Add(this.lbl_estado);
             this.panel1.Controls.Add(this.btn_guardarc);
             this.panel1.Controls.Add(this.cmb_estado);
-            this.panel1.Location = new System.Drawing.Point(1179, 130);
+            this.panel1.Location = new System.Drawing.Point(1206, 130);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 377);
@@ -269,14 +267,6 @@
             this.btn_guardarc.UseVisualStyleBackColor = false;
             this.btn_guardarc.Click += new System.EventHandler(this.btn_guardarc_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(21, 130);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1125, 388);
-            this.panel2.TabIndex = 63;
-            // 
             // btn_busqueda
             // 
             this.btn_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -285,10 +275,10 @@
             this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_busqueda.IconSize = 18;
             this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_busqueda.Location = new System.Drawing.Point(1043, 61);
+            this.btn_busqueda.Location = new System.Drawing.Point(1042, 62);
             this.btn_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.btn_busqueda.Name = "btn_busqueda";
-            this.btn_busqueda.Size = new System.Drawing.Size(51, 28);
+            this.btn_busqueda.Size = new System.Drawing.Size(49, 28);
             this.btn_busqueda.TabIndex = 59;
             this.btn_busqueda.UseVisualStyleBackColor = true;
             this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
@@ -303,7 +293,7 @@
             this.btn_recargar.Location = new System.Drawing.Point(985, 62);
             this.btn_recargar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_recargar.Name = "btn_recargar";
-            this.btn_recargar.Size = new System.Drawing.Size(51, 28);
+            this.btn_recargar.Size = new System.Drawing.Size(49, 28);
             this.btn_recargar.TabIndex = 56;
             this.btn_recargar.UseVisualStyleBackColor = true;
             this.btn_recargar.Click += new System.EventHandler(this.btn_recargar_Click);
@@ -318,7 +308,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(985, 542);
+            this.iconButton1.Location = new System.Drawing.Point(999, 542);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(147, 37);
@@ -339,7 +329,7 @@
             this.btn_modificard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_modificard.IconSize = 25;
             this.btn_modificard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificard.Location = new System.Drawing.Point(775, 542);
+            this.btn_modificard.Location = new System.Drawing.Point(829, 542);
             this.btn_modificard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificard.Name = "btn_modificard";
             this.btn_modificard.Size = new System.Drawing.Size(147, 37);
@@ -384,8 +374,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1629, 644);
+            this.ClientSize = new System.Drawing.Size(1656, 644);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmb_filtro);
@@ -396,14 +387,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_busqueda);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestion_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,6 +422,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
     }
 }

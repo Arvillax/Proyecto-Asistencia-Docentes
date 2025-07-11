@@ -203,12 +203,6 @@
     <Compile Include="frm_Bitacora.Designer.cs">
       <DependentUpon>frm_Bitacora.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_modificar_admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_modificar_admin.Designer.cs">
-      <DependentUpon>frm_modificar_admin.cs</DependentUpon>
-    </Compile>
     <Compile Include="obs_justificacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,9 +269,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Bitacora.resx">
       <DependentUpon>frm_Bitacora.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_modificar_admin.resx">
-      <DependentUpon>frm_modificar_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obs_justificacion.resx">
       <DependentUpon>obs_justificacion.cs</DependentUpon>

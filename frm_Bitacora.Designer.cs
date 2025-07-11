@@ -33,6 +33,8 @@
             this.dtpBitacora = new System.Windows.Forms.DateTimePicker();
             this.dgvBitacora = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,9 +91,46 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(473, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 39);
+            this.label2.Size = new System.Drawing.Size(137, 38);
             this.label2.TabIndex = 9;
             this.label2.Text = "Bitácora";
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimizar.IconColor = System.Drawing.Color.Snow;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMinimizar.IconSize = 20;
+            this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimizar.Location = new System.Drawing.Point(1081, -3);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(38, 33);
+            this.btnMinimizar.TabIndex = 71;
+            this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMaximizar.IconColor = System.Drawing.Color.Snow;
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconSize = 25;
+            this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaximizar.Location = new System.Drawing.Point(1116, -3);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(38, 33);
+            this.btnMaximizar.TabIndex = 70;
+            this.btnMaximizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMaximizar.UseVisualStyleBackColor = false;
             // 
             // frm_Bitacora
             // 
@@ -100,6 +139,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1153, 619);
             this.ControlBox = false;
+            this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
@@ -119,5 +160,7 @@
         private System.Windows.Forms.DateTimePicker dtpBitacora;
         private System.Windows.Forms.DataGridView dgvBitacora;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton btnMinimizar;
+        private FontAwesome.Sharp.IconButton btnMaximizar;
     }
 }
