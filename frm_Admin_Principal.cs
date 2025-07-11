@@ -36,7 +36,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Admin());
+            AbrirFormularioHijo(new frmGestion_Usuarios());
         }
 
         private void btnCreacionPeriodo_Click(object sender, EventArgs e)

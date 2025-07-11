@@ -1,17 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\",
+  "WorkspaceRootPath": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frm_admin_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frm_admin_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmmigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmmigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmmodificaciondoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmmodificaciondoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_admin_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frm_admin_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmcierre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmcierre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frm_modificar_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frm_modificar_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,8 +50,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -58,41 +90,136 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T23:56:53.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Title": "frmAdministrador.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.cs",
+              "RelativeDocumentMoniker": "frmAdministrador.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmAdministrador.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T23:56:48.219Z",
+              "WhenOpened": "2025-07-11T04:02:44.878Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_Admin_Principal.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs",
+              "RelativeDocumentMoniker": "frm_Admin_Principal.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs*",
+              "RelativeToolTip": "frm_Admin_Principal.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA+wCYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T04:01:39.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frmMigracion.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmMigracion.cs",
+              "RelativeDocumentMoniker": "frmMigracion.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmMigracion.cs",
+              "RelativeToolTip": "frmMigracion.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T04:01:30.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmModificacionDoC.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmModificacionDoC.cs",
+              "RelativeDocumentMoniker": "frmModificacionDoC.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmModificacionDoC.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmModificacionDoC.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T03:58:01.704Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmCierre.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmCierre.cs",
+              "RelativeDocumentMoniker": "frmCierre.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmCierre.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmCierre.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T03:50:59.52Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frm_modificar_admin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_modificar_admin.cs",
+              "RelativeDocumentMoniker": "frm_modificar_admin.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_modificar_admin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frm_modificar_admin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:43:11.367Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frm_Admin_Principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs",
+              "RelativeDocumentMoniker": "frm_Admin_Principal.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "frm_Admin_Principal.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:43:06.808Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:56:53.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:56:48.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "clsrecuperacion.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
               "RelativeDocumentMoniker": "clsrecuperacion.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
               "RelativeToolTip": "clsrecuperacion.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T16:48:59.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T16:48:59.878Z"
             }
           ]
         }

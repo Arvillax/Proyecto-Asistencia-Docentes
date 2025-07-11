@@ -109,34 +109,6 @@ namespace Proyecto_DesarrolloSoftware
             conectar.Close();
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            Admin frmGestion = new Admin();
-            frmGestion.Show();
-            this.Hide();
-        }
-
-        private void btn_cierre_periodo_Click(object sender, EventArgs e)
-        {
-            frmCierre frmcierre = new frmCierre();
-            frmcierre.Show();
-            this.Hide();
-        }
-
-        private void btn_migracion_Click(object sender, EventArgs e)
-        {
-            frmMigracion frmmigra = new frmMigracion();
-            frmmigra.Show();
-            this.Hide();
-        }
-
-        private void btn_cierre_sesion_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Close();
-        }
-
         private void btn_recargar_Click(object sender, EventArgs e)
         {
             m_tabla();
