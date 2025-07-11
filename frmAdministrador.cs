@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
-    public partial class frmGestion_Usuarios : Form
+    public partial class Admin : Form
     {
         string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
         SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
-        public frmGestion_Usuarios()
+        public Admin()
         {
             InitializeComponent();
             m_tabla_usuarios_admin();
