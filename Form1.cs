@@ -24,24 +24,7 @@ namespace Proyecto_DesarrolloSoftware
         }
 
 
-        private void lnContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmRecuperacion_De_Contraseñas frmRecuC = new frmRecuperacion_De_Contraseñas();
-            frmRecuC.Show();
-            this.Hide();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.MinimumSize = new Size(800, 600);
-        }
-
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_ingresar_Click(object sender, EventArgs e)
+        private void Ingresar()
         {
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
             {
@@ -68,24 +51,19 @@ namespace Proyecto_DesarrolloSoftware
                     break;
 
                 case "SUPERVISOR":
-
                     frmSupervisor supervisorForm = new frmSupervisor();
                     supervisorForm.Show();
                     this.Hide();
                     break;
 
                 case "DOCENTE":
-                    int numero = Convert.ToInt32(txtUsuario.Text);
-                    frmDocente docenteForm = new frmDocente(numero);
-
+                    frmDocente docenteForm = new frmDocente(idUsuario);
                     docenteForm.Show();
                     this.Hide();
                     break;
 
                 case "DECANO":
-                    int usuario_decano = Convert.ToInt32(txtUsuario.Text);
-
-                    frmDecano decanoForm = new frmDecano(usuario_decano);
+                    frmDecano decanoForm = new frmDecano(idUsuario);
                     decanoForm.Show();
                     this.Hide();
                     break;
@@ -94,6 +72,29 @@ namespace Proyecto_DesarrolloSoftware
                     MessageBox.Show("Usuario o contraseña incorrectos o usuario inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
+        }
+
+
+        private void lnContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRecuperacion_De_Contraseñas frmRecuC = new frmRecuperacion_De_Contraseñas();
+            frmRecuC.Show();
+            this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(800, 600);
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_ingresar_Click(object sender, EventArgs e)
+        {
+            Ingresar();
         }
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
@@ -119,6 +120,24 @@ namespace Proyecto_DesarrolloSoftware
             {
                 this.WindowState = FormWindowState.Maximized;
                 btnMaximizar.Text = "🗗"; 
+            }
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Ingresar();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Ingresar();
+                e.SuppressKeyPress = true;
             }
         }
     }

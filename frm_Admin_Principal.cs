@@ -95,7 +95,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void frm_Admin_Principal_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new Size(1600, 700);
+            this.MinimumSize = new Size(1700, 700);
         }
     }
 }

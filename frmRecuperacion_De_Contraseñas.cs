@@ -18,14 +18,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             InitializeComponent();
             btnIngresarCod.Enabled = false;
-        }
-
-        // boton de regresar
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Hide();
+            btnMaximizar.Text = "🗖";
         }
         // boton de ingresar codigo
         private void btnIngresarCod_Click(object sender, EventArgs e)
@@ -88,6 +81,31 @@ namespace Proyecto_DesarrolloSoftware
         private async void btn_enviar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+                btnMaximizar.Text = "🗖";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizar.Text = "🗗";
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frmRecuperacion_De_Contraseñas_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(800, 600);
         }
     }
 }

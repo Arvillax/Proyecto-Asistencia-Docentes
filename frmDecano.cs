@@ -24,6 +24,7 @@ namespace Proyecto_DesarrolloSoftware
             txt_usu_decano.Text = usuario_decano.ToString();
             mtabla_decano();
             escondertablas();
+            btnMaximizar.Text = "🗖";
 
         }
 

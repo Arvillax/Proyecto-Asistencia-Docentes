@@ -84,8 +84,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.AliceBlue;
@@ -122,7 +121,7 @@
             this.btn_modificard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_modificard.IconSize = 25;
             this.btn_modificard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificard.Location = new System.Drawing.Point(795, 541);
+            this.btn_modificard.Location = new System.Drawing.Point(98, 542);
             this.btn_modificard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificard.Name = "btn_modificard";
             this.btn_modificard.Size = new System.Drawing.Size(180, 37);
@@ -135,6 +134,7 @@
             // 
             // btn_busqueda
             // 
+            this.btn_busqueda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_busqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.btn_busqueda.IconColor = System.Drawing.Color.Black;
             this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;

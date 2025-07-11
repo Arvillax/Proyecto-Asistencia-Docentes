@@ -26,6 +26,7 @@ namespace Proyecto_DesarrolloSoftware
             customdesign();
             mtabla_supervisor();
             escondertablas();
+            btnMaximizar.Text = "🗖";
         }
 
         public void mtabla_supervisor()

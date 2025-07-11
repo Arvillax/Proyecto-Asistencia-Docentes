@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestion_Usuarios));
             this.txt_busqueda = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmb_permiso = new System.Windows.Forms.ComboBox();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
@@ -51,8 +50,9 @@
             this.btn_modificard = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_busqueda
@@ -60,31 +60,12 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busqueda.Location = new System.Drawing.Point(132, 61);
+            this.txt_busqueda.Location = new System.Drawing.Point(111, 61);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(829, 26);
+            this.txt_busqueda.Size = new System.Drawing.Size(785, 26);
             this.txt_busqueda.TabIndex = 13;
             this.txt_busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_busqueda_KeyPress);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 131);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1108, 380);
-            this.dataGridView1.TabIndex = 18;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cmb_permiso
             // 
@@ -197,17 +178,15 @@
             // 
             // cmb_filtro
             // 
-            this.cmb_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_filtro.FormattingEnabled = true;
             this.cmb_filtro.Items.AddRange(new object[] {
             "ID de Empleado",
             "Nombre de Empleado"});
-            this.cmb_filtro.Location = new System.Drawing.Point(132, 99);
+            this.cmb_filtro.Location = new System.Drawing.Point(111, 99);
             this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
-            this.cmb_filtro.Size = new System.Drawing.Size(295, 24);
+            this.cmb_filtro.Size = new System.Drawing.Size(233, 24);
             this.cmb_filtro.TabIndex = 60;
             this.cmb_filtro.SelectedIndexChanged += new System.EventHandler(this.cmb_filtro_SelectedIndexChanged);
             // 
@@ -218,7 +197,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(43, 100);
+            this.label3.Location = new System.Drawing.Point(22, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
@@ -228,7 +207,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.lbl_id);
             this.panel1.Controls.Add(this.txt_idempleado);
             this.panel1.Controls.Add(this.lbl_permiso);
@@ -240,10 +219,10 @@
             this.panel1.Controls.Add(this.lbl_estado);
             this.panel1.Controls.Add(this.btn_guardarc);
             this.panel1.Controls.Add(this.cmb_estado);
-            this.panel1.Location = new System.Drawing.Point(1206, 130);
+            this.panel1.Location = new System.Drawing.Point(935, 160);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 377);
+            this.panel1.Size = new System.Drawing.Size(477, 376);
             this.panel1.TabIndex = 62;
             // 
             // btn_guardarc
@@ -275,10 +254,10 @@
             this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_busqueda.IconSize = 18;
             this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_busqueda.Location = new System.Drawing.Point(1042, 62);
+            this.btn_busqueda.Location = new System.Drawing.Point(993, 61);
             this.btn_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.btn_busqueda.Name = "btn_busqueda";
-            this.btn_busqueda.Size = new System.Drawing.Size(49, 28);
+            this.btn_busqueda.Size = new System.Drawing.Size(40, 28);
             this.btn_busqueda.TabIndex = 59;
             this.btn_busqueda.UseVisualStyleBackColor = true;
             this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
@@ -290,7 +269,7 @@
             this.btn_recargar.IconColor = System.Drawing.Color.Black;
             this.btn_recargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_recargar.IconSize = 20;
-            this.btn_recargar.Location = new System.Drawing.Point(985, 62);
+            this.btn_recargar.Location = new System.Drawing.Point(924, 59);
             this.btn_recargar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_recargar.Name = "btn_recargar";
             this.btn_recargar.Size = new System.Drawing.Size(49, 28);
@@ -300,7 +279,7 @@
             // 
             // iconButton1
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.iconButton1.BackColor = System.Drawing.Color.LimeGreen;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
@@ -308,7 +287,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(999, 542);
+            this.iconButton1.Location = new System.Drawing.Point(726, 581);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(147, 37);
@@ -321,7 +300,7 @@
             // 
             // btn_modificard
             // 
-            this.btn_modificard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_modificard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_modificard.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn_modificard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificard.IconChar = FontAwesome.Sharp.IconChar.Pencil;
@@ -329,7 +308,7 @@
             this.btn_modificard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_modificard.IconSize = 25;
             this.btn_modificard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificard.Location = new System.Drawing.Point(829, 542);
+            this.btn_modificard.Location = new System.Drawing.Point(556, 581);
             this.btn_modificard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificard.Name = "btn_modificard";
             this.btn_modificard.Size = new System.Drawing.Size(147, 37);
@@ -348,7 +327,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(43, 65);
+            this.label2.Location = new System.Drawing.Point(22, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 14;
@@ -363,18 +342,34 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(559, 9);
+            this.label1.Location = new System.Drawing.Point(538, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 46);
             this.label1.TabIndex = 12;
             this.label1.Text = "Gestión de Usuarios";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(847, 394);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // frmGestion_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1656, 644);
+            this.ClientSize = new System.Drawing.Size(1679, 677);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -390,9 +385,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestion_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +397,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_busqueda;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cmb_permiso;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.TextBox txt_nombre;
@@ -422,5 +416,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

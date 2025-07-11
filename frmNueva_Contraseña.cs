@@ -19,14 +19,6 @@ namespace Proyecto_DesarrolloSoftware
             InitializeComponent();
             idUsuario = usuario;
         }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Hide();
-        }
-
         private void btnGuardarContra_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtncon.Text) || string.IsNullOrEmpty(txtccon.Text))
@@ -52,6 +44,38 @@ namespace Proyecto_DesarrolloSoftware
             {
                 MessageBox.Show("Error al cambiar la contraseña.");
             }
+        }
+
+        private void btn_regrsar_Click(object sender, EventArgs e)
+        {
+            Form1 frmLogin = new Form1();
+            frmLogin.Show();
+            this.Hide();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+                btnMaximizar.Text = "🗖";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizar.Text = "🗗";
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frmNueva_Contraseña_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(800, 600);
         }
     }
 }

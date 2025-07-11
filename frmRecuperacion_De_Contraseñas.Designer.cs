@@ -38,6 +38,8 @@
             this.btnEnviarSoli = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,7 +85,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.panel1.Controls.Add(this.btn_regrsar);
+            this.panel1.Controls.Add(this.btnMinimizar);
+            this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -93,6 +96,7 @@
             // 
             // btn_regrsar
             // 
+            this.btn_regrsar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_regrsar.BackColor = System.Drawing.Color.Khaki;
             this.btn_regrsar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regrsar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
@@ -100,8 +104,8 @@
             this.btn_regrsar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_regrsar.IconSize = 35;
             this.btn_regrsar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_regrsar.Location = new System.Drawing.Point(643, 14);
-            this.btn_regrsar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_regrsar.Location = new System.Drawing.Point(666, 404);
+            this.btn_regrsar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_regrsar.Name = "btn_regrsar";
             this.btn_regrsar.Size = new System.Drawing.Size(140, 46);
             this.btn_regrsar.TabIndex = 34;
@@ -166,6 +170,48 @@
             this.pictureBox2.TabIndex = 29;
             this.pictureBox2.TabStop = false;
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimizar.IconColor = System.Drawing.Color.Snow;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMinimizar.IconSize = 20;
+            this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimizar.Location = new System.Drawing.Point(728, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(38, 33);
+            this.btnMinimizar.TabIndex = 27;
+            this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.AutoSize = true;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMaximizar.IconColor = System.Drawing.Color.Snow;
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconSize = 25;
+            this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaximizar.Location = new System.Drawing.Point(763, 0);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(38, 33);
+            this.btnMaximizar.TabIndex = 26;
+            this.btnMaximizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMaximizar.UseVisualStyleBackColor = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
             // frmRecuperacion_De_Contraseñas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,6 +219,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_regrsar);
             this.Controls.Add(this.btnIngresarCod);
             this.Controls.Add(this.lbmensaje);
             this.Controls.Add(this.pictureBox2);
@@ -183,7 +230,10 @@
             this.Controls.Add(this.txtUsuario);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRecuperacion_De_Contraseñas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmRecuperacion_De_Contraseñas_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -203,5 +253,7 @@
         private System.Windows.Forms.Button btnEnviarSoli;
         private System.Windows.Forms.TextBox txtUsuario;
         private FontAwesome.Sharp.IconButton btn_regrsar;
+        private FontAwesome.Sharp.IconButton btnMinimizar;
+        private FontAwesome.Sharp.IconButton btnMaximizar;
     }
 }
