@@ -15,6 +15,7 @@ namespace Proyecto_DesarrolloSoftware
         public frm_Admin_Principal()
         {
             InitializeComponent();
+            btnMaximizar.Text = "🗖";
         }
 
 
@@ -65,5 +66,30 @@ namespace Proyecto_DesarrolloSoftware
             frmLogin.Show();
             this.Close();
         }
+
+        private void btnBitacora_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new frm_Bitacora());
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMaximizar.Text = "🗖";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizar.Text = "🗗";
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
     }
 }

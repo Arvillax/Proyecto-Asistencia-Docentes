@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Admin_Principal));
             this.pnMenuLateral = new System.Windows.Forms.Panel();
+            this.btnBitacora = new FontAwesome.Sharp.IconButton();
             this.btnMigracionDatos = new FontAwesome.Sharp.IconButton();
             this.btnCierrePeriodo = new FontAwesome.Sharp.IconButton();
             this.btnCreacionPeriodo = new FontAwesome.Sharp.IconButton();
@@ -38,13 +39,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cierre_sesion = new FontAwesome.Sharp.IconButton();
             this.PnlPadre = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.pnMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PnlPadre.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMenuLateral
             // 
             this.pnMenuLateral.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnMenuLateral.Controls.Add(this.btnBitacora);
             this.pnMenuLateral.Controls.Add(this.btnMigracionDatos);
             this.pnMenuLateral.Controls.Add(this.btnCierrePeriodo);
             this.pnMenuLateral.Controls.Add(this.btnCreacionPeriodo);
@@ -58,6 +63,29 @@
             this.pnMenuLateral.Name = "pnMenuLateral";
             this.pnMenuLateral.Size = new System.Drawing.Size(249, 730);
             this.pnMenuLateral.TabIndex = 66;
+            // 
+            // btnBitacora
+            // 
+            this.btnBitacora.BackColor = System.Drawing.Color.Khaki;
+            this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBitacora.FlatAppearance.BorderSize = 0;
+            this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBitacora.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.btnBitacora.IconColor = System.Drawing.Color.Black;
+            this.btnBitacora.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBitacora.IconSize = 40;
+            this.btnBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBitacora.Location = new System.Drawing.Point(0, 345);
+            this.btnBitacora.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBitacora.Name = "btnBitacora";
+            this.btnBitacora.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.btnBitacora.Size = new System.Drawing.Size(249, 49);
+            this.btnBitacora.TabIndex = 61;
+            this.btnBitacora.Text = "Bitácora";
+            this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBitacora.UseVisualStyleBackColor = false;
+            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
             // 
             // btnMigracionDatos
             // 
@@ -211,10 +239,51 @@
             // 
             // PnlPadre
             // 
+            this.PnlPadre.Controls.Add(this.btnMinimizar);
+            this.PnlPadre.Controls.Add(this.btnMaximizar);
             this.PnlPadre.Location = new System.Drawing.Point(247, 0);
             this.PnlPadre.Name = "PnlPadre";
             this.PnlPadre.Size = new System.Drawing.Size(1311, 730);
             this.PnlPadre.TabIndex = 67;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimizar.IconColor = System.Drawing.Color.Snow;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMinimizar.IconSize = 20;
+            this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimizar.Location = new System.Drawing.Point(1238, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(38, 33);
+            this.btnMinimizar.TabIndex = 69;
+            this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMaximizar.IconColor = System.Drawing.Color.Snow;
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconSize = 25;
+            this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaximizar.Location = new System.Drawing.Point(1273, 0);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(38, 33);
+            this.btnMaximizar.TabIndex = 68;
+            this.btnMaximizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMaximizar.UseVisualStyleBackColor = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // frm_Admin_Principal
             // 
@@ -228,6 +297,7 @@
             this.Name = "frm_Admin_Principal";
             this.pnMenuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PnlPadre.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -243,5 +313,8 @@
         private FontAwesome.Sharp.IconButton btn_cierre_sesion;
         private System.Windows.Forms.Panel PnlPadre;
         private FontAwesome.Sharp.IconButton btnMigracionDatos;
+        private FontAwesome.Sharp.IconButton btnBitacora;
+        private FontAwesome.Sharp.IconButton btnMinimizar;
+        private FontAwesome.Sharp.IconButton btnMaximizar;
     }
 }

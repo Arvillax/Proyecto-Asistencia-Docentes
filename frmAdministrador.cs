@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
-    public partial class Admin : Form
+    public partial class frmGestion_Usuarios : Form
     {
         string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
         SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
-        public Admin()
+        public frmGestion_Usuarios()
         {
             InitializeComponent();
             m_tabla_usuarios_admin();
@@ -58,85 +58,7 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
-        private void btnCerrar_Click_1(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Close();
-        }
-
-        private void btnMGestion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMdatos_Click(object sender, EventArgs e)
-        {
-            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
-            frmmodiDatos.Show();
-            this.Hide();
-        }
-
-        private void btnMCierre_Click(object sender, EventArgs e)
-        {
-            frmCierre frmcierre = new frmCierre();
-            frmcierre.Show();
-            this.Hide();
-        }
-
-        private void btnMMigra_Click(object sender, EventArgs e)
-        {
-            frmMigracion frmmigra = new frmMigracion();
-            frmmigra.Show();
-            this.Hide();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            frm_agregar_admin frm_Agregar = new frm_agregar_admin();
-            frm_Agregar.Show();
-           
-
-        }
-
-        private void btn_refrescar_Click(object sender, EventArgs e)
-        {
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            con.mostrar_usuarios_admin(dataGridView1);
-            conectar.Close();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            txt_idempleado.Visible = true;
-            txt_nombre.Visible = true;
-            cmb_permiso.Visible = true;
-            cmb_estado.Visible = true;
-
-            lbl_estado.Visible = true;
-            lbl_id.Visible = true;
-            lbl_nombre.Visible = true;
-            lbl_permiso.Visible = true;
-
-            btn_guardarc.Visible = true;
-
-            // frm_modificar_admin modi = new frm_modificar_admin();  
-            // modi.Show();
-
-        }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,32 +87,6 @@ namespace Proyecto_DesarrolloSoftware
             lbl_permiso.Visible = false;
 
             btn_guardarc.Visible = false;
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_modi_datos_Click(object sender, EventArgs e)
-        {
-            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
-            frmmodiDatos.Show();
-            this.Hide();
-        }
-
-        private void btn_cierre_Click(object sender, EventArgs e)
-        {
-            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
-            frmmodiDatos.Show();
-            this.Hide();
-        }
-
-        private void btn_migra_Click(object sender, EventArgs e)
-        {
-            frmMigracion frmmigra = new frmMigracion();
-            frmmigra.Show();
-            this.Hide();
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
@@ -268,40 +164,6 @@ namespace Proyecto_DesarrolloSoftware
 
            
         }
-
-        private void btn_cierre_sesion_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Close();
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
-            frmmodiDatos.Show();
-            this.Hide();
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            frmCierre cierre = new frmCierre();
-            cierre.Show();
-            this.Hide();
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            frmMigracion frmmigra = new frmMigracion();
-            frmmigra.Show();
-            this.Hide();
-        }
-
         private void cmb_permiso_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_permiso.SelectedIndex == 0)

@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_DesarrolloSoftware
 {
-    partial class Admin
+    partial class frmGestion_Usuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestion_Usuarios));
             this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmb_permiso = new System.Windows.Forms.ComboBox();
@@ -45,13 +45,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_guardarc = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_busqueda = new FontAwesome.Sharp.IconButton();
             this.btn_recargar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_modificard = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -269,6 +269,14 @@
             this.btn_guardarc.UseVisualStyleBackColor = false;
             this.btn_guardarc.Click += new System.EventHandler(this.btn_guardarc_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(21, 130);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1125, 388);
+            this.panel2.TabIndex = 63;
+            // 
             // btn_busqueda
             // 
             this.btn_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -371,15 +379,7 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Gestión de Usuarios";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(21, 130);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1125, 388);
-            this.panel2.TabIndex = 63;
-            // 
-            // Admin
+            // frmGestion_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -398,9 +398,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Admin";
+            this.Name = "frmGestion_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGestion_Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
