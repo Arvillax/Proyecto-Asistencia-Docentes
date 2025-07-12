@@ -92,8 +92,8 @@
             this.panel1.TabIndex = 48;
             // 
             // btnRegresar
-            // 
-            this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            //
+            this.btnRegresar.Anchor =  System.Windows.Forms.AnchorStyles.Right;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Location = new System.Drawing.Point(500, 5);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
