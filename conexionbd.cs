@@ -8,6 +8,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Windows;
 using System.Windows.Controls;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Proyecto_DesarrolloSoftware
 {
@@ -426,35 +427,65 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        public DataTable ObtenerAsistencias(int idPeriodo)
+        public DataTable ObtenerAsistencias()
         {
-            DataTable dt = new DataTable();
+            {
+                DataTable dt = new DataTable();
 
+                try
+                {
+                    using (SqlConnection conexion = Conectar())
+                    {
+                        conexion.Open();
+
+                        using (SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", conexion))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                            da.Fill(dt);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener asistencias: " + ex.Message);
+                }
+
+                return dt;
+            }
+        }
+
+        public void CerrarPeriodo(DateTime fechaFinal)
+        {
             try
             {
-                using (SqlConnection con = new SqlConnection())
+                using (SqlConnection con = Conectar())
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", con))
+                    using (SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@idPeriodo", idPeriodo);
+                        cmd.Parameters.AddWithValue("@Fecha_Final", fechaFinal);
 
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(dt);
+                        // Capturar mensajes informativos de SQL Server
+                        con.InfoMessage += (s, ev) =>
+                        {
+                            // Aquí puedes manejar los mensajes como gustes, por ejemplo:
+                            MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        };
+
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al cargar asistencias: " + ex.Message);
+                // Propagar la excepción para que la manejes donde llames al método
+                throw new Exception("Error al cerrar periodo: " + ex.Message);
             }
-
-            return dt;
         }
-
-
     }
 }
 

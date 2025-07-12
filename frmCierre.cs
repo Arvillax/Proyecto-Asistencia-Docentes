@@ -18,35 +18,34 @@ namespace Proyecto_DesarrolloSoftware
         public frmCierre()
         {
             InitializeComponent();
-            //CargarAsistencias();
+            CargarAsistencias();
+
         }
+
+        private void CargarAsistencias()
+        {
+            try
+            {
+                dgvMatriz.DataSource = cn.ObtenerAsistencias();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void btn_cerrar_periodo_Click(object sender, EventArgs e)
         {
             try
             {
-                using (SqlConnection con = cn.Conectar())
-                {
-                    con.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Fecha_Final", DateTime.Now.Date);
-
-                        // Capturar mensajes de SQL Server
-                        con.InfoMessage += (s, ev) =>
-                        {
-                            MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        };
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
+                cn.CerrarPeriodo(DateTime.Now.Date);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cerrar periodo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
