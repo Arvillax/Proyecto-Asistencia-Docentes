@@ -26,7 +26,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnMGestion_Click(object sender, EventArgs e)
         {
-            frmGestion_Usuarios frmGestion = new frmGestion_Usuarios();
+            Admin frmGestion = new Admin();
             frmGestion.Show();
             this.Hide();
         }
@@ -56,7 +56,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            frmGestion_Usuarios frmGestion = new frmGestion_Usuarios();
+            Admin frmGestion = new Admin();
             frmGestion.Show();
             this.Hide();
         }
@@ -82,8 +82,10 @@ namespace Proyecto_DesarrolloSoftware
             this.Close();
         }
 
-        public void MigrarDatos(DataTable tablaDatos)
+        public int MigrarDatos(DataTable tablaDatos)
         {
+            int errores = 0;
+
             using (SqlConnection conectar = new SqlConnection(server))
             {
                 conectar.Open();
@@ -95,7 +97,6 @@ namespace Proyecto_DesarrolloSoftware
                         {
                             cmdSql.CommandType = CommandType.StoredProcedure;
 
-                            cmdSql.CommandType = CommandType.StoredProcedure;
                             cmdSql.Parameters.AddWithValue("@idFacultad", row["idFacultad"].ToString());
                             cmdSql.Parameters.AddWithValue("@idClase", row["idClase"].ToString());
                             cmdSql.Parameters.AddWithValue("@seccion", row["Seccion"].ToString());
@@ -105,26 +106,30 @@ namespace Proyecto_DesarrolloSoftware
                             cmdSql.Parameters.AddWithValue("@hora_inicio", TimeSpan.Parse(row["Hora_Inicio"].ToString()));
                             cmdSql.Parameters.AddWithValue("@hora_final", TimeSpan.Parse(row["Hora_Final"].ToString()));
                             cmdSql.Parameters.AddWithValue("@idEdificio", row["idEdificio"].ToString());
+
                             string idAula = row["idAula"].ToString().Trim();
-                            if (string.IsNullOrWhiteSpace(idAula)) idAula = "SN";
-                            else idAula = Convert.ToInt32(row["idAula"]).ToString(); // convierte a int y luego a string limpio
+                            if (string.IsNullOrWhiteSpace(idAula))
+                                idAula = "SN";
+                            else
+                                idAula = Convert.ToInt32(row["idAula"]).ToString();
 
                             cmdSql.Parameters.AddWithValue("@idAula", idAula);
 
-
-
-
                             cmdSql.ExecuteNonQuery();
-                            Console.WriteLine($"✅ Migración de clase {row["idClase"]} completada correctamente.");
                         }
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"⚠️ Error en la migración de {row["idClase"]}: " + ex.Message);
+                        errores++;
+                        Console.WriteLine($"⚠️ Error en la fila: {ex.Message}");
                     }
                 }
             }
+
+            return errores;
         }
+
+
 
         static DataTable LeerExcel(string rutaArchivo)
         {
@@ -189,118 +194,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-           
-        }
 
-        private void btn_AgregarP_Click(object sender, EventArgs e)
-        {
-            lb_fechaI.Visible = true;
-            lb_fechaF.Visible = true;
-            lb_descr.Visible = true;
-
-            dtpFechaInicio.Visible = true;
-            dtpFechaFinal.Visible = true;
-            txtDescripcion.Visible = true;
-
-            btnGuardarP.Visible = true;
-        }
-
-        private void btnGuardarP_Click(object sender, EventArgs e)
-        {
-            string descripcionPeriodo = txtDescripcion.Text.Trim();
-            DateTime fechaInicio = dtpFechaInicio.Value.Date;
-            DateTime fechaFin = dtpFechaFinal.Value.Date;
-            int anioActual = DateTime.Now.Year;
-
-            //Validación campos vacíos o fuera del rango del año
-            if (string.IsNullOrEmpty(descripcionPeriodo))
-            {
-                MessageBox.Show("Debes ingresar la descripción del período.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (fechaInicio.Year != anioActual || fechaFin.Year != anioActual)
-            {
-                MessageBox.Show($"Las fechas deben estar dentro del año actual: {anioActual}.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (fechaFin < fechaInicio)
-            {
-                MessageBox.Show("La fecha de fin no puede ser menor que la fecha de inicio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            TimeSpan duracion = fechaFin - fechaInicio;
-            if (duracion.TotalDays < 30)
-            {
-                MessageBox.Show("El período debe durar al menos 1 mes (30 días).", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Confirmación del usuario
-            DialogResult confirmacion = MessageBox.Show(
-                $"¿Estás seguro de que deseas crear el nuevo período '{descripcionPeriodo}' del {fechaInicio:dd/MM/yyyy} al {fechaFin:dd/MM/yyyy}?",
-                "Confirmar creación de período",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (confirmacion == DialogResult.No)
-                return;
-
-            // Validaciones sql
-            using (SqlConnection conectar = new SqlConnection(server))
-            {
-                try
-                {
-                    conectar.Open();
-
-                    // Validar si ya existe un período con esas fechas
-                    using (SqlCommand cmdValidar = new SqlCommand("sp_ValidarFechaPeriodo", conectar))
-                    {
-                        cmdValidar.CommandType = CommandType.StoredProcedure;
-                        cmdValidar.Parameters.AddWithValue("@FechaInicio", fechaInicio);
-                        cmdValidar.Parameters.AddWithValue("@FechaFinal", fechaFin);
-
-                        int existe = (int)cmdValidar.ExecuteScalar();
-
-                        if (existe > 0)
-                        {
-                            MessageBox.Show("Ya existe un período con esas fechas de inicio o fin.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                    }
-
-                    // Insertar el nuevo período
-                    using (SqlCommand cmdInsertar = new SqlCommand("sp_AgregarPeriodo", conectar))
-                    {
-                        cmdInsertar.CommandType = CommandType.StoredProcedure;
-                        cmdInsertar.Parameters.AddWithValue("@FechaInicio", fechaInicio);
-                        cmdInsertar.Parameters.AddWithValue("@FechaFin", fechaFin);
-                        cmdInsertar.Parameters.AddWithValue("@Descripcion", descripcionPeriodo);
-
-                        cmdInsertar.ExecuteNonQuery();
-
-                        MessageBox.Show("El período se ha guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        btnImportar.Enabled = true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar el período: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            lb_fechaI.Visible = false;
-            lb_fechaF.Visible = false;
-            lb_descr.Visible = false;
-
-            dtpFechaInicio.Visible = false;
-            dtpFechaFinal.Visible = false;
-            txtDescripcion.Visible = false;
-
-            btnGuardarP.Visible = false;
-            btn_AgregarP.Enabled = false;
         }
 
         private void btnImportar_Click(object sender, EventArgs e)
@@ -318,20 +212,25 @@ namespace Proyecto_DesarrolloSoftware
                     string rutaArchivo = openFileDialog.FileName;
                     Console.WriteLine($"📂 Archivo seleccionado: {rutaArchivo}");
 
-                    // Leer datos del Excel
                     DataTable tablaDatos = LeerExcel(rutaArchivo);
 
-                    // Verificar si la tabla tiene datos
                     if (tablaDatos == null || tablaDatos.Rows.Count == 0)
                     {
                         MessageBox.Show("No se encontraron datos en el archivo Excel.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    dataGridView1.DataSource = tablaDatos;
-                    // Insertar datos en la base de datos
-                    MigrarDatos(tablaDatos);
-                    MessageBox.Show("Migración completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int errores = MigrarDatos(tablaDatos);
+
+                    if (errores == 0)
+                    {
+                        dataGridView1.DataSource = tablaDatos;
+                        MessageBox.Show("Migración completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"La migración se completó con {errores} errores. Verifica el Excel antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
             catch (Exception ex)
@@ -340,9 +239,5 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void btn_AgregarP_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
