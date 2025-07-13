@@ -58,7 +58,85 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
-        
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Form1 frmLogin = new Form1();
+            frmLogin.Show();
+            this.Close();
+        }
+
+        private void btnMGestion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMdatos_Click(object sender, EventArgs e)
+        {
+            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
+            frmmodiDatos.Show();
+            this.Hide();
+        }
+
+        private void btnMCierre_Click(object sender, EventArgs e)
+        {
+            frmCierre frmcierre = new frmCierre();
+            frmcierre.Show();
+            this.Hide();
+        }
+
+        private void btnMMigra_Click(object sender, EventArgs e)
+        {
+            frmMigracion frmmigra = new frmMigracion();
+            frmmigra.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frm_agregar_admin frm_Agregar = new frm_agregar_admin();
+            frm_Agregar.Show();
+           
+
+        }
+
+        private void btn_refrescar_Click(object sender, EventArgs e)
+        {
+            conectar.ConnectionString = server;
+            conectar.Open();
+            SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            con.mostrar_usuarios_admin(dataGridView1);
+            conectar.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            txt_idempleado.Visible = true;
+            txt_nombre.Visible = true;
+            cmb_permiso.Visible = true;
+            cmb_estado.Visible = true;
+
+            lbl_estado.Visible = true;
+            lbl_id.Visible = true;
+            lbl_nombre.Visible = true;
+            lbl_permiso.Visible = true;
+
+            btn_guardarc.Visible = true;
+
+            // frm_modificar_admin modi = new frm_modificar_admin();  
+            // modi.Show();
+
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -69,6 +147,50 @@ namespace Proyecto_DesarrolloSoftware
             cmb_permiso.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
             cmb_estado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+
+
+            
+            txt_idempleado.Visible = false;
+            txt_nombre.Visible = false;
+            cmb_permiso.Visible = false;
+            cmb_estado.Visible = false;
+
+            lbl_estado.Visible = false;
+            lbl_id.Visible = false;
+            lbl_nombre.Visible = false;
+            lbl_permiso.Visible = false;
+
+            btn_guardarc.Visible = false;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_modi_datos_Click(object sender, EventArgs e)
+        {
+            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
+            frmmodiDatos.Show();
+            this.Hide();
+        }
+
+        private void btn_cierre_Click(object sender, EventArgs e)
+        {
+            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
+            frmmodiDatos.Show();
+            this.Hide();
+        }
+
+        private void btn_migra_Click(object sender, EventArgs e)
+        {
+            frmMigracion frmmigra = new frmMigracion();
+            frmmigra.Show();
+            this.Hide();
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
@@ -146,6 +268,40 @@ namespace Proyecto_DesarrolloSoftware
 
            
         }
+
+        private void btn_cierre_sesion_Click(object sender, EventArgs e)
+        {
+            Form1 frmLogin = new Form1();
+            frmLogin.Show();
+            this.Close();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
+            frmmodiDatos.Show();
+            this.Hide();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            frmCierre cierre = new frmCierre();
+            cierre.Show();
+            this.Hide();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            frmMigracion frmmigra = new frmMigracion();
+            frmmigra.Show();
+            this.Hide();
+        }
+
         private void cmb_permiso_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_permiso.SelectedIndex == 0)
@@ -166,6 +322,10 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+        }
+
         private void cmb_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_estado.SelectedIndex == 0)
@@ -180,10 +340,19 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
+        private void txt_estado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void btn_recargar_Click(object sender, EventArgs e)
         {
             m_tabla_usuarios_admin();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_busqueda_Click(object sender, EventArgs e)

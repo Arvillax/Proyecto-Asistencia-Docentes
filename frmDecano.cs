@@ -24,7 +24,6 @@ namespace Proyecto_DesarrolloSoftware
             txt_usu_decano.Text = usuario_decano.ToString();
             mtabla_decano();
             escondertablas();
-            btnMaximizar.Text = "🗖";
 
         }
 
@@ -306,31 +305,6 @@ namespace Proyecto_DesarrolloSoftware
             }
 
            
-        }
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(1600, 700);
-                btnMaximizar.Text = "🗖";
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                btnMaximizar.Text = "🗗";
-            }
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void frmDecano_Load(object sender, EventArgs e)
-        {
-            this.MinimumSize = new Size(1600, 700);
         }
     }
 }

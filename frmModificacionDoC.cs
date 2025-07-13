@@ -49,7 +49,6 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
-<<<<<<< HEAD
         private void btnMdatos_Click(object sender, EventArgs e)
         {
 
@@ -89,8 +88,6 @@ namespace Proyecto_DesarrolloSoftware
             modidatos.Show();
         }
 
-=======
->>>>>>> main
         private void button1_Click(object sender, EventArgs e)
         {
             conectar.ConnectionString = server;
@@ -112,7 +109,6 @@ namespace Proyecto_DesarrolloSoftware
             conectar.Close();
         }
 
-<<<<<<< HEAD
         private void iconButton2_Click(object sender, EventArgs e)
         {
             Admin frmGestion = new Admin();
@@ -141,8 +137,6 @@ namespace Proyecto_DesarrolloSoftware
             this.Close();
         }
 
-=======
->>>>>>> main
         private void btn_recargar_Click(object sender, EventArgs e)
         {
             m_tabla();

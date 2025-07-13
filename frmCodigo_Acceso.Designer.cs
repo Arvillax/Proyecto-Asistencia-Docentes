@@ -46,16 +46,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(404, 433);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(291, 29);
-=======
-            this.label3.Location = new System.Drawing.Point(269, 277);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 18);
->>>>>>> main
             this.label3.TabIndex = 37;
             this.label3.Text = "Ingrese código de acceso";
             // 
@@ -66,34 +60,20 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Controls.Add(this.pictureBox1);
-<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1208, 104);
-=======
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 66);
->>>>>>> main
             this.panel1.TabIndex = 36;
             // 
             // btnRegresar
             // 
             this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.btnRegresar.Location = new System.Drawing.Point(996, 17);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(184, 71);
-=======
-            this.btnRegresar.Location = new System.Drawing.Point(664, 11);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(123, 46);
->>>>>>> main
             this.btnRegresar.TabIndex = 32;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
@@ -102,17 +82,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_DesarrolloSoftware.Properties.Resources.d3d7b312_6a18_4bf1_ad9e_59d16cf61af9__1_;
-<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(10, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(94, 94);
-=======
-            this.pictureBox1.Location = new System.Drawing.Point(7, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 60);
->>>>>>> main
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -120,33 +93,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(340, 377);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 25);
-=======
-            this.label2.Location = new System.Drawing.Point(227, 241);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
->>>>>>> main
             this.label2.TabIndex = 34;
             // 
             // btnVerificarCod
             // 
             this.btnVerificarCod.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVerificarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.btnVerificarCod.Location = new System.Drawing.Point(494, 562);
             this.btnVerificarCod.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerificarCod.Name = "btnVerificarCod";
             this.btnVerificarCod.Size = new System.Drawing.Size(156, 71);
-=======
-            this.btnVerificarCod.Location = new System.Drawing.Point(329, 359);
-            this.btnVerificarCod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnVerificarCod.Name = "btnVerificarCod";
-            this.btnVerificarCod.Size = new System.Drawing.Size(104, 46);
->>>>>>> main
             this.btnVerificarCod.TabIndex = 33;
             this.btnVerificarCod.Text = "Verificar Código";
             this.btnVerificarCod.UseVisualStyleBackColor = true;
@@ -154,7 +114,6 @@
             // 
             // txtUsuario2
             // 
-<<<<<<< HEAD
             this.txtUsuario2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtUsuario2.Location = new System.Drawing.Point(419, 476);
             this.txtUsuario2.Margin = new System.Windows.Forms.Padding(4);
@@ -162,14 +121,6 @@
             this.txtUsuario2.Size = new System.Drawing.Size(340, 31);
             this.txtUsuario2.TabIndex = 32;
             this.txtUsuario2.TextChanged += new System.EventHandler(this.txtUsuario2_TextChanged);
-=======
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtUsuario.Location = new System.Drawing.Point(272, 297);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(228, 22);
-            this.txtUsuario.TabIndex = 32;
->>>>>>> main
             // 
             // pictureBox2
             // 
@@ -177,48 +128,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Proyecto_DesarrolloSoftware.Properties.Resources.NewLogo;
-<<<<<<< HEAD
             this.pictureBox2.Location = new System.Drawing.Point(404, 165);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(346, 196);
-=======
-            this.pictureBox2.Location = new System.Drawing.Point(269, 106);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(231, 126);
->>>>>>> main
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 35;
             this.pictureBox2.TabStop = false;
             // 
             // frmCodigo_Acceso
             // 
-<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(1200, 704);
-=======
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
->>>>>>> main
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnVerificarCod);
-<<<<<<< HEAD
             this.Controls.Add(this.txtUsuario2);
             this.Margin = new System.Windows.Forms.Padding(4);
-=======
-            this.Controls.Add(this.txtUsuario);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> main
             this.Name = "frmCodigo_Acceso";
+            this.Text = "frmCodigo_Acceso";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
