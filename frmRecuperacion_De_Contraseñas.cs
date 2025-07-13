@@ -14,20 +14,27 @@ namespace Proyecto_DesarrolloSoftware
     {
         //INICIADOR DE FORMULARIO 
         clsrecuperacion rec = new clsrecuperacion();
+        private int idUsuario;
+
         public frmRecuperacion_De_Contraseñas()
         {
             InitializeComponent();
             btnIngresarCod.Enabled = false;
             btnMaximizar.Text = "🗖";
+            this.MinimumSize = new Size(1187, 767);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Resize += Form1_Resize;
         }
-        // boton de ingresar codigo
-        private void btnIngresarCod_Click(object sender, EventArgs e)
+        
+        private void Form1_Resize(object sender, EventArgs e)// forzar que la aventana conserve el tamaño
         {
-            int idUsuario = Convert.ToInt32(txtUsuario.Text);
-            frmCodigo_Acceso frm = new frmCodigo_Acceso(idUsuario);
-            frm.Show();
-            this.Hide();
+            if (this.Width < 1187)
+                this.Width = 1187;
+
+            if (this.Height < 761)
+                this.Height = 761;
         }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -71,6 +78,28 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
+        private void btnVerificarCod_Click(object sender, EventArgs e)
+        {
+            if (rec.ValidarCodigo(idUsuario, txtUsuario2.Text)) // txtUsuario2 contiene el código
+            {
+                frmNueva_Contraseña frm = new frmNueva_Contraseña(idUsuario);
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Código incorrecto o expirado.");
+            }
+        }
+
+        private void txtUsuario2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
         private void btn_regrsar_Click(object sender, EventArgs e)
         {
             Form1 frmLogin = new Form1();
@@ -80,7 +109,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private async void btn_enviar_Click(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
