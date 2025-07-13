@@ -17,28 +17,18 @@ namespace Proyecto_DesarrolloSoftware
         public frmRecuperacion_De_Contraseñas()
         {
             InitializeComponent();
-            btnVerificarCod.Enabled = false;
-        }
-
-        
-        private int idUsuario;
-        // boton de regresar
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Hide();
+            btnIngresarCod.Enabled = false;
+            btnMaximizar.Text = "🗖";
         }
         // boton de ingresar codigo
-        /*
         private void btnIngresarCod_Click(object sender, EventArgs e)
         {
             int idUsuario = Convert.ToInt32(txtUsuario.Text);
             frmCodigo_Acceso frm = new frmCodigo_Acceso(idUsuario);
             frm.Show();
             this.Hide();
-        }*/
-        
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -71,39 +61,16 @@ namespace Proyecto_DesarrolloSoftware
             {
                 await rec.EnviarCorreoAsync(codigo);
                 lbmensaje.Text = "Código de recuperación enviado a tu correo.";
-                btnVerificarCod.Enabled = true;
+                btnIngresarCod.Enabled = true;
             }
             catch (Exception ex)
             {
                 lbmensaje.Text = "Error al enviar el correo. Inténtalo de nuevo más tarde.";
                 Console.WriteLine("Error al enviar el correo: " + ex.Message);
-                btnVerificarCod.Enabled = false;
+                btnIngresarCod.Enabled = false;
             }
         }
-        
 
-
-        private void btnVerificarCod_Click(object sender, EventArgs e)
-        {
-            if (rec.ValidarCodigo(idUsuario, txtUsuario2.Text))
-            {
-                frmNueva_Contraseña frm = new frmNueva_Contraseña(idUsuario);
-                frm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Código incorrecto o expirado.");
-            }
-        }
-        private void txtUsuario2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btn_regrsar_Click(object sender, EventArgs e)
         {
             Form1 frmLogin = new Form1();
@@ -114,6 +81,31 @@ namespace Proyecto_DesarrolloSoftware
         private async void btn_enviar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+                btnMaximizar.Text = "🗖";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizar.Text = "🗗";
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frmRecuperacion_De_Contraseñas_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(800, 600);
         }
     }
 }
