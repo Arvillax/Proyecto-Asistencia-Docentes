@@ -21,9 +21,27 @@ namespace Proyecto_DesarrolloSoftware
         {
             InitializeComponent();
             btnMaximizar.Text = "🗖";
+            // fijar pantalla
+            this.MinimumSize = new Size(1130, 761);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
+        private bool contraseñaVisible = false;
+        private void btnMostrarContraseña_Click(object sender, EventArgs e)
+        {
+            contraseñaVisible = !contraseñaVisible;
 
-
+            if (contraseñaVisible)
+            {
+                txtContraseña.PasswordChar = '\0'; // Mostrar texto normal
+                btnMostrarContraseña.Text = "🙈";
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '*'; // Ocultar con asteriscos
+                btnMostrarContraseña.Text = "👁️";
+            }
+        }
+       
         private void Ingresar()
         {
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
