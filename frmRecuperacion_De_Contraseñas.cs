@@ -17,6 +17,7 @@ namespace Proyecto_DesarrolloSoftware
         public frmRecuperacion_De_Contraseñas()
         {
             InitializeComponent();
+<<<<<<< HEAD
             btnVerificarCod.Enabled = false;
         }
 
@@ -28,6 +29,10 @@ namespace Proyecto_DesarrolloSoftware
             Form1 frmLogin = new Form1();
             frmLogin.Show();
             this.Hide();
+=======
+            btnIngresarCod.Enabled = false;
+            btnMaximizar.Text = "🗖";
+>>>>>>> main
         }
         // boton de ingresar codigo
         /*
@@ -114,6 +119,31 @@ namespace Proyecto_DesarrolloSoftware
         private async void btn_enviar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+                btnMaximizar.Text = "🗖";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizar.Text = "🗗";
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frmRecuperacion_De_Contraseñas_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(800, 600);
         }
     }
 }

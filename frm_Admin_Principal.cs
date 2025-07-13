@@ -15,6 +15,11 @@ namespace Proyecto_DesarrolloSoftware
         public frm_Admin_Principal()
         {
             InitializeComponent();
+<<<<<<< HEAD
+=======
+            btnMaximizar.Text = "🗖";
+            
+>>>>>>> main
         }
 
 
@@ -36,7 +41,11 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             AbrirFormularioHijo(new Admin());
+=======
+            AbrirFormularioHijo(new frmGestion_Usuarios());
+>>>>>>> main
         }
 
         private void btnCreacionPeriodo_Click(object sender, EventArgs e)
@@ -65,5 +74,38 @@ namespace Proyecto_DesarrolloSoftware
             frmLogin.Show();
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+        private void btnBitacora_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new frm_Bitacora());
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(1600, 700);
+                btnMaximizar.Text = "🗖";
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizar.Text = "🗗";
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frm_Admin_Principal_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(1700, 700);
+        }
+>>>>>>> main
     }
 }

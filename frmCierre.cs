@@ -18,35 +18,56 @@ namespace Proyecto_DesarrolloSoftware
         public frmCierre()
         {
             InitializeComponent();
+<<<<<<< HEAD
             //CargarAsistencias();
         }
         private void btn_cerrar_periodo_Click(object sender, EventArgs e)
+=======
+            CargarAsistencias();
+
+        }
+
+        private void CargarAsistencias()
+>>>>>>> main
         {
             try
             {
-                using (SqlConnection con = cn.Conectar())
-                {
-                    con.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Fecha_Final", DateTime.Now.Date);
-
-                        // Capturar mensajes de SQL Server
-                        con.InfoMessage += (s, ev) =>
-                        {
-                            MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        };
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
+                dgvMatriz.DataSource = cn.ObtenerAsistencias();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cerrar periodo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        private void btn_cerrar_periodo_Click(object sender, EventArgs e)
+        {
+            
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Está seguro que desea cerrar el período?",
+                "Confirmación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            
+            if (confirmacion == DialogResult.Yes)
+            {
+                try
+                {
+                    cn.CerrarPeriodo(DateTime.Now.Date);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cerrar período: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cierre del período cancelado.", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 }

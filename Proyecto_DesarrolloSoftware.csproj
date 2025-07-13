@@ -161,6 +161,12 @@
     <Compile Include="frmNueva_Contraseña.Designer.cs">
       <DependentUpon>frmNueva_Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevoPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoPeriodo.Designer.cs">
+      <DependentUpon>frmNuevoPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmObservacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,23 +185,23 @@
     <Compile Include="frmSupervisor.Designer.cs">
       <DependentUpon>frmSupervisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Admin_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Admin_Principal.Designer.cs">
+      <DependentUpon>frm_Admin_Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_agregar_admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_agregar_admin.Designer.cs">
       <DependentUpon>frm_agregar_admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_modificacion_datos.cs">
+    <Compile Include="frm_Bitacora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_modificacion_datos.Designer.cs">
-      <DependentUpon>frm_modificacion_datos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_modificar_admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_modificar_admin.Designer.cs">
-      <DependentUpon>frm_modificar_admin.cs</DependentUpon>
+    <Compile Include="frm_Bitacora.Designer.cs">
+      <DependentUpon>frm_Bitacora.cs</DependentUpon>
     </Compile>
     <Compile Include="obs_justificacion.cs">
       <SubType>Form</SubType>
@@ -243,6 +249,9 @@
     <EmbeddedResource Include="frmNueva_Contraseña.resx">
       <DependentUpon>frmNueva_Contraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoPeriodo.resx">
+      <DependentUpon>frmNuevoPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmObservacion.resx">
       <DependentUpon>frmObservacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,14 +261,14 @@
     <EmbeddedResource Include="frmSupervisor.resx">
       <DependentUpon>frmSupervisor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Admin_Principal.resx">
+      <DependentUpon>frm_Admin_Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_agregar_admin.resx">
       <DependentUpon>frm_agregar_admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_modificacion_datos.resx">
-      <DependentUpon>frm_modificacion_datos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_modificar_admin.resx">
-      <DependentUpon>frm_modificar_admin.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Bitacora.resx">
+      <DependentUpon>frm_Bitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obs_justificacion.resx">
       <DependentUpon>obs_justificacion.cs</DependentUpon>
