@@ -339,5 +339,10 @@ namespace Proyecto_DesarrolloSoftware
                 MessageBox.Show("Error al migrar datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_AgregarP_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

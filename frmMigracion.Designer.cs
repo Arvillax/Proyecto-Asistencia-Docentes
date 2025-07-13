@@ -181,6 +181,7 @@
             this.btn_AgregarP.TabIndex = 53;
             this.btn_AgregarP.Text = "Agregar Nuevo Periodo";
             this.btn_AgregarP.UseVisualStyleBackColor = true;
+            this.btn_AgregarP.Click += new System.EventHandler(this.btn_AgregarP_Click_1);
             // 
             // frmMigracion
             // 

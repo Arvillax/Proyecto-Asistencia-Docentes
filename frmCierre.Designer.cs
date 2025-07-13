@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_busqueda = new System.Windows.Forms.TextBox();
+            this.dtpBitacora = new System.Windows.Forms.DateTimePicker();
             this.pnMenuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).BeginInit();
             this.SuspendLayout();
@@ -150,6 +151,15 @@
             this.txt_busqueda.Size = new System.Drawing.Size(785, 26);
             this.txt_busqueda.TabIndex = 32;
             // 
+            // dtpBitacora
+            // 
+            this.dtpBitacora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpBitacora.Location = new System.Drawing.Point(1114, 66);
+            this.dtpBitacora.Name = "dtpBitacora";
+            this.dtpBitacora.Size = new System.Drawing.Size(200, 22);
+            this.dtpBitacora.TabIndex = 34;
+            // 
             // frmCierre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -157,6 +167,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1395, 760);
             this.ControlBox = false;
+            this.Controls.Add(this.dtpBitacora);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_busqueda);
             this.Controls.Add(this.btn_cerrar_periodo);
@@ -183,5 +194,6 @@
         private System.Windows.Forms.DataGridView dgvMatriz;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_busqueda;
+        private System.Windows.Forms.DateTimePicker dtpBitacora;
     }
 }

@@ -37,13 +37,29 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btn_cerrar_periodo_Click(object sender, EventArgs e)
         {
-            try
+            
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Está seguro que desea cerrar el período?",
+                "Confirmación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            
+            if (confirmacion == DialogResult.Yes)
             {
-                cn.CerrarPeriodo(DateTime.Now.Date);
+                try
+                {
+                    cn.CerrarPeriodo(DateTime.Now.Date);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cerrar período: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cierre del período cancelado.", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
