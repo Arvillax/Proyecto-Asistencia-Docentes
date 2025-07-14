@@ -36,7 +36,7 @@ namespace Proyecto_DesarrolloSoftware
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_bus_idempleado_admin", conectar);
+            SqlCommand cmd = new SqlCommand("PA_BUS_IDEMPLEADO_ADMIN", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id_empleado", busqueda);
 
@@ -66,7 +66,7 @@ namespace Proyecto_DesarrolloSoftware
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_bus_nomclase_admin", conectar);
+            SqlCommand cmd = new SqlCommand("PA_BUS_NOMCLASE_ADMIN", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@nom_clase", busqueda);
 
@@ -96,7 +96,7 @@ namespace Proyecto_DesarrolloSoftware
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_bus_nom_admin", conectar);
+            SqlCommand cmd = new SqlCommand("s  ", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@nombre", busqueda);
 
@@ -122,10 +122,10 @@ namespace Proyecto_DesarrolloSoftware
 
             conectar.ConnectionString = server;
             conectar.Open();
-            string query = "sp_veri_aula " + nueva_aula;
+            string query = "PA_VERIFICACION_AULA " + nueva_aula;
 
 
-            SqlCommand cmd = new SqlCommand("sp_veri_aula", conectar);
+            SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id_aula", nueva_aula);
 
@@ -145,10 +145,10 @@ namespace Proyecto_DesarrolloSoftware
             
             conectar.ConnectionString = server;
             conectar.Open();
-            string query = "sp_veri_usu " + id_empleado;
+            string query = "PA_VERIFICACION_AULA " + id_empleado;
 
 
-            SqlCommand cmd = new SqlCommand("sp_veri_usu", conectar);
+            SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@usuario", id_empleado);
 

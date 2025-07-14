@@ -26,7 +26,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection con = Conectar())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_VU", con);
+                    SqlCommand cmd = new SqlCommand("PA_VALIDAR_USUARIO", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
 
@@ -51,7 +51,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection con = Conectar())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_GCodigo", con);
+                    SqlCommand cmd = new SqlCommand("PA_GENERAR_CODIGO", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
                     cmd.Parameters.AddWithValue("@Codigo", codigo);
@@ -84,7 +84,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection con = Conectar())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_CContraseña", con);
+                    SqlCommand cmd = new SqlCommand("PA_CAMBIO_CONTRASEÑA", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
