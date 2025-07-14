@@ -51,7 +51,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection con = Conectar())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("PA_GENERAR_CODIGO", con);
+                    SqlCommand cmd = new SqlCommand("PA_GUARDAR_CODIGO", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
                     cmd.Parameters.AddWithValue("@Codigo", codigo);

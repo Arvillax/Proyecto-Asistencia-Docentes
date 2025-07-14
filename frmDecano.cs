@@ -39,7 +39,7 @@ namespace Proyecto_DesarrolloSoftware
 
             conectar.ConnectionString = server;
             conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_mos_decano", conectar);
+            SqlCommand cmd = new SqlCommand("PA_MOSTRAR_DATOS_DECANO", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id_decano", usu_decano);
 
@@ -119,7 +119,7 @@ namespace Proyecto_DesarrolloSoftware
             conectar.ConnectionString = server;
             conectar.Open();
 
-            SqlCommand cmd = new SqlCommand("sp_justificacion ", conectar);
+            SqlCommand cmd = new SqlCommand("PA_MARCAR_JUSTIFICACION_DECANO ", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@estado_justificacion", est_asis);
             cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
@@ -148,7 +148,7 @@ namespace Proyecto_DesarrolloSoftware
             conectar.Open();
             
 
-            SqlCommand cmd = new SqlCommand("sp_justificacion ", conectar);
+            SqlCommand cmd = new SqlCommand("PA_MARCAR_JUSTIFICACION_DECANO ", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@estado_justificacion", est_asis);
             cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
@@ -190,7 +190,7 @@ namespace Proyecto_DesarrolloSoftware
             conectar.ConnectionString = server;
             conectar.Open();
 
-            SqlCommand cmd = new SqlCommand("sp_justificacion ", conectar);
+            SqlCommand cmd = new SqlCommand("PA_MARCAR_JUSTIFICACION_DECANO ", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@estado_justificacion", est_asis);
             cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
@@ -219,7 +219,7 @@ namespace Proyecto_DesarrolloSoftware
             conectar.Open();
 
 
-            SqlCommand cmd = new SqlCommand("sp_justificacion ", conectar);
+            SqlCommand cmd = new SqlCommand("PA_MARCAR_JUSTIFICACION_DECANO ", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@estado_justificacion", est_asis);
             cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
@@ -266,7 +266,7 @@ namespace Proyecto_DesarrolloSoftware
 
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_decano", conectar);
+                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_DATOS_DECANO ", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@clase", busqueda);
                     cmd.Parameters.AddWithValue("@id_decano", id);
@@ -349,7 +349,7 @@ namespace Proyecto_DesarrolloSoftware
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable contenedor = new DataTable();
-                SqlCommand cmd = new SqlCommand("sp_bus_decano", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_DATOS_DECANO ", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@clase", busqueda);
                 cmd.Parameters.AddWithValue("@id_decano", id);

@@ -96,9 +96,9 @@ namespace Proyecto_DesarrolloSoftware
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_bus_nom_admin", conectar);
+            SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@nombre", busqueda);
+            cmd.Parameters.AddWithValue("@nombre", busqueda);   
 
             try
             {
@@ -252,7 +252,7 @@ namespace Proyecto_DesarrolloSoftware
             DataTable contenedor = new DataTable();
             conectar.ConnectionString = server;
             conectar.Open();
-            string query = "sp_justificacion " + est_asis + "," + id_asistencia + "," + id_decano ;
+            string query = "PA_MARCAR_JUSTIFICACION_DECANO " + est_asis + "," + id_asistencia + "," + id_decano ;
 
             SqlCommand cmd = new SqlCommand(query, conectar);
             try
@@ -277,7 +277,7 @@ namespace Proyecto_DesarrolloSoftware
             DataTable contenedor = new DataTable();
             conectar.ConnectionString = server;
             conectar.Open();
-            string query = "sp_mos_decano " + usu_decano;
+            string query = "PA_MOSTRAR_DATOS_DECANO " + usu_decano;
 
             SqlCommand cmd = new SqlCommand(query, conectar);
             try
@@ -415,7 +415,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection conexion = Conectar())
                 {
                     conexion.Open();
-                    using (SqlCommand cmd = new SqlCommand("sp_ValidarUsuario", conexion))
+                    using (SqlCommand cmd = new SqlCommand("PA_TIPO_USUARIO_LOGIN", conexion))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
