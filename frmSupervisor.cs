@@ -233,7 +233,7 @@ namespace Proyecto_DesarrolloSoftware
         {
 
         }
-
+        //
         private void iconButton16_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_busqueda.Text))

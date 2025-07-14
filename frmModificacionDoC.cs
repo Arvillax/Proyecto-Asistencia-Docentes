@@ -260,6 +260,7 @@ namespace Proyecto_DesarrolloSoftware
             txt_horafinal.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
 
+        // 
         private void txt_busqueda_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (cmb_filtro.SelectedIndex == 1)

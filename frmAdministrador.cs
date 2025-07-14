@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
+    //
     public partial class frmGestion_Usuarios : Form
     {
         string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
@@ -250,6 +251,55 @@ namespace Proyecto_DesarrolloSoftware
         private void cmb_filtro_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_busqueda.Clear();
+        }
+
+        private void txt_busqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_busqueda.Text))
+            {
+                m_tabla_usuarios_admin();
+            }
+            else
+            {
+                string busqueda = txt_busqueda.Text;
+
+                if (cmb_filtro.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione un filtro antes para empezar la busqueda");
+                }
+                else if (cmb_filtro.SelectedIndex == 0)
+                {
+                    conectar.ConnectionString = server;
+                    conectar.Open();
+
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataTable contenedor = new DataTable();
+                    SqlCommand cmd = new SqlCommand("sp_bus_usuarios_admin", conectar);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@usuario", busqueda);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        adapter.SelectCommand = cmd;
+                        adapter.Fill(contenedor);
+                        dataGridView1.DataSource = contenedor;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                    conectar.Close();
+                    txt_busqueda.Clear();
+
+                }
+                else if (cmb_filtro.SelectedIndex == 1)
+                {
+                    con.busqueda_nombre_admin(busqueda, dataGridView1);
+                    txt_busqueda.Clear();
+                }
+            }
         }
     }
 }
