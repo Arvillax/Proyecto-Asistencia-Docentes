@@ -400,10 +400,15 @@ namespace Proyecto_DesarrolloSoftware
                 throw;
             }
         }
-
-
-        // Método para validar usuario usando el procedimiento almacenado
-        public string ValidarUsuario(int idUsuario, string contraseña)
+        public static int UsuarioActual = 0;
+        // Guardar usuario globalmente
+        public static class SesionActual
+        {
+            public static int IdUsuario { get; set; }
+        }
+   
+    // Método para validar usuario usando el procedimiento almacenado
+    public string ValidarUsuario(int idUsuario, string contraseña)
         {
             try
             {
@@ -421,7 +426,7 @@ namespace Proyecto_DesarrolloSoftware
                         if (resultado != null && resultado.ToString() != "Invalido")
                         {
                             // Guardar usuario globalmente
-                           // SesionActual.IdUsuario = idUsuario;
+                            UsuarioActual = idUsuario;
 
                             // Establecer variable de sesión para usarla en triggers
                             using (SqlCommand cmdSetContext = new SqlCommand("EXEC sp_set_session_context @key, @value", conexion))
