@@ -278,5 +278,61 @@ namespace Proyecto_DesarrolloSoftware
         {
             txt_busqueda.Clear();
         }
+
+        private void txt_busqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_busqueda.Text))
+            {
+                m_tabla();
+            }
+            else
+            {
+                string busqueda = txt_busqueda.Text;
+
+                if (cmb_filtro.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Elija un filtro antes de empezar la busqueda");
+                }
+                else if (cmb_filtro.SelectedIndex == 0)
+                {
+                    conectar.ConnectionString = server;
+                    conectar.Open();
+
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataTable contenedor = new DataTable();
+                    SqlCommand cmd = new SqlCommand("sp_bus_modi_admin", conectar);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_clase", busqueda);
+
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        adapter.SelectCommand = cmd;
+                        adapter.Fill(contenedor);
+                        dataGridView1.DataSource = contenedor;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                    conectar.Close();
+
+                  
+                }
+                else if (cmb_filtro.SelectedIndex == 1)
+                {
+                    con.busqueda_nomclase_admin(busqueda, dataGridView1);
+                  
+                }
+                else if (cmb_filtro.SelectedIndex == 2)
+                {
+                    con.busqueda_idempleado_admin(busqueda, dataGridView1);
+                    
+                }
+
+            }
+        }
     }
 }

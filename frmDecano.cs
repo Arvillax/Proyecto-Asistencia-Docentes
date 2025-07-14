@@ -332,5 +332,42 @@ namespace Proyecto_DesarrolloSoftware
         {
             this.MinimumSize = new Size(1600, 700);
         }
+
+        private void txt_busqueda_TextChanged(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txt_usu_decano.Text);
+            string busqueda = txt_busqueda.Text;
+
+            if (cmb_filtro.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un filtro antes de iniciar la busqueda");
+            }
+            else if (cmb_filtro.SelectedIndex == 0)
+            {
+                conectar.ConnectionString = server;
+                conectar.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataTable contenedor = new DataTable();
+                SqlCommand cmd = new SqlCommand("sp_bus_decano", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@clase", busqueda);
+                cmd.Parameters.AddWithValue("@id_decano", id);
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    adapter.SelectCommand = cmd;
+                    adapter.Fill(contenedor);
+                    dataGridView1.DataSource = contenedor;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+                conectar.Close();
+            }
+        }
     }
 }

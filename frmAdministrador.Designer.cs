@@ -44,8 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_guardarc = new FontAwesome.Sharp.IconButton();
-            this.btn_busqueda = new FontAwesome.Sharp.IconButton();
-            this.btn_recargar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_modificard = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,9 +59,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_busqueda.Location = new System.Drawing.Point(83, 50);
-            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(590, 23);
+            this.txt_busqueda.Size = new System.Drawing.Size(572, 23);
             this.txt_busqueda.TabIndex = 13;
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             this.txt_busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_busqueda_KeyPress);
@@ -233,35 +231,6 @@
             this.btn_guardarc.UseVisualStyleBackColor = false;
             this.btn_guardarc.Click += new System.EventHandler(this.btn_guardarc_Click);
             // 
-            // btn_busqueda
-            // 
-            this.btn_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_busqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_busqueda.IconColor = System.Drawing.Color.Black;
-            this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_busqueda.IconSize = 18;
-            this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_busqueda.Location = new System.Drawing.Point(745, 50);
-            this.btn_busqueda.Name = "btn_busqueda";
-            this.btn_busqueda.Size = new System.Drawing.Size(30, 23);
-            this.btn_busqueda.TabIndex = 59;
-            this.btn_busqueda.UseVisualStyleBackColor = true;
-            this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
-            // 
-            // btn_recargar
-            // 
-            this.btn_recargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_recargar.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
-            this.btn_recargar.IconColor = System.Drawing.Color.Black;
-            this.btn_recargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_recargar.IconSize = 20;
-            this.btn_recargar.Location = new System.Drawing.Point(693, 48);
-            this.btn_recargar.Name = "btn_recargar";
-            this.btn_recargar.Size = new System.Drawing.Size(37, 23);
-            this.btn_recargar.TabIndex = 56;
-            this.btn_recargar.UseVisualStyleBackColor = true;
-            this.btn_recargar.Click += new System.EventHandler(this.btn_recargar_Click);
-            // 
             // iconButton1
             // 
             this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -359,14 +328,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmb_filtro);
-            this.Controls.Add(this.btn_busqueda);
-            this.Controls.Add(this.btn_recargar);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.btn_modificard);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_busqueda);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestion_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
@@ -394,8 +361,6 @@
         private FontAwesome.Sharp.IconButton btn_guardarc;
         private System.Windows.Forms.TextBox txtpermiso;
         private System.Windows.Forms.TextBox txt_estado;
-        private FontAwesome.Sharp.IconButton btn_recargar;
-        private FontAwesome.Sharp.IconButton btn_busqueda;
         private System.Windows.Forms.ComboBox cmb_filtro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;

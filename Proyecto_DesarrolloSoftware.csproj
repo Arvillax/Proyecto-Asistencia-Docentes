@@ -134,12 +134,6 @@
     <Compile Include="frmCierre.Designer.cs">
       <DependentUpon>frmCierre.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCodigo_Acceso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCodigo_Acceso.Designer.cs">
-      <DependentUpon>frmCodigo_Acceso.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDecano.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,9 +233,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCierre.resx">
       <DependentUpon>frmCierre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCodigo_Acceso.resx">
-      <DependentUpon>frmCodigo_Acceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDecano.resx">
       <DependentUpon>frmDecano.cs</DependentUpon>

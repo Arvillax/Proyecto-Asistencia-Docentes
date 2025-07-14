@@ -182,59 +182,8 @@ namespace Proyecto_DesarrolloSoftware
         }
 
 
-        private void btn_recargar_Click(object sender, EventArgs e)
-        {
-            m_tabla_usuarios_admin();
-        }
-
-        private void btn_busqueda_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_busqueda.Text))
-            {
-                MessageBox.Show("la busqueda no puede estar vacia");
-            }
-            else
-            {
-                string busqueda = txt_busqueda.Text;
-
-                if (cmb_filtro.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Seleccione un filtro antes para empezar la busqueda");
-                }
-                else if (cmb_filtro.SelectedIndex == 0)
-                {
-                    conectar.ConnectionString = server;
-                    conectar.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_usuarios_admin", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@usuario", busqueda);
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        adapter.SelectCommand = cmd;
-                        adapter.Fill(contenedor);
-                        dataGridView1.DataSource = contenedor;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
-                    conectar.Close();
-                    txt_busqueda.Clear();
-
-                }
-                else if (cmb_filtro.SelectedIndex == 1)
-                {
-                    con.busqueda_nombre_admin(busqueda,dataGridView1);
-                    txt_busqueda.Clear();
-                }
-            }
-        }
+      
+        
 
         private void txt_busqueda_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -291,13 +240,13 @@ namespace Proyecto_DesarrolloSoftware
                         throw;
                     }
                     conectar.Close();
-                    txt_busqueda.Clear();
+                   
 
                 }
                 else if (cmb_filtro.SelectedIndex == 1)
                 {
                     con.busqueda_nombre_admin(busqueda, dataGridView1);
-                    txt_busqueda.Clear();
+                   
                 }
             }
         }

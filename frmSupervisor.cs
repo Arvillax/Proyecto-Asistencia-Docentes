@@ -231,7 +231,48 @@ namespace Proyecto_DesarrolloSoftware
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_edificios.Text))
+            {
+                MessageBox.Show("Seleccione un edificio para empezar la busqueda");
+            }
+            else
+            {
+                string edificio = txt_edificios.Text;
+                string busqueda = txt_busqueda.Text;
 
+                if (cmb_filtro.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Escoja un filtro para empezar la busqueda");
+                }
+                else if (cmb_filtro.SelectedIndex == 0)
+                {
+                    conectar.ConnectionString = server;
+                    conectar.Open();
+
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataTable contenedor = new DataTable();
+                    SqlCommand cmd = new SqlCommand("sp_bus_super", conectar);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@nom_docente", busqueda);
+                    cmd.Parameters.AddWithValue("@id_edificio", edificio);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        adapter.SelectCommand = cmd;
+                        adapter.Fill(contenedor);
+                        dataGridView1.DataSource = contenedor;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                    conectar.Close();
+                }
+
+
+            }
         }
         //
         private void iconButton16_Click(object sender, EventArgs e)

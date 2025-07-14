@@ -96,7 +96,7 @@ namespace Proyecto_DesarrolloSoftware
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("s  ", conectar);
+            SqlCommand cmd = new SqlCommand("sp_bus_nom_admin", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@nombre", busqueda);
 
@@ -145,10 +145,10 @@ namespace Proyecto_DesarrolloSoftware
             
             conectar.ConnectionString = server;
             conectar.Open();
-            string query = "PA_VERIFICACION_AULA " + id_empleado;
+            string query = "PA_VERIFICACION_USUARIO " + id_empleado;
 
 
-            SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
+            SqlCommand cmd = new SqlCommand("PA_VERIFICACION_USUARIO", conectar);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@usuario", id_empleado);
 
