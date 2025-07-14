@@ -66,7 +66,7 @@ namespace Proyecto_DesarrolloSoftware
             //
             try
             {
-                await rec.EnviarCorreoAsync(codigo);
+                await rec.EnviarCorreoAsync(codigo,idUsuario);
                 lbmensaje.Text = "Código de recuperación enviado a tu correo.";
                 btnIngresarCod.Enabled = true;
             }
