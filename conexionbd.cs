@@ -416,16 +416,35 @@ namespace Proyecto_DesarrolloSoftware
                         cmd.Parameters.AddWithValue("@Contraseña", contraseña);
 
                         object resultado = cmd.ExecuteScalar();
-                        return resultado != null ? resultado.ToString() : "Invalido";
+
+                        if (resultado != null && resultado.ToString() != "Invalido")
+                        {
+                            // Guardar usuario globalmente
+                            SesionActual.IdUsuario = idUsuario;
+
+                            // Establecer variable de sesión para usarla en triggers
+                            using (SqlCommand cmdSetContext = new SqlCommand("EXEC sp_set_session_context @key, @value", conexion))
+                            {
+                                cmdSetContext.Parameters.AddWithValue("@key", "usuario_id");
+                                cmdSetContext.Parameters.AddWithValue("@value", idUsuario);
+                                cmdSetContext.ExecuteNonQuery();
+                            }
+
+                            return resultado.ToString(); 
+                        }
+                        else
+                        {
+                            return "Invalido";
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Error de conexión: " + ex.Message);
                 return "Error";
             }
         }
+
 
         public DataTable ObtenerAsistencias()
         {
