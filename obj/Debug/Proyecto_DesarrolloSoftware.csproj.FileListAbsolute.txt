@@ -368,3 +368,8 @@ C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto.5092338
 C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frmNuevoPeriodo.resources
 C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frm_Admin_Principal.resources
 C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\obj\Debug\Proyecto_DesarrolloSoftware.frm_Bitacora.resources
+C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\bin\Debug\itextsharp.dll
+C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Arvi\Documents\Proyecto-Asistencia-Docentes\bin\Debug\itextsharp.xml
