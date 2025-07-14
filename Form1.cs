@@ -69,6 +69,8 @@ namespace Proyecto_DesarrolloSoftware
             string contraseña = txtContraseña.Text.Trim();
             clsConexion conexion = new clsConexion();
             string tipoUsuario = conexion.ValidarUsuario(idUsuario, contraseña);
+            
+
 
             switch (tipoUsuario)
             {
