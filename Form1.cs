@@ -22,8 +22,18 @@ namespace Proyecto_DesarrolloSoftware
             InitializeComponent();
             btnMaximizar.Text = "🗖";
             // fijar pantalla
-            this.MinimumSize = new Size(1130, 761);
+            this.MinimumSize = new Size(1187, 767);
             this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Resize += Form1_Resize;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)// forzar que la aventana conserve el tamaño
+        {
+            if (this.Width < 1187)
+                this.Width = 1187;
+
+            if (this.Height < 761)
+                this.Height = 761;
         }
         private bool contraseñaVisible = false;
         private void btnMostrarContraseña_Click(object sender, EventArgs e)
