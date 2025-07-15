@@ -21,7 +21,6 @@ namespace Proyecto_DesarrolloSoftware
             CargarAsistencias();
 
         }
-
         private void CargarAsistencias()
         {
             try

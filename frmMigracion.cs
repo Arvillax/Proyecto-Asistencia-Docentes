@@ -14,15 +14,13 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmMigracion : Form
     {
-        string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
-        SqlConnection conectar = new SqlConnection();
+       SqlConnection conectar = new SqlConnection();
+        clsConexion con = new clsConexion();
 
         public frmMigracion()
         {
             InitializeComponent();
         }
-
-
 
         private void btnMGestion_Click(object sender, EventArgs e)
         {
@@ -86,7 +84,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             int errores = 0;
 
-            using (SqlConnection conectar = new SqlConnection(server))
+            using (SqlConnection conectar = con.Conectar())
             {
                 conectar.Open();
                 foreach (DataRow row in tablaDatos.Rows)

@@ -11,11 +11,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
-    //
     public partial class frmGestion_Usuarios : Form
     {
-        string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
-        SqlConnection conectar = new SqlConnection();
+       SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
         public frmGestion_Usuarios()
@@ -38,28 +36,12 @@ namespace Proyecto_DesarrolloSoftware
 
         public void m_tabla_usuarios_admin()
         {
-            
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
+            clsConexion con = new clsConexion();
             con.mostrar_usuarios_admin(dataGridView1);
-            conectar.Close();
-
         }
 
-        
+
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -95,41 +77,37 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btn_guardarc_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_idempleado.Text) || string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txtpermiso.Text) || string.IsNullOrEmpty(txt_estado.Text))
+            if (string.IsNullOrEmpty(txt_idempleado.Text) || string.IsNullOrEmpty(txt_nombre.Text) ||
+                string.IsNullOrEmpty(txtpermiso.Text) || string.IsNullOrEmpty(txt_estado.Text))
             {
-                MessageBox.Show("aegurese de que todos los campos esten con información");
+                MessageBox.Show("Asegúrese de que todos los campos estén con información");
+                return;
             }
-            else
+
+            int id_empleado = Convert.ToInt32(txt_idempleado.Text);
+            string nombreempleado = txt_nombre.Text;
+            int codrol = Convert.ToInt32(txtpermiso.Text);
+            string nuevoestado = txt_estado.Text;
+
+            clsConexion con = new clsConexion();
+
+            try
             {
-                int id_empleado = Convert.ToInt32(txt_idempleado.Text);
-                string nombreempleado = txt_nombre.Text;
-                int codrol = Convert.ToInt32(txtpermiso.Text);
-                string nuevoestado = txt_estado.Text;
-
-
-                conectar.ConnectionString = server;
-                conectar.Open();
-                SqlCommand cmd = new SqlCommand("sp_Modificar_U", conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
-                cmd.Parameters.AddWithValue("@NuevoNombre", nombreempleado);
-                cmd.Parameters.AddWithValue("@NuevoPermiso", codrol);
-                cmd.Parameters.AddWithValue("@NuevoEstado", nuevoestado);
-
-
-                try
+                using (SqlConnection conectar = con.Conectar())
                 {
+                    conectar.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Modificar_U", conectar);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
+                    cmd.Parameters.AddWithValue("@NuevoNombre", nombreempleado);
+                    cmd.Parameters.AddWithValue("@NuevoPermiso", codrol);
+                    cmd.Parameters.AddWithValue("@NuevoEstado", nuevoestado);
+
                     cmd.ExecuteNonQuery();
                 }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                    throw;
-                }
-                //con.agregar_usuario(id_empleado,nombre,id_rol,nombre_usuario,contraseña);
-                conectar.Close();
 
-
+                // Ocultar controles
                 txt_idempleado.Visible = false;
                 txt_nombre.Visible = false;
                 cmb_permiso.Visible = false;
@@ -142,11 +120,14 @@ namespace Proyecto_DesarrolloSoftware
 
                 btn_guardarc.Visible = false;
 
-                m_tabla_usuarios_admin();
+                m_tabla_usuarios_admin(); // recargar tabla
             }
-
-           
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error al modificar el usuario:\n" + ex.Message);
+            }
         }
+
         private void cmb_permiso_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_permiso.SelectedIndex == 0)
@@ -204,51 +185,51 @@ namespace Proyecto_DesarrolloSoftware
 
         private void txt_busqueda_TextChanged(object sender, EventArgs e)
         {
+            clsConexion con = new clsConexion();
+
             if (string.IsNullOrEmpty(txt_busqueda.Text))
             {
                 m_tabla_usuarios_admin();
+                return;
             }
-            else
+
+            string busqueda = txt_busqueda.Text;
+
+            if (cmb_filtro.SelectedIndex == -1)
             {
-                string busqueda = txt_busqueda.Text;
+                MessageBox.Show("Seleccione un filtro antes para empezar la búsqueda");
+                return;
+            }
 
-                if (cmb_filtro.SelectedIndex == -1)
+            if (cmb_filtro.SelectedIndex == 0)
+            {
+                try
                 {
-                    MessageBox.Show("Seleccione un filtro antes para empezar la busqueda");
-                }
-                else if (cmb_filtro.SelectedIndex == 0)
-                {
-                    conectar.ConnectionString = server;
-                    conectar.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_usuarios_admin", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@usuario", busqueda);
-
-                    try
+                    using (SqlConnection conectar = con.Conectar())
                     {
-                        cmd.ExecuteNonQuery();
-                        adapter.SelectCommand = cmd;
+                        conectar.Open();
+
+                        SqlCommand cmd = new SqlCommand("sp_bus_usuarios_admin", conectar);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@usuario", busqueda);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable contenedor = new DataTable();
+
                         adapter.Fill(contenedor);
                         dataGridView1.DataSource = contenedor;
                     }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
-                    conectar.Close();
-                   
-
                 }
-                else if (cmb_filtro.SelectedIndex == 1)
+                catch (SqlException ex)
                 {
-                    con.busqueda_nombre_admin(busqueda, dataGridView1);
-                   
+                    MessageBox.Show("Error al buscar usuario:\n" + ex.Message);
                 }
             }
+            else if (cmb_filtro.SelectedIndex == 1)
+            {
+                con.busqueda_nombre_admin(busqueda, dataGridView1); // ya encapsulado
+            }
         }
+
     }
 }

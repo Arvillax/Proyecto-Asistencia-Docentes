@@ -12,504 +12,257 @@ using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Proyecto_DesarrolloSoftware
 {
+    using System;
+    using System.Data;
+    using System.Data.SqlClient;
+    using System.Windows.Forms;
+    using Proyecto_DesarrolloSoftware;
+
     class clsConexion
     {
-        private string conexionString = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
-        public string ConexionString
-        {
-            get { return conexionString;}
-        }
+        private readonly Cadena cadena = new Cadena();
 
         public SqlConnection Conectar()
         {
-            return new SqlConnection(conexionString);
+            return cadena.Conectar();
         }
 
-        public void busqueda_docente_fecha(string busqueda, int id, DataGridView dgv_docente)
+        public static int UsuarioActual = 0;
+
+        public static class SesionActual
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_bus_docente_fecha", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@fecha", busqueda);
-            cmd.Parameters.AddWithValue("@id_docente", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
-                adapter.Fill(contenedor);
-                dgv_docente.DataSource = contenedor;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            conectar.Close();
-
-        }
-
-        public void busqueda_docente_clase(string busqueda,int id, DataGridView dgv_docente)
-            {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_bus_docente_clase", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@clase", busqueda);
-            cmd.Parameters.AddWithValue("@id_docente", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
-                adapter.Fill(contenedor);
-                dgv_docente.DataSource = contenedor;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            conectar.Close();
-
-        }
-
-        public void buscar_tabla_decano_clase(String busqueda,int id, DataGridView dgv_decano)
-            {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("PA_BUSCAR_DATOS_DECANO ", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@clase", busqueda);
-            cmd.Parameters.AddWithValue("@id_decano", id);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
-                adapter.Fill(contenedor);
-                dgv_decano.DataSource = contenedor;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            conectar.Close();
-
+            public static int IdUsuario { get; set; }
         }
 
         public void busqueda_idempleado_admin(string busqueda, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("PA_BUS_IDEMPLEADO_ADMIN", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_empleado", busqueda);
-
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("PA_BUS_IDEMPLEADO_ADMIN", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_empleado", busqueda);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
 
         public void busqueda_nomclase_admin(string busqueda, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("PA_BUS_NOMCLASE_ADMIN", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@nom_clase", busqueda);
-
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("PA_BUS_NOMCLASE_ADMIN", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nom_clase", busqueda);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
 
-        public void busqueda_nombre_admin(string busqueda,DataGridView grid)
+        public void busqueda_nombre_admin(string busqueda, DataGridView grid)
+        {
+            using (SqlConnection conectar = Conectar())
             {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
+                SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombre", busqueda);
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@nombre", busqueda);   
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
                 adapter.Fill(contenedor);
-                grid.DataSource = contenedor; 
+                grid.DataSource = contenedor;
             }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
 
         public bool verificaraula(string nueva_aula)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
+            using (SqlConnection conectar = Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_aula", nueva_aula);
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "PA_VERIFICACION_AULA " + nueva_aula;
-
-
-            SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_aula", nueva_aula);
-
-
-            object result = cmd.ExecuteScalar();
-
-            conectar.Close();
-
-            return result != null && Convert.ToInt32(result) == 1;
+                object result = cmd.ExecuteScalar();
+                return result != null && Convert.ToInt32(result) == 1;
+            }
         }
 
-        //metodo para verificar si un usuario existe
         public bool verificacionusuario(int id_empleado)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "PA_VERIFICACION_USUARIO " + id_empleado;
+            using (SqlConnection conectar = Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("PA_VERIFICACION_USUARIO", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@usuario", id_empleado);
 
-
-            SqlCommand cmd = new SqlCommand("PA_VERIFICACION_USUARIO", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@usuario", id_empleado);
-
-
-            object result = cmd.ExecuteScalar();
-           
-            conectar.Close();
-
-            return result != null && Convert.ToInt32(result) == 1;
+                object result = cmd.ExecuteScalar();
+                return result != null && Convert.ToInt32(result) == 1;
+            }
         }
-
 
         public void mostrar_claseydocentes(DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "sp_MD_Tabla ";
-
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("sp_MD_Tabla", conectar);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
         }
 
-        public void agregar_usuario(int id_empleado ,string nombre,int id_rol,string nombre_usuario,string contraseña)
+        public void agregar_usuario(int id_empleado, string nombre, int id_rol, string nombre_usuario, string contraseña)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-
-            conectar.ConnectionString = server;
-            conectar.Open();
-
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            SqlCommand cmd = new SqlCommand("sp_Agregar_Empleado_Usuario", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
-            cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
-            cmd.Parameters.AddWithValue("@idRol", id_rol);
-            cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario);
-            cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
-
-            try
+            using (SqlConnection conectar = Conectar())
             {
+                SqlCommand cmd = new SqlCommand("sp_Agregar_Empleado_Usuario", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
+                cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
+                cmd.Parameters.AddWithValue("@idRol", id_rol);
+                cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario);
+                cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
+
                 cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
             }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
 
-        //(funciona asi)
         public void mostrar_usuarios_admin(DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "sp_GU_Tabla ";
-
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
             }
         }
 
         public void marcar_justificacion(string est_asis, int id_asistencia, int id_decano, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "PA_MARCAR_JUSTIFICACION_DECANO " + est_asis + "," + id_asistencia + "," + id_decano ;
-
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("PA_MARCAR_JUSTIFICACION_DECANO", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@estado_asistencia", est_asis);
+                cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
+                cmd.Parameters.AddWithValue("@id_decano", id_decano);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
 
         public void visualizar_decano(int usu_decano, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "PA_MOSTRAR_DATOS_DECANO " + usu_decano;
-
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_DATOS_DECANO", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_usuario", usu_decano);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
 
-      
-        
-
-        public void marcar_asistencia(string est_asis,int id_asistencia,string id_edifico, DataGridView grid)
+        public void marcar_asistencia(string est_asis, int id_asistencia, string id_edifico, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "sp_marcasis " + est_asis + "," + id_asistencia + ',' + id_edifico;
-
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("sp_marcasis", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@estado_asistencia", est_asis);
+                cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
+                cmd.Parameters.AddWithValue("@id_edificio", id_edifico);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
         }
 
-       
-
-        //metodo para mostrar los edificios del supervisor
         public void mostrar_edificios(string id_edificio, DataGridView grid)
         {
-            string server = conexionString;
-            
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "exec sp_c_edificio " + id_edificio;
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("sp_c_edificio", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_edificio", id_edificio);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
         }
 
-        //metedo por el que el supervisor visualizara el datagrid view al momento de ingresar al sistema
         public void mostrar_supervisor(int idrol, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "exec sp_vs " +idrol;
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("sp_vs", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_rol", idrol);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
             }
         }
 
-        // metodo para mostrar las interfaces de los docentes dependiendo de que usuario entro al sistema
-        public void mostrar(int id,DataGridView grid)
+        public void mostrar(int id, DataGridView grid)
         {
-            string server = conexionString;
-            SqlConnection conectar = new SqlConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable contenedor = new DataTable();
-            conectar.ConnectionString = server;
-            conectar.Open();
-            string query = "exec sp_v_docente " + id;
-            SqlCommand cmd = new SqlCommand(query, conectar);
-            try
+            using (SqlConnection conectar = Conectar())
             {
-                cmd.ExecuteNonQuery();
-                adapter.SelectCommand = cmd;
+                SqlCommand cmd = new SqlCommand("sp_v_docente", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_usuario", id);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable contenedor = new DataTable();
+
                 adapter.Fill(contenedor);
                 grid.DataSource = contenedor;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex.ToString());
-                throw;
-            }
-            conectar.Close();
         }
-        public static int UsuarioActual = 0;
-        // Guardar usuario globalmente
-        public static class SesionActual
-        {
-            public static int IdUsuario { get; set; }
-        }
-   
-    // Método para validar usuario usando el procedimiento almacenado
-    public string ValidarUsuario(int idUsuario, string contraseña)
+
+        public string ValidarUsuario(int idUsuario, string contraseña)
         {
             try
             {
                 using (SqlConnection conexion = Conectar())
                 {
                     conexion.Open();
+
                     using (SqlCommand cmd = new SqlCommand("PA_TIPO_USUARIO_LOGIN", conexion))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -520,10 +273,8 @@ namespace Proyecto_DesarrolloSoftware
 
                         if (resultado != null && resultado.ToString() != "Invalido")
                         {
-                            // Guardar usuario globalmente
                             UsuarioActual = idUsuario;
 
-                            // Establecer variable de sesión para usarla en triggers
                             using (SqlCommand cmdSetContext = new SqlCommand("EXEC sp_set_session_context @key, @value", conexion))
                             {
                                 cmdSetContext.Parameters.AddWithValue("@key", "usuario_id");
@@ -531,7 +282,7 @@ namespace Proyecto_DesarrolloSoftware
                                 cmdSetContext.ExecuteNonQuery();
                             }
 
-                            return resultado.ToString(); 
+                            return resultado.ToString();
                         }
                         else
                         {
@@ -540,40 +291,33 @@ namespace Proyecto_DesarrolloSoftware
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return "Error";
             }
         }
 
-
         public DataTable ObtenerAsistencias()
         {
+            DataTable dt = new DataTable();
+
+            try
             {
-                DataTable dt = new DataTable();
-
-                try
+                using (SqlConnection conexion = Conectar())
                 {
-                    using (SqlConnection conexion = Conectar())
-                    {
-                        conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                        using (SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", conexion))
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            SqlDataAdapter da = new SqlDataAdapter(cmd);
-                            da.Fill(dt);
-                        }
-                    }
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
                 }
-                catch (Exception ex)
-                {
-                    throw new Exception("Error al obtener asistencias: " + ex.Message);
-                }
-
-                return dt;
             }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener asistencias: " + ex.Message);
+            }
+
+            return dt;
         }
 
         public void CerrarPeriodo(DateTime fechaFinal)
@@ -582,30 +326,23 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection con = Conectar())
                 {
-                    con.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con))
+                    con.InfoMessage += (s, ev) =>
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Fecha_Final", fechaFinal);
+                        MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
 
-                        // Capturar mensajes informativos de SQL Server
-                        con.InfoMessage += (s, ev) =>
-                        {
-                            // Aquí puedes manejar los mensajes como gustes, por ejemplo:
-                            MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        };
-
-                        cmd.ExecuteNonQuery();
-                    }
+                    SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Fecha_Final", fechaFinal);
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                // Propagar la excepción para que la manejes donde llames al método
                 throw new Exception("Error al cerrar periodo: " + ex.Message);
             }
         }
     }
+
 }
 

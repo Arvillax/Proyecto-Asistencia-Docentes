@@ -15,8 +15,6 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmSupervisor : Form
     {
-        string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
-        SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
 
@@ -32,9 +30,7 @@ namespace Proyecto_DesarrolloSoftware
         public void mtabla_supervisor()
         {
             int idrol = 4;
-
-            con.mostrar_supervisor(idrol,dataGridView1);
-            conectar.Close();
+            con.mostrar_supervisor(idrol, dataGridView1);
         }
 
         private void customdesign()
@@ -44,13 +40,13 @@ namespace Proyecto_DesarrolloSoftware
 
         private void hidesubmenu()
         {
-            if (panel_btn_edificios.Visible == true)
+            if (panel_btn_edificios.Visible)
                 panel_btn_edificios.Visible = false;
         }
 
         private void showsubmenu(Panel submenu)
         {
-            if (submenu.Visible == false)
+            if (!submenu.Visible)
             {
                 hidesubmenu();
                 submenu.Visible = true;
@@ -66,13 +62,8 @@ namespace Proyecto_DesarrolloSoftware
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-        
-            txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-        }
-
-        private void txt_idasis_TextChanged(object sender, EventArgs e)
-        {
-
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells[0].Value != null)
+                txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void frmSupervisor_Load(object sender, EventArgs e)
@@ -87,170 +78,53 @@ namespace Proyecto_DesarrolloSoftware
             this.Hide();
         }
 
-        private void panel_btn_edificios_Paint(object sender, PaintEventArgs e)
+        // Métodos para botones de edificios (A, B, C, ...)
+
+        private void CargarEdificio(string id)
         {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            string id = "A";
-            txt_edificios.Text = "A";
-
+            txt_edificios.Text = id;
             con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            string id = "B";
-            txt_edificios.Text = "B";
-
-            con.mostrar_edificios(id, dataGridView1);
-             
-            
-            conectar.Close();
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            string id = "C";
-            txt_edificios.Text = "C";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            string id = "D";
-            txt_edificios.Text = "D";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            string id = "E";
-            txt_edificios.Text = "E";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton6_Click(object sender, EventArgs e)
-        {
-            string id = "F";
-            txt_edificios.Text = "F";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton7_Click(object sender, EventArgs e)
-        {
-            string id = "G";
-            txt_edificios.Text = "G";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-            string id = "H";
-            txt_edificios.Text = "H";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-            string id = "I";
-            txt_edificios.Text = "I";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton10_Click(object sender, EventArgs e)
-        {
-            string id = "J";
-            txt_edificios.Text = "J";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton11_Click(object sender, EventArgs e)
-        {
-            string id = "K";
-            txt_edificios.Text = "K";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton12_Click(object sender, EventArgs e)
-        {
-            string id = "L";
-            txt_edificios.Text = "L";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton13_Click(object sender, EventArgs e)
-        {
-            string id = "M";
-            txt_edificios.Text = "M";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton14_Click(object sender, EventArgs e)
-        {
-            string id = "ND";
-            txt_edificios.Text = "ND";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
-
-        private void iconButton15_Click(object sender, EventArgs e)
-        {
-            string id = "P";
-            txt_edificios.Text = "P";
-
-            con.mostrar_edificios(id, dataGridView1);
-            conectar.Close();
-        }
+        private void iconButton1_Click(object sender, EventArgs e) => CargarEdificio("A");
+        private void iconButton2_Click(object sender, EventArgs e) => CargarEdificio("B");
+        private void iconButton3_Click(object sender, EventArgs e) => CargarEdificio("C");
+        private void iconButton4_Click(object sender, EventArgs e) => CargarEdificio("D");
+        private void iconButton5_Click(object sender, EventArgs e) => CargarEdificio("E");
+        private void iconButton6_Click(object sender, EventArgs e) => CargarEdificio("F");
+        private void iconButton7_Click(object sender, EventArgs e) => CargarEdificio("G");
+        private void iconButton8_Click(object sender, EventArgs e) => CargarEdificio("H");
+        private void iconButton9_Click(object sender, EventArgs e) => CargarEdificio("I");
+        private void iconButton10_Click(object sender, EventArgs e) => CargarEdificio("J");
+        private void iconButton11_Click(object sender, EventArgs e) => CargarEdificio("K");
+        private void iconButton12_Click(object sender, EventArgs e) => CargarEdificio("L");
+        private void iconButton13_Click(object sender, EventArgs e) => CargarEdificio("M");
+        private void iconButton14_Click(object sender, EventArgs e) => CargarEdificio("ND");
+        private void iconButton15_Click(object sender, EventArgs e) => CargarEdificio("P");
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Seleccione un edificio para empezar la busqueda");
+                MessageBox.Show("Seleccione un edificio para empezar la búsqueda");
+                return;
             }
-            else
+
+            string edificio = txt_edificios.Text;
+            string busqueda = txt_busqueda.Text;
+
+            if (cmb_filtro.SelectedIndex == -1)
             {
-                string edificio = txt_edificios.Text;
-                string busqueda = txt_busqueda.Text;
+                MessageBox.Show("Escoja un filtro para empezar la búsqueda");
+                return;
+            }
 
-                if (cmb_filtro.SelectedIndex == -1)
+            if (cmb_filtro.SelectedIndex == 0)
+            {
+                DataTable contenedor = new DataTable();
+                using (SqlConnection conectar = con.Conectar())
                 {
-                    MessageBox.Show("Escoja un filtro para empezar la busqueda");
-                }
-                else if (cmb_filtro.SelectedIndex == 0)
-                {
-                    conectar.ConnectionString = server;
-                    conectar.Open();
-
                     SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
                     SqlCommand cmd = new SqlCommand("sp_bus_super", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nom_docente", busqueda);
@@ -268,40 +142,39 @@ namespace Proyecto_DesarrolloSoftware
                         MessageBox.Show(ex.ToString());
                         throw;
                     }
-                    conectar.Close();
                 }
-
-
             }
         }
-        //
+
         private void iconButton16_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_busqueda.Text))
             {
-                MessageBox.Show("La busqueda no puede estar vacía");
-
+                MessageBox.Show("La búsqueda no puede estar vacía");
+                return;
             }
-            else if (string.IsNullOrEmpty(txt_edificios.Text))
+
+            if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Seleccione un edificio para empezar la busqueda");
+                MessageBox.Show("Seleccione un edificio para empezar la búsqueda");
+                return;
             }
-            else
+
+            string edificio = txt_edificios.Text;
+            string busqueda = txt_busqueda.Text;
+
+            if (cmb_filtro.SelectedIndex == -1)
             {
-                string edificio = txt_edificios.Text;
-                string busqueda = txt_busqueda.Text;
+                MessageBox.Show("Escoja un filtro para empezar la búsqueda");
+                return;
+            }
 
-                if (cmb_filtro.SelectedIndex == -1)
+            if (cmb_filtro.SelectedIndex == 0)
+            {
+                DataTable contenedor = new DataTable();
+                using (SqlConnection conectar = con.Conectar())
                 {
-                    MessageBox.Show("Escoja un filtro para empezar la busqueda");
-                }
-                else if (cmb_filtro.SelectedIndex == 0)
-                {
-                    conectar.ConnectionString = server;
-                    conectar.Open();
-
                     SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
                     SqlCommand cmd = new SqlCommand("sp_bus_super", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nom_docente", busqueda);
@@ -319,76 +192,65 @@ namespace Proyecto_DesarrolloSoftware
                         MessageBox.Show(ex.ToString());
                         throw;
                     }
-                    conectar.Close();
                 }
-
-               
             }
-
         }
 
         private void iconButton16_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoga un edificio para marcar o quitar asistencia");
+                MessageBox.Show("Escoja un edificio para marcar o quitar asistencia");
+                return;
             }
-            else if (string.IsNullOrEmpty(txt_idasis.Text))
+            if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show("Asegurese de que se haya seleccionado un registro");
+                MessageBox.Show("Asegúrese de que se haya seleccionado un registro");
+                return;
             }
-            else
-            {
 
-                string est_asis = "P";
-                int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-                string id_edificio = txt_edificios.Text;
-                
-                con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
-                conectar.Close();
-            }
-            
-            
+            string est_asis = "P";
+            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
+            string id_edificio = txt_edificios.Text;
+
+            con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
         }
 
         private void btn_noasistio_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoga un edificio para marcar o quitar asistencia");
+                MessageBox.Show("Escoja un edificio para marcar o quitar asistencia");
+                return;
             }
-            else if (string.IsNullOrEmpty(txt_idasis.Text))
+            if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show("Asegurese de que se haya seleccionado un registro");
-            }
-            else 
-            {
-                string est_asis = "A";
-                int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-                string id_edificio = txt_edificios.Text;
-                
-                con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
-                conectar.Close();
-
+                MessageBox.Show("Asegúrese de que se haya seleccionado un registro");
+                return;
             }
 
+            string est_asis = "A";
+            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
+            string id_edificio = txt_edificios.Text;
+
+            con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
         }
 
         private void btn_observacion_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoga un edificio y seleccione un registro para agregar una observacion");
+                MessageBox.Show("Escoja un edificio y seleccione un registro para agregar una observación");
+                return;
             }
-            else if (string.IsNullOrEmpty(txt_idasis.Text))
+            if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show("Asegurese de que se haya seleccionado un registro");
+                MessageBox.Show("Asegúrese de que se haya seleccionado un registro");
+                return;
             }
-            else
-            {
-                frmObservacion obsForm = new frmObservacion(this);
-                obsForm.ShowDialog();
-            }    
+
+            frmObservacion obsForm = new frmObservacion(this);
+            obsForm.ShowDialog();
         }
 
         private void btn_recargar_Click(object sender, EventArgs e)
@@ -403,12 +265,8 @@ namespace Proyecto_DesarrolloSoftware
 
         public void escondertablas()
         {
-            dataGridView1.Columns[0].Visible = false;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            if (dataGridView1.Columns.Count > 0)
+                dataGridView1.Columns[0].Visible = false;
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -428,7 +286,9 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized; 
+            this.WindowState = FormWindowState.Minimized;
         }
     }
+
+
 }

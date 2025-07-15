@@ -14,8 +14,8 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmNuevoPeriodo : Form
     {
-        string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
         SqlConnection conectar = new SqlConnection();
+        clsConexion con = new clsConexion();
 
         public frmNuevoPeriodo()
         {
@@ -72,7 +72,7 @@ namespace Proyecto_DesarrolloSoftware
                 return;
 
             // Validaciones sql
-            using (SqlConnection conectar = new SqlConnection(server))
+            using (SqlConnection conectar = con.Conectar())
             {
                 try
                 {
@@ -149,7 +149,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void MostrarPeriodoActivoEnCalendario()
         {
-            using (SqlConnection conectar = new SqlConnection(server))
+            using (SqlConnection conectar = con.Conectar())
             {
                 try
                 {

@@ -19,8 +19,6 @@ namespace Proyecto_DesarrolloSoftware
             
         }
 
-
-
         private void AbrirFormularioHijo(Form childForm)
         {
             

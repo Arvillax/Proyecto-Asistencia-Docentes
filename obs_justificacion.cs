@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace Proyecto_DesarrolloSoftware
     {
         public frmDecano decanoform;
         private clsConexion conexion;
+
+        SqlConnection conectar = new SqlConnection();
+        clsConexion con = new clsConexion();
 
         public obs_justificacion(frmDecano form)
         {
@@ -65,10 +69,10 @@ namespace Proyecto_DesarrolloSoftware
             }
 
             // Guardar en la base de datos
-            using (SqlConnection conn = new SqlConnection(conexion.ConexionString))
+            using (SqlConnection conectar = con.Conectar())
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("sp_ActualizarObservacion_justificacion", conn))
+                conectar.Open();
+                using (SqlCommand cmd = new SqlCommand("sp_ActualizarObservacion_justificacion", conectar))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id", idBuscado); // Usar el ID del TextBox

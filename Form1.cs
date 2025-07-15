@@ -12,7 +12,6 @@ using System.Windows.Forms;
 namespace Proyecto_DesarrolloSoftware
 {
     
-
     public partial class Form1 : Form
     {
         Validaciones vali = new Validaciones();
@@ -51,50 +50,48 @@ namespace Proyecto_DesarrolloSoftware
                 btnMostrarContraseña.Text = "👁️";
             }
         }
-       
+
         private void Ingresar()
         {
+            // Validación básica
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
             {
                 MessageBox.Show("Ingrese usuario y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            // Verificar que el usuario sea numérico
             if (!int.TryParse(txtUsuario.Text.Trim(), out int idUsuario))
             {
                 MessageBox.Show("El usuario debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            // Llamar a la lógica de conexión y autenticación
             string contraseña = txtContraseña.Text.Trim();
             clsConexion conexion = new clsConexion();
             string tipoUsuario = conexion.ValidarUsuario(idUsuario, contraseña);
-            
 
-
+            // Redireccionar según el tipo de usuario
             switch (tipoUsuario)
             {
                 case "ADMINISTRADOR":
-                    frm_Admin_Principal adminForm = new frm_Admin_Principal();
-                    adminForm.Show();
+                    new frm_Admin_Principal().Show();
                     this.Hide();
                     break;
 
                 case "SUPERVISOR":
-                    frmSupervisor supervisorForm = new frmSupervisor();
-                    supervisorForm.Show();
+                    new frmSupervisor().Show();
                     this.Hide();
                     break;
 
                 case "DOCENTE":
-                    frmDocente docenteForm = new frmDocente(idUsuario);
-                    docenteForm.Show();
+                    new frmDocente(idUsuario).Show();
                     this.Hide();
                     break;
 
                 case "DECANO":
-                    frmDecano decanoForm = new frmDecano(idUsuario);
-                    decanoForm.Show();
+                    new frmDecano(idUsuario).Show();
                     this.Hide();
                     break;
 
@@ -103,6 +100,7 @@ namespace Proyecto_DesarrolloSoftware
                     break;
             }
         }
+
 
 
         private void lnContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
