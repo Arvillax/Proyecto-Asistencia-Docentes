@@ -8,19 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 using OfficeOpenXml;
 
 namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmMigracion : Form
     {
-       SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
 
         public frmMigracion()
         {
             InitializeComponent();
         }
+
+
 
         private void btnMGestion_Click(object sender, EventArgs e)
         {

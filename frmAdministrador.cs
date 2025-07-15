@@ -11,9 +11,10 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
+    //
     public partial class frmGestion_Usuarios : Form
     {
-       SqlConnection conectar = new SqlConnection();
+        
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
         public frmGestion_Usuarios()

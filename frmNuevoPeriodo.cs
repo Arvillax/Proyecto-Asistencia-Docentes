@@ -14,7 +14,6 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmNuevoPeriodo : Form
     {
-        SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
 
         public frmNuevoPeriodo()

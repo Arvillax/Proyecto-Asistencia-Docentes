@@ -13,9 +13,12 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frm_agregar_admin : Form
     {
+      
         clsConexion con = new clsConexion();
         SqlConnection conectar = new SqlConnection();
         
+
+       
 
         public frm_agregar_admin()
         {

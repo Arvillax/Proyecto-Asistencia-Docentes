@@ -63,7 +63,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             if (string.IsNullOrEmpty(txt_busqueda.Text))
             {
-                MessageBox.Show("la búsqueda no puede estar vacía");
+                MessageBox.Show("lo busqueda no puede estar vacia");
                 return;
             }
 
@@ -71,7 +71,7 @@ namespace Proyecto_DesarrolloSoftware
 
             if (cmb_filtro.SelectedIndex == -1)
             {
-                MessageBox.Show("Elija un filtro antes de empezar la búsqueda");
+                MessageBox.Show("Elija un filtro antes de empezar la busqueda");
             }
             else if (cmb_filtro.SelectedIndex == 0)
             {
@@ -115,7 +115,7 @@ namespace Proyecto_DesarrolloSoftware
             if (string.IsNullOrEmpty(txt_estadoclase.Text) || string.IsNullOrEmpty(txt_horafinal.Text) || string.IsNullOrEmpty(txt_idclase.Text)
                 || string.IsNullOrEmpty(txt_idempleado.Text) || string.IsNullOrEmpty(txt_nuevahora.Text) || string.IsNullOrEmpty(txt_nuevaula.Text))
             {
-                MessageBox.Show("No puede haber campos vacíos");
+                MessageBox.Show("No puede haber campos vacios");
                 return;
             }
 
@@ -181,7 +181,7 @@ namespace Proyecto_DesarrolloSoftware
                 }
                 else
                 {
-                    MessageBox.Show("El empleado que ingresó no existe");
+                    MessageBox.Show("el empleado que ingresó no existe");
                 }
             }
             else
@@ -234,7 +234,7 @@ namespace Proyecto_DesarrolloSoftware
 
             if (cmb_filtro.SelectedIndex == -1)
             {
-                MessageBox.Show("Elija un filtro antes de empezar la búsqueda");
+                MessageBox.Show("Elija un filtro antes de empezar la busqueda");
             }
             else if (cmb_filtro.SelectedIndex == 0)
             {
@@ -270,6 +270,5 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
     }
-
 
 }
