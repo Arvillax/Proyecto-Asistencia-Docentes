@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_busqueda = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_decano = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_observacion = new FontAwesome.Sharp.IconButton();
             this.btn_nojustificado = new FontAwesome.Sharp.IconButton();
@@ -43,13 +43,12 @@
             this.txt_idasis = new System.Windows.Forms.TextBox();
             this.txt_usu_decano = new System.Windows.Forms.TextBox();
             this.cmb_filtro = new System.Windows.Forms.ComboBox();
-            this.btn_recargar = new FontAwesome.Sharp.IconButton();
-            this.btn_busqueda = new FontAwesome.Sharp.IconButton();
             this.lbl_id = new System.Windows.Forms.Label();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_decano)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,28 +125,26 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_busqueda.Location = new System.Drawing.Point(358, 44);
+            this.txt_busqueda.Location = new System.Drawing.Point(384, 44);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(802, 20);
+            this.txt_busqueda.Size = new System.Drawing.Size(837, 20);
             this.txt_busqueda.TabIndex = 15;
-            this.txt_busqueda.Text = "escriba los caracteres para empezar la busqueda";
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             // 
-            // dataGridView1
+            // dgv_decano
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(257, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(964, 359);
-            this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dgv_decano.AllowUserToAddRows = false;
+            this.dgv_decano.AllowUserToDeleteRows = false;
+            this.dgv_decano.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_decano.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_decano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_decano.Location = new System.Drawing.Point(257, 121);
+            this.dgv_decano.Name = "dgv_decano";
+            this.dgv_decano.ReadOnly = true;
+            this.dgv_decano.RowHeadersWidth = 51;
+            this.dgv_decano.Size = new System.Drawing.Size(964, 359);
+            this.dgv_decano.TabIndex = 20;
+            this.dgv_decano.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_decano_CellClick);
             // 
             // groupBox1
             // 
@@ -179,7 +176,7 @@
             this.btn_observacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_observacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_observacion.UseVisualStyleBackColor = false;
-            this.btn_observacion.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btn_observacion.Click += new System.EventHandler(this.btn_observacion_Click);
             // 
             // btn_nojustificado
             // 
@@ -241,38 +238,11 @@
             this.cmb_filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_filtro.FormattingEnabled = true;
             this.cmb_filtro.Items.AddRange(new object[] {
-            "nombre de clase"});
+            "Nombre de clase"});
             this.cmb_filtro.Location = new System.Drawing.Point(256, 79);
             this.cmb_filtro.Name = "cmb_filtro";
             this.cmb_filtro.Size = new System.Drawing.Size(121, 21);
             this.cmb_filtro.TabIndex = 59;
-            // 
-            // btn_recargar
-            // 
-            this.btn_recargar.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
-            this.btn_recargar.IconColor = System.Drawing.Color.Black;
-            this.btn_recargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_recargar.IconSize = 20;
-            this.btn_recargar.Location = new System.Drawing.Point(1166, 43);
-            this.btn_recargar.Name = "btn_recargar";
-            this.btn_recargar.Size = new System.Drawing.Size(23, 23);
-            this.btn_recargar.TabIndex = 58;
-            this.btn_recargar.UseVisualStyleBackColor = true;
-            this.btn_recargar.Click += new System.EventHandler(this.btn_recargar_Click);
-            // 
-            // btn_busqueda
-            // 
-            this.btn_busqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_busqueda.IconColor = System.Drawing.Color.Black;
-            this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_busqueda.IconSize = 18;
-            this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_busqueda.Location = new System.Drawing.Point(1195, 43);
-            this.btn_busqueda.Name = "btn_busqueda";
-            this.btn_busqueda.Size = new System.Drawing.Size(26, 23);
-            this.btn_busqueda.TabIndex = 37;
-            this.btn_busqueda.UseVisualStyleBackColor = true;
-            this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
             // 
             // lbl_id
             // 
@@ -323,32 +293,45 @@
             this.btnMaximizar.UseVisualStyleBackColor = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(256, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Busqueda:";
+            // 
             // frmDecano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1370, 570);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.cmb_filtro);
-            this.Controls.Add(this.btn_recargar);
-            this.Controls.Add(this.btn_busqueda);
             this.Controls.Add(this.txt_usu_decano);
             this.Controls.Add(this.txt_idasis);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_decano);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_busqueda);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDecano";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDecano_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_decano)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -367,14 +350,13 @@
         private FontAwesome.Sharp.IconButton btn_cierre_sesion;
         private FontAwesome.Sharp.IconButton btn_nojustificado;
         private FontAwesome.Sharp.IconButton btn_justificado;
-        private FontAwesome.Sharp.IconButton btn_busqueda;
-        private FontAwesome.Sharp.IconButton btn_recargar;
         private System.Windows.Forms.ComboBox cmb_filtro;
         private FontAwesome.Sharp.IconButton btn_observacion;
         public System.Windows.Forms.TextBox txt_idasis;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dgv_decano;
         private System.Windows.Forms.Label lbl_id;
         private FontAwesome.Sharp.IconButton btnMinimizar;
         private FontAwesome.Sharp.IconButton btnMaximizar;
+        private System.Windows.Forms.Label label1;
     }
 }

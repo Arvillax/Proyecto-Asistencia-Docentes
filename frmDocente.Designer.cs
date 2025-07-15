@@ -39,14 +39,14 @@
             this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_usu_docente = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_docente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmb_filtro = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_docente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -193,17 +193,17 @@
             this.txt_usu_docente.TabIndex = 15;
             this.txt_usu_docente.Visible = false;
             // 
-            // dataGridView1
+            // dgv_docente
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(289, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 289);
-            this.dataGridView1.TabIndex = 16;
+            this.dgv_docente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_docente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_docente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_docente.Location = new System.Drawing.Point(289, 139);
+            this.dgv_docente.Name = "dgv_docente";
+            this.dgv_docente.ReadOnly = true;
+            this.dgv_docente.RowHeadersWidth = 51;
+            this.dgv_docente.Size = new System.Drawing.Size(706, 289);
+            this.dgv_docente.TabIndex = 16;
             // 
             // label1
             // 
@@ -265,7 +265,7 @@
             this.Controls.Add(this.cmb_filtro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_docente);
             this.Controls.Add(this.txt_usu_docente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -276,7 +276,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_docente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +290,7 @@
         private System.Windows.Forms.TextBox txt_busqueda;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_usu_docente;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_docente;
         private FontAwesome.Sharp.IconButton btn_cierre_sesion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

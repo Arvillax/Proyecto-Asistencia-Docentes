@@ -21,8 +21,6 @@ namespace Proyecto_DesarrolloSoftware
     //
     public partial class frmDocente : Form
     {
-        string server = "workstation id=ProyectoFinal.mssql.somee.com;packet size=4096;user id=JRivera_SQLLogin_1;pwd=cokdua1z5a;data source=ProyectoFinal.mssql.somee.com;persist security info=False;initial catalog=ProyectoFinal;TrustServerCertificate=True";
-        SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
 
@@ -38,24 +36,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             int id = Convert.ToInt32(txt_usu_docente.Text);
 
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_v_docente",conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_empleado", id);
-
-            try
-            { 
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            con.mostrar(id, dataGridView1);
-            conectar.Close();
-
+            con.mostrar(id, dgv_docente);
         }
 
         private void btn_cierre_sesion_Click(object sender, EventArgs e)
@@ -76,8 +57,8 @@ namespace Proyecto_DesarrolloSoftware
 
         public void escondertablas()
         {
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].Visible = false;
+            dgv_docente.Columns[0].Visible = false;
+            dgv_docente.Columns[1].Visible = false;
         }
 
         private void cmb_filtro_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,7 +68,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btn_reportes_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+            if (dgv_docente.Rows.Count > 0)
             {
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
@@ -114,18 +95,18 @@ namespace Proyecto_DesarrolloSoftware
                     {
                         try
                         {
-                            PdfPTable ptable = new PdfPTable(dataGridView1.Columns.Count);
+                            PdfPTable ptable = new PdfPTable(dgv_docente.Columns.Count);
                             ptable.DefaultCell.Padding = 2;
                             ptable.WidthPercentage = 100;
                             ptable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            foreach (DataGridViewColumn col in dataGridView1.Columns)
+                            foreach (DataGridViewColumn col in dgv_docente.Columns)
                             {
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
                                 ptable.AddCell(pCell);
 
                             }
-                            foreach (DataGridViewRow viewRow in dataGridView1.Rows)
+                            foreach (DataGridViewRow viewRow in dgv_docente.Rows)
                             {
                                 if (!viewRow.IsNewRow) 
                                 {
@@ -162,67 +143,20 @@ namespace Proyecto_DesarrolloSoftware
 
         private void txt_busqueda_TextChanged(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(txt_usu_docente.Text);
+            string busqueda = txt_busqueda.Text;
+
             if (cmb_filtro.SelectedIndex == -1)
             {
-                int id = Convert.ToInt32(txt_usu_docente.Text);
-                string busqueda = txt_busqueda.Text;
+                
 
-                conectar.ConnectionString = server;
-                conectar.Open();
-
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                DataTable contenedor = new DataTable();
-                SqlCommand cmd = new SqlCommand("sp_bus_docente_clase", conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@clase", busqueda);
-                cmd.Parameters.AddWithValue("@id_docente", id);
-
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                    adapter.SelectCommand = cmd;
-                    adapter.Fill(contenedor);
-                    dataGridView1.DataSource = contenedor;
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                    throw;
-                }
-                conectar.Close();
-
-               
+                con.busqueda_docente_clase(busqueda,id,dgv_docente);
             }
             else if (cmb_filtro.SelectedIndex == 0)
             {
-                int id = Convert.ToInt32(txt_usu_docente.Text);
-                string busqueda = txt_busqueda.Text;
 
-                conectar.ConnectionString = server;
-                conectar.Open();
+                con.busqueda_docente_clase(busqueda, id, dgv_docente);
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                DataTable contenedor = new DataTable();
-                SqlCommand cmd = new SqlCommand("sp_bus_docente_clase", conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@clase", busqueda);
-                cmd.Parameters.AddWithValue("@id_docente", id);
-
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                    adapter.SelectCommand = cmd;
-                    adapter.Fill(contenedor);
-                    dataGridView1.DataSource = contenedor;
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                    throw;
-                }
-                conectar.Close();
-
-               
             }
             else if (cmb_filtro.SelectedIndex == 1)
             {
@@ -235,37 +169,10 @@ namespace Proyecto_DesarrolloSoftware
                 }
                 else
                 {
-                    int id = Convert.ToInt32(txt_usu_docente.Text);
-                    string busqueda = txt_busqueda.Text;
-
-                    conectar.ConnectionString = server;
-                    conectar.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_docente_fecha", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@fecha", busqueda);
-                    cmd.Parameters.AddWithValue("@id_docente", id);
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        adapter.SelectCommand = cmd;
-                        adapter.Fill(contenedor);
-                        dataGridView1.DataSource = contenedor;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
-                    conectar.Close();
+                    con.busqueda_docente_fecha(busqueda, id, dgv_docente);
 
                    
                 }
-
-
             }
         }
     }

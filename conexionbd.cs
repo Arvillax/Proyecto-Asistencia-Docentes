@@ -25,6 +25,99 @@ namespace Proyecto_DesarrolloSoftware
             return new SqlConnection(conexionString);
         }
 
+        public void busqueda_docente_fecha(string busqueda, int id, DataGridView dgv_docente)
+        {
+            string server = conexionString;
+            SqlConnection conectar = new SqlConnection();
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable contenedor = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_bus_docente_fecha", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@fecha", busqueda);
+            cmd.Parameters.AddWithValue("@id_docente", id);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(contenedor);
+                dgv_docente.DataSource = contenedor;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            conectar.Close();
+
+        }
+
+        public void busqueda_docente_clase(string busqueda,int id, DataGridView dgv_docente)
+            {
+            string server = conexionString;
+            SqlConnection conectar = new SqlConnection();
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable contenedor = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_bus_docente_clase", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@clase", busqueda);
+            cmd.Parameters.AddWithValue("@id_docente", id);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(contenedor);
+                dgv_docente.DataSource = contenedor;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            conectar.Close();
+
+        }
+
+        public void buscar_tabla_decano_clase(String busqueda,int id, DataGridView dgv_decano)
+            {
+            string server = conexionString;
+            SqlConnection conectar = new SqlConnection();
+
+            conectar.ConnectionString = server;
+            conectar.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable contenedor = new DataTable();
+            SqlCommand cmd = new SqlCommand("PA_BUSCAR_DATOS_DECANO ", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@clase", busqueda);
+            cmd.Parameters.AddWithValue("@id_decano", id);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(contenedor);
+                dgv_decano.DataSource = contenedor;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            conectar.Close();
+
+        }
+
         public void busqueda_idempleado_admin(string busqueda, DataGridView grid)
         {
             string server = conexionString;
@@ -267,6 +360,7 @@ namespace Proyecto_DesarrolloSoftware
                 Console.WriteLine("error" + ex.ToString());
                 throw;
             }
+            conectar.Close();
         }
 
         public void visualizar_decano(int usu_decano, DataGridView grid)
@@ -292,7 +386,7 @@ namespace Proyecto_DesarrolloSoftware
                 Console.WriteLine("error" + ex.ToString());
                 throw;
             }
-
+            conectar.Close();
         }
 
       
@@ -399,6 +493,7 @@ namespace Proyecto_DesarrolloSoftware
                 Console.WriteLine("error" + ex.ToString());
                 throw;
             }
+            conectar.Close();
         }
         public static int UsuarioActual = 0;
         // Guardar usuario globalmente

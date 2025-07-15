@@ -48,7 +48,7 @@ namespace Proyecto_DesarrolloSoftware
 
             // Buscar la fila en el DataGridView con el mismo ID
             bool filaEncontrada = false;
-            foreach (DataGridViewRow row in decanoform.dataGridView1.Rows)
+            foreach (DataGridViewRow row in decanoform.dgv_decano.Rows)
             {
                 if (row.Cells["idAsistencia"].Value != null && row.Cells["idAsistencia"].Value.ToString() == idBuscado)
                 {

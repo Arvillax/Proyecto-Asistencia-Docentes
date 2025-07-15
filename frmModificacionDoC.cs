@@ -49,31 +49,9 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            conectar.ConnectionString = server;
-            conectar.Open();
-            SqlCommand cmd = new SqlCommand("sp_MD_Tabla", conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
+        
 
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-            con.mostrar_claseydocentes(dataGridView1);
-            conectar.Close();
-        }
-
-        private void btn_recargar_Click(object sender, EventArgs e)
-        {
-            m_tabla();
-        }
+        
 
         private void btn_modificard_Click(object sender, EventArgs e)
         {
@@ -83,67 +61,7 @@ namespace Proyecto_DesarrolloSoftware
 
         }
 
-        private void btn_busqueda_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_busqueda.Text))
-            {
-                MessageBox.Show("lo busqueda no puede estar vacia");
-            }
-            else
-            {
-                string busqueda = txt_busqueda.Text;
-
-                if (cmb_filtro.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Elija un filtro antes de empezar la busqueda");
-                }
-                else if (cmb_filtro.SelectedIndex == 0)
-                {
-                    conectar.ConnectionString = server;
-                    conectar.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_modi_admin", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id_clase", busqueda);
-
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        adapter.SelectCommand = cmd;
-                        adapter.Fill(contenedor);
-                        dataGridView1.DataSource = contenedor;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
-                    conectar.Close();
-
-                    txt_busqueda.Clear();
-                }
-                else if (cmb_filtro.SelectedIndex == 1)
-                {
-                    con.busqueda_nomclase_admin(busqueda,dataGridView1);
-                    txt_busqueda.Clear();
-                }
-                else if (cmb_filtro.SelectedIndex == 2)
-                { 
-                    con.busqueda_idempleado_admin(busqueda,dataGridView1);
-                    txt_busqueda.Clear();
-                }
-
-                    
-               
-
-
-            }
-
-            
-        }
+        
 
         private void btn_concambios_Click(object sender, EventArgs e)
         {

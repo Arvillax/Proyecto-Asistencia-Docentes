@@ -32,9 +32,7 @@
             this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_recargar = new FontAwesome.Sharp.IconButton();
             this.btn_modificard = new FontAwesome.Sharp.IconButton();
-            this.btn_busqueda = new FontAwesome.Sharp.IconButton();
             this.btn_concambios = new FontAwesome.Sharp.IconButton();
             this.txt_horafinal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,7 +64,7 @@
             this.txt_busqueda.Location = new System.Drawing.Point(138, 64);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(439, 23);
+            this.txt_busqueda.Size = new System.Drawing.Size(594, 23);
             this.txt_busqueda.TabIndex = 19;
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             this.txt_busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_busqueda_KeyPress);
@@ -100,19 +98,6 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Modificación de Datos";
             // 
-            // btn_recargar
-            // 
-            this.btn_recargar.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
-            this.btn_recargar.IconColor = System.Drawing.Color.Black;
-            this.btn_recargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_recargar.IconSize = 20;
-            this.btn_recargar.Location = new System.Drawing.Point(670, 61);
-            this.btn_recargar.Name = "btn_recargar";
-            this.btn_recargar.Size = new System.Drawing.Size(23, 23);
-            this.btn_recargar.TabIndex = 57;
-            this.btn_recargar.UseVisualStyleBackColor = true;
-            this.btn_recargar.Click += new System.EventHandler(this.btn_recargar_Click);
-            // 
             // btn_modificard
             // 
             this.btn_modificard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -132,21 +117,6 @@
             this.btn_modificard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_modificard.UseVisualStyleBackColor = false;
             this.btn_modificard.Click += new System.EventHandler(this.btn_modificard_Click);
-            // 
-            // btn_busqueda
-            // 
-            this.btn_busqueda.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_busqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_busqueda.IconColor = System.Drawing.Color.Black;
-            this.btn_busqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_busqueda.IconSize = 18;
-            this.btn_busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_busqueda.Location = new System.Drawing.Point(700, 61);
-            this.btn_busqueda.Name = "btn_busqueda";
-            this.btn_busqueda.Size = new System.Drawing.Size(23, 23);
-            this.btn_busqueda.TabIndex = 59;
-            this.btn_busqueda.UseVisualStyleBackColor = true;
-            this.btn_busqueda.Click += new System.EventHandler(this.btn_busqueda_Click);
             // 
             // btn_concambios
             // 
@@ -389,9 +359,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cmb_filtro);
             this.Controls.Add(this.pan_modificardatos);
-            this.Controls.Add(this.btn_busqueda);
             this.Controls.Add(this.btn_modificard);
-            this.Controls.Add(this.btn_recargar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_busqueda);
             this.Controls.Add(this.label1);
@@ -410,9 +378,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_busqueda;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton btn_recargar;
         private FontAwesome.Sharp.IconButton btn_modificard;
-        private FontAwesome.Sharp.IconButton btn_busqueda;
         private FontAwesome.Sharp.IconButton btn_concambios;
         private System.Windows.Forms.TextBox txt_horafinal;
         private System.Windows.Forms.Label label7;
