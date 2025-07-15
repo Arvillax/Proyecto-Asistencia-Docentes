@@ -83,7 +83,10 @@ namespace Proyecto_DesarrolloSoftware
                 MessageBox.Show("Error al guardar la observación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
         private void lbObservacion_Click(object sender, EventArgs e)
         {
             // Opcional

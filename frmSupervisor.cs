@@ -288,6 +288,18 @@ namespace Proyecto_DesarrolloSoftware
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void panel_btn_edificios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void txt_idasis_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
