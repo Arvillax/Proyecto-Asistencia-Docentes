@@ -3,48 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmobservacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmobservacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\frmobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\frmadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmrecuperacion_de_contrase\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmrecuperacion_de_contrase\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\frmrecuperacion_de_contrase\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmrecuperacion_de_contrase\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmsupervisor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmsupervisor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\frmrecuperacion_de_contrase\u00F1as.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmrecuperacion_de_contrase\u00F1as.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\cadena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:cadena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\arvi\\documents\\proyecto-asistencia-docentes\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,135 +70,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmObservacion.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.cs",
-              "RelativeDocumentMoniker": "frmObservacion.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.cs*",
-              "RelativeToolTip": "frmObservacion.cs*",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFcAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "frmRecuperacion_De_Contrase\u00F1as.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.Designer.cs",
+              "RelativeDocumentMoniker": "frmRecuperacion_De_Contrase\u00F1as.Designer.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.Designer.cs",
+              "RelativeToolTip": "frmRecuperacion_De_Contrase\u00F1as.Designer.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAAAOAAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T09:31:52.138Z",
+              "WhenOpened": "2025-07-17T01:08:49.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmAdministrador.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.Designer.cs",
-              "RelativeDocumentMoniker": "frmAdministrador.Designer.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.Designer.cs",
-              "RelativeToolTip": "frmAdministrador.Designer.cs",
-              "ViewState": "AgIAAF4BAAAAAAAAAAAwwG4BAAA2AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "clsrecuperacion.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
+              "RelativeDocumentMoniker": "clsrecuperacion.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
+              "RelativeToolTip": "clsrecuperacion.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAqwEgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T09:29:04.371Z",
+              "WhenOpened": "2025-07-17T01:03:01.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmRecuperacion_De_Contrase\u00F1as.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.cs",
+              "RelativeDocumentMoniker": "frmRecuperacion_De_Contrase\u00F1as.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "frmRecuperacion_De_Contrase\u00F1as.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T00:49:22.37Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmRecuperacion_De_Contrase\u00F1as.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.cs",
+              "RelativeDocumentMoniker": "frmRecuperacion_De_Contrase\u00F1as.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.cs*",
+              "RelativeToolTip": "frmRecuperacion_De_Contrase\u00F1as.cs*",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAiwFgAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T09:28:47.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "frmRecuperacion_De_Contrase\u00F1as.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.cs",
-              "RelativeDocumentMoniker": "frmRecuperacion_De_Contrase\u00F1as.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmRecuperacion_De_Contrase\u00F1as.cs",
-              "RelativeToolTip": "frmRecuperacion_De_Contrase\u00F1as.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T09:28:47.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmSupervisor.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs",
-              "RelativeDocumentMoniker": "frmSupervisor.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs",
-              "RelativeToolTip": "frmSupervisor.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAAAAwCQBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T07:06:48.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmSupervisor.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs",
-              "RelativeDocumentMoniker": "frmSupervisor.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs [Dise\u00F1o]",
-              "RelativeToolTip": "frmSupervisor.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T07:06:12.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmSupervisor.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.Designer.cs",
-              "RelativeDocumentMoniker": "frmSupervisor.Designer.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.Designer.cs",
-              "RelativeToolTip": "frmSupervisor.Designer.cs",
-              "ViewState": "AgIAADMCAAAAAAAAAADwvzsCAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T09:09:34.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmObservacion.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.Designer.cs",
-              "RelativeDocumentMoniker": "frmObservacion.Designer.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.Designer.cs",
-              "RelativeToolTip": "frmObservacion.Designer.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAIAwwFEAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T09:09:23.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Cadena.cs",
               "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Cadena.cs",
               "RelativeDocumentMoniker": "Cadena.cs",
               "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\Cadena.cs",
               "RelativeToolTip": "Cadena.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwAsAAADDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T09:04:56.014Z"
+              "WhenOpened": "2025-07-15T09:04:56.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmDocente.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmDocente.cs",
-              "RelativeDocumentMoniker": "frmDocente.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmDocente.cs",
-              "RelativeToolTip": "frmDocente.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAcwI4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T08:57:55.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmDecano.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
-              "RelativeDocumentMoniker": "frmDecano.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
-              "RelativeToolTip": "frmDecano.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAMwHYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T08:55:01.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "conexionbd.cs",
               "DocumentMoniker": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\conexionbd.cs",
               "RelativeDocumentMoniker": "conexionbd.cs",
               "ToolTip": "C:\\Users\\Arvi\\Documents\\Proyecto-Asistencia-Docentes\\conexionbd.cs",
               "RelativeToolTip": "conexionbd.cs",
-              "ViewState": "AgIAADIBAAAAAAAAAAAIwJ0BAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAFwBAAAAAAAAAADgv10BAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T07:48:57.241Z",
               "EditorCaption": ""

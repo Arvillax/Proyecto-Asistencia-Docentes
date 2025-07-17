@@ -26,7 +26,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection con = Conectar())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("PA_VALIDAR_USUARIO", con);
+                    SqlCommand cmd = new SqlCommand("PA_VALIDACION_USUARIO", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
 

@@ -222,6 +222,7 @@
             this.btnVerificarCod.TabIndex = 33;
             this.btnVerificarCod.Text = "Verificar Código";
             this.btnVerificarCod.UseVisualStyleBackColor = true;
+            this.btnVerificarCod.Click += new System.EventHandler(this.btnVerificarCod_Click);
             // 
             // txtUsuario2
             // 

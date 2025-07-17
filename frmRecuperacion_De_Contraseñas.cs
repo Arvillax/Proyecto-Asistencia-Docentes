@@ -80,7 +80,14 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnVerificarCod_Click(object sender, EventArgs e)
         {
-            if (rec.ValidarCodigo(idUsuario, txtUsuario2.Text)) // txtUsuario2 contiene el código
+            if (!int.TryParse(txtUsuario.Text, out int idUsuario))
+            {
+                MessageBox.Show("ID de usuario inválido.");
+                return;
+            }
+
+            string codigoIngresado = txtUsuario2.Text.Trim(); // Eliminar espacios
+            if (rec.ValidarCodigo(idUsuario, codigoIngresado))
             {
                 frmNueva_Contraseña frm = new frmNueva_Contraseña(idUsuario);
                 frm.Show();
@@ -91,6 +98,7 @@ namespace Proyecto_DesarrolloSoftware
                 MessageBox.Show("Código incorrecto o expirado.");
             }
         }
+
 
         private void txtUsuario2_TextChanged(object sender, EventArgs e)
         {

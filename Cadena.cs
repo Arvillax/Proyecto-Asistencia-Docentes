@@ -9,7 +9,7 @@ namespace Proyecto_DesarrolloSoftware
 {
     internal class Cadena
     {
-        private readonly string conexionString = "Server=mssql-199159-0.cloudclusters.net,10002;Database=implementacion;User Id=freed;Password=Homofredus1;Encrypt=True;TrustServerCertificate=False;";
+        private readonly string conexionString = "Server=mssql-199159-0.cloudclusters.net,10002;Database=implementacion;User Id=freed;Password=Homofredus1;Encrypt=True;TrustServerCertificate=True;";
 
         public string ConexionString
         {
