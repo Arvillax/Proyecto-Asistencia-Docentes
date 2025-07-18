@@ -48,20 +48,15 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btn_justificado_Click(object sender, EventArgs e)
         {
-            string est_asis = "R";
-            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-            int id_decano = Convert.ToInt32(txt_usu_decano.Text);
+           
 
-            con.marcar_justificacion(est_asis, id_asistencia, id_decano, dgv_decano);
+            
         }
 
         private void btn_nojustificado_Click(object sender, EventArgs e)
         {
-            string est_asis = "N";
-            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-            int id_decano = Convert.ToInt32(txt_usu_decano.Text);
-
-            con.marcar_justificacion(est_asis, id_asistencia, id_decano, dgv_decano);
+           
+            
         }
 
         private void btn_observacion_Click(object sender, EventArgs e)

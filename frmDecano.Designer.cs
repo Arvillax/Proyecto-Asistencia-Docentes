@@ -38,8 +38,6 @@
             this.dgv_decano = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_observacion = new FontAwesome.Sharp.IconButton();
-            this.btn_nojustificado = new FontAwesome.Sharp.IconButton();
-            this.btn_justificado = new FontAwesome.Sharp.IconButton();
             this.txt_idasis = new System.Windows.Forms.TextBox();
             this.txt_usu_decano = new System.Windows.Forms.TextBox();
             this.cmb_filtro = new System.Windows.Forms.ComboBox();
@@ -150,11 +148,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Khaki;
             this.groupBox1.Controls.Add(this.btn_observacion);
-            this.groupBox1.Controls.Add(this.btn_nojustificado);
-            this.groupBox1.Controls.Add(this.btn_justificado);
-            this.groupBox1.Location = new System.Drawing.Point(1237, 73);
+            this.groupBox1.Location = new System.Drawing.Point(1237, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(121, 127);
+            this.groupBox1.Size = new System.Drawing.Size(121, 77);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
@@ -168,7 +164,7 @@
             this.btn_observacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_observacion.IconSize = 35;
             this.btn_observacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_observacion.Location = new System.Drawing.Point(4, 66);
+            this.btn_observacion.Location = new System.Drawing.Point(3, 6);
             this.btn_observacion.Name = "btn_observacion";
             this.btn_observacion.Size = new System.Drawing.Size(115, 55);
             this.btn_observacion.TabIndex = 27;
@@ -177,44 +173,6 @@
             this.btn_observacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_observacion.UseVisualStyleBackColor = false;
             this.btn_observacion.Click += new System.EventHandler(this.btn_observacion_Click);
-            // 
-            // btn_nojustificado
-            // 
-            this.btn_nojustificado.BackColor = System.Drawing.Color.LightCoral;
-            this.btn_nojustificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nojustificado.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btn_nojustificado.IconColor = System.Drawing.Color.Black;
-            this.btn_nojustificado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_nojustificado.IconSize = 20;
-            this.btn_nojustificado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nojustificado.Location = new System.Drawing.Point(6, 37);
-            this.btn_nojustificado.Name = "btn_nojustificado";
-            this.btn_nojustificado.Size = new System.Drawing.Size(109, 23);
-            this.btn_nojustificado.TabIndex = 26;
-            this.btn_nojustificado.Text = "No Justificado";
-            this.btn_nojustificado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nojustificado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_nojustificado.UseVisualStyleBackColor = false;
-            this.btn_nojustificado.Click += new System.EventHandler(this.btn_nojustificado_Click);
-            // 
-            // btn_justificado
-            // 
-            this.btn_justificado.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_justificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_justificado.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.btn_justificado.IconColor = System.Drawing.Color.Black;
-            this.btn_justificado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_justificado.IconSize = 20;
-            this.btn_justificado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_justificado.Location = new System.Drawing.Point(6, 11);
-            this.btn_justificado.Name = "btn_justificado";
-            this.btn_justificado.Size = new System.Drawing.Size(109, 23);
-            this.btn_justificado.TabIndex = 25;
-            this.btn_justificado.Text = "Justificado";
-            this.btn_justificado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_justificado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_justificado.UseVisualStyleBackColor = false;
-            this.btn_justificado.Click += new System.EventHandler(this.btn_justificado_Click);
             // 
             // txt_idasis
             // 
@@ -348,8 +306,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_usu_decano;
         private FontAwesome.Sharp.IconButton btn_cierre_sesion;
-        private FontAwesome.Sharp.IconButton btn_nojustificado;
-        private FontAwesome.Sharp.IconButton btn_justificado;
         private System.Windows.Forms.ComboBox cmb_filtro;
         private FontAwesome.Sharp.IconButton btn_observacion;
         public System.Windows.Forms.TextBox txt_idasis;
