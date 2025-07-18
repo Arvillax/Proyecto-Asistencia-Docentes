@@ -43,7 +43,7 @@ namespace Proyecto_DesarrolloSoftware
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable contenedor = new DataTable();
-                SqlCommand cmd = new SqlCommand("sp_bus_docente_fecha", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_FECHA_DOCENTE", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@fecha", busqueda);
                 cmd.Parameters.AddWithValue("@id_docente", id);
@@ -72,7 +72,7 @@ namespace Proyecto_DesarrolloSoftware
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable contenedor = new DataTable();
-                SqlCommand cmd = new SqlCommand("sp_bus_docente_clase", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_CLASE_DOCENTE", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@clase", busqueda);
                 cmd.Parameters.AddWithValue("@id_docente", id);
@@ -157,7 +157,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);//xd
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombre", busqueda);
 
@@ -199,7 +199,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_MD_Tabla", conectar);
+                SqlCommand cmd = new SqlCommand("sp_MD_Tabla", conectar);//admin
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -213,7 +213,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_Agregar_Empleado_Usuario", conectar);
+                SqlCommand cmd = new SqlCommand("sp_Agregar_Empleado_Usuario", conectar);// admin
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
@@ -230,7 +230,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar);
+                SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar); //admin
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -279,7 +279,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_marcasis", conectar);
+                SqlCommand cmd = new SqlCommand("PA_MARCAR_ASISTENCIA_SUPERV", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@estado_asistencia", est_asis);
@@ -298,7 +298,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_c_edificio", conectar);
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_EDIFICIOS_SUPERV", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_edificio", id_edificio);
 
@@ -314,7 +314,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_vs", conectar);
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_DATOS_SUPERV", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_rol", idrol);
 
@@ -330,7 +330,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_v_docente", conectar);
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_DATOS_DOCENTE", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_usuario", id);
 
@@ -392,7 +392,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection conexion = Conectar())
                 {
-                    SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", conexion);
+                    SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", conexion); //matriz
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -418,7 +418,7 @@ namespace Proyecto_DesarrolloSoftware
                         MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     };
 
-                    SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con);
+                    SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con);//matriz
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Fecha_Final", fechaFinal);
                     cmd.ExecuteNonQuery();
