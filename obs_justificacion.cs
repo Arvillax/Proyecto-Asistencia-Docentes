@@ -72,7 +72,7 @@ namespace Proyecto_DesarrolloSoftware
             using (SqlConnection conectar = con.Conectar())
             {
                 conectar.Open();
-                using (SqlCommand cmd = new SqlCommand("sp_ActualizarObservacion_justificacion", conectar))
+                using (SqlCommand cmd = new SqlCommand("PA_ACTUALIZAROBSERVACION_JUSTIFICACION", conectar)) //xs
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id", idBuscado); // Usar el ID del TextBox

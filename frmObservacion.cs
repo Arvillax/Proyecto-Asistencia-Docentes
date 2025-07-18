@@ -66,7 +66,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection conn = conexion.Conectar())
                 {
-                    using (SqlCommand cmd = new SqlCommand("sp_ActualizarObservacion", conn))
+                    using (SqlCommand cmd = new SqlCommand("PA_AGREGAR_OBS_SUPERV", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@id", idBuscado);

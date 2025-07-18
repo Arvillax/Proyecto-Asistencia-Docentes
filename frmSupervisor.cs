@@ -125,7 +125,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection conectar = con.Conectar())
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter();
-                    SqlCommand cmd = new SqlCommand("sp_bus_super", conectar);
+                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_NOMBRE_SUPERV", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nom_docente", busqueda);
                     cmd.Parameters.AddWithValue("@id_edificio", edificio);
@@ -175,7 +175,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection conectar = con.Conectar())
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter();
-                    SqlCommand cmd = new SqlCommand("sp_bus_super", conectar);
+                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_NOMBRE_SUPERV", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nom_docente", busqueda);
                     cmd.Parameters.AddWithValue("@id_edificio", edificio);

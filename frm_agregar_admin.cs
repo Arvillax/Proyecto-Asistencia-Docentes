@@ -63,7 +63,7 @@ namespace Proyecto_DesarrolloSoftware
                 int id_rol = Convert.ToInt32(txt_permiso.Text);
                 int id_empleado = Convert.ToInt32(txt_idempleado.Text);
                 string nombre = txt_nombre.Text;
-                string nombre_usuario = txt_usuarioempleado.Text;
+                string nombre_usuario = txt_usuarioempleado.Text; // campo eliminado en la nueva tabla
                 string contraseña = txt_contraseña.Text;
 
 

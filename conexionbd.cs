@@ -199,7 +199,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_MD_Tabla", conectar);//admin
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_MODIFICAR_ADMIN", conectar);//admin
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -213,13 +213,13 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_Agregar_Empleado_Usuario", conectar);// admin
+                SqlCommand cmd = new SqlCommand("PA_AGREGAR_EMPLEADO_ADMIN", conectar);// admin
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
                 cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
                 cmd.Parameters.AddWithValue("@idRol", id_rol);
-                cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario);
+                cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario); // campo eliminado en la nueva tabla
                 cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
 
                 cmd.ExecuteNonQuery();
@@ -230,7 +230,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_GU_Tabla", conectar); //admin
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_GESTION_ADMIN", conectar); //admin
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -240,24 +240,7 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        public void marcar_justificacion(string est_asis, int id_asistencia, int id_decano, DataGridView grid)
-        {
-            using (SqlConnection conectar = Conectar())
-            {
-                SqlCommand cmd = new SqlCommand("PA_MARCAR_JUSTIFICACION_DECANO", conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@estado_asistencia", est_asis);
-                cmd.Parameters.AddWithValue("@id_asistencia", id_asistencia);
-                cmd.Parameters.AddWithValue("@id_decano", id_decano);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable contenedor = new DataTable();
-
-                adapter.Fill(contenedor);
-                grid.DataSource = contenedor;
-            }
-        }
+        
 
         public void visualizar_decano(int usu_decano, DataGridView grid)
         {
@@ -392,7 +375,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection conexion = Conectar())
                 {
-                    SqlCommand cmd = new SqlCommand("sp_MostrarAsistenciasMatrizA", conexion); //matriz
+                    SqlCommand cmd = new SqlCommand("PA_TABLA_MATRIZ_ADMIN", conexion); //matriz
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -418,7 +401,7 @@ namespace Proyecto_DesarrolloSoftware
                         MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     };
 
-                    SqlCommand cmd = new SqlCommand("sp_MoverAsistenciasAMatriz", con);//matriz
+                    SqlCommand cmd = new SqlCommand("PA_TABLA_MATRIZ_ADMIN", con);//matriz
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Fecha_Final", fechaFinal);
                     cmd.ExecuteNonQuery();

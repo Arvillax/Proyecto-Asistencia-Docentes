@@ -94,7 +94,7 @@ namespace Proyecto_DesarrolloSoftware
                     }
 
                     // Validar si ya hay un período activo
-                    using (SqlCommand cmdActivo = new SqlCommand("sp_PeriodoActivo", conectar))
+                    using (SqlCommand cmdActivo = new SqlCommand("PA_PERIODO_ACTIVO", conectar))
                     {
                         int periodoActivo = (int)cmdActivo.ExecuteScalar();
                         if (periodoActivo > 0)
@@ -105,7 +105,7 @@ namespace Proyecto_DesarrolloSoftware
                     }
 
                     // Validar si el nuevo período se superpone con otro existente
-                    using (SqlCommand cmdSolapado = new SqlCommand("sp_ValidarPeriodoSuperpuesto", conectar))
+                    using (SqlCommand cmdSolapado = new SqlCommand("PA_VALIDACION_PERIODO", conectar))
                     {
                         cmdSolapado.CommandType = CommandType.StoredProcedure;
                         cmdSolapado.Parameters.AddWithValue("@FechaInicio", fechaInicio);
@@ -122,7 +122,7 @@ namespace Proyecto_DesarrolloSoftware
                     
 
                     // Insertar el nuevo período
-                    using (SqlCommand cmdInsertar = new SqlCommand("sp_AgregarPeriodo", conectar))
+                    using (SqlCommand cmdInsertar = new SqlCommand("PA_AGREGAR_PERIODO_ADMIN", conectar))
                     {
                         cmdInsertar.CommandType = CommandType.StoredProcedure;
                         cmdInsertar.Parameters.AddWithValue("@FechaInicio", fechaInicio);
@@ -154,7 +154,7 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     conectar.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("sp_Calendario", conectar))
+                    using (SqlCommand cmd = new SqlCommand("PA_CALENDARIO", conectar))//XS
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 

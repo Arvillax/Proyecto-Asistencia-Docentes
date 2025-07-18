@@ -28,7 +28,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = con.Conectar())
             {
-                SqlCommand cmd = new SqlCommand("sp_MD_Tabla", conectar);
+                SqlCommand cmd = new SqlCommand("PA_MOSTRAR_MODIFICAR_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 try
@@ -79,7 +79,7 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_modi_admin", conectar);
+                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_clase", busqueda);
 
@@ -157,7 +157,7 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     using (SqlConnection conectar = con.Conectar())
                     {
-                        SqlCommand cmd = new SqlCommand("sp_Clases_Modificar", conectar);
+                        SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@idClase", id_clase);
                         cmd.Parameters.AddWithValue("@Nueva_Aula", nueva_aula);
@@ -242,7 +242,7 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("sp_bus_modi_admin", conectar);
+                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_clase", busqueda);
 
