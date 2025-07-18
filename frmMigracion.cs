@@ -93,7 +93,7 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     try
                     {
-                        using (SqlCommand cmdSql = new SqlCommand("sp_Migracion_Excel", conectar))
+                        using (SqlCommand cmdSql = new SqlCommand("sp_Migracion_Excel", conectar)) // migracion
                         {
                             cmdSql.CommandType = CommandType.StoredProcedure;
 

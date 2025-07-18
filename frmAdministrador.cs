@@ -97,7 +97,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection conectar = con.Conectar())
                 {
                     conectar.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Modificar_U", conectar);
+                    SqlCommand cmd = new SqlCommand("sp_Modificar_U", conectar);// admin
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
@@ -210,7 +210,7 @@ namespace Proyecto_DesarrolloSoftware
                     {
                         conectar.Open();
 
-                        SqlCommand cmd = new SqlCommand("sp_bus_usuarios_admin", conectar);
+                        SqlCommand cmd = new SqlCommand("sp_bus_usuarios_admin", conectar);//admin
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@usuario", busqueda);
 

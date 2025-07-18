@@ -156,7 +156,7 @@ namespace Proyecto_DesarrolloSoftware
         };
 
         var mensaje = new MailMessage("recuperacioncontra8@gmail.com", correoDestino, "Código de Recuperación",
-            $"<h2>Tu código es: <span style='color:blue;font-size:24px'>{codigo}</span></h2>")
+            $"<h2>Tu código es: < an style='color:blue;font-size:24px'>{codigo}</span></h2>")
         {
             IsBodyHtml = true
         };
