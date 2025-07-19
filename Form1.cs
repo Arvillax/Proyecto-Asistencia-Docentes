@@ -19,20 +19,20 @@ namespace Proyecto_DesarrolloSoftware
         public Form1()
         {
             InitializeComponent();
-            btnMaximizar.Text = "🗖";
+          
             // fijar pantalla
-            this.MinimumSize = new Size(1187, 767);
+            this.MinimumSize = new Size(800, 600);
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.Resize += Form1_Resize;
         }
 
         private void Form1_Resize(object sender, EventArgs e)// forzar que la aventana conserve el tamaño
         {
-            if (this.Width < 1187)
-                this.Width = 1187;
+            if (this.Width < 800)
+                this.Width = 800;
 
-            if (this.Height < 761)
-                this.Height = 761;
+            if (this.Height < 600)
+                this.Height = 600;
         }
         private bool contraseñaVisible = false;
         private void btnMostrarContraseña_Click(object sender, EventArgs e)
@@ -130,26 +130,7 @@ namespace Proyecto_DesarrolloSoftware
             vali.solonumeros(e);
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(800, 600);
-                btnMaximizar.Text = "🗖"; 
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                btnMaximizar.Text = "🗗"; 
-            }
-        }
+        
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
@@ -166,6 +147,26 @@ namespace Proyecto_DesarrolloSoftware
             {
                 Ingresar();
                 e.SuppressKeyPress = true;
+            }
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+
             }
         }
     }

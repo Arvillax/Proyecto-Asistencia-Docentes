@@ -73,6 +73,16 @@ namespace Proyecto_DesarrolloSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HorizontalFullColor {
+            get {
+                object obj = ResourceManager.GetObject("HorizontalFullColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NewLogo {
             get {
                 object obj = ResourceManager.GetObject("NewLogo", resourceCulture);

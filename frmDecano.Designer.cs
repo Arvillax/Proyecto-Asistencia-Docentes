@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDecano));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cierre_sesion = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,12 +41,16 @@
             this.txt_usu_decano = new System.Windows.Forms.TextBox();
             this.cmb_filtro = new System.Windows.Forms.ComboBox();
             this.lbl_id = new System.Windows.Forms.Label();
-            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
-            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_minimizar = new FontAwesome.Sharp.IconButton();
+            this.btn_maximizar = new FontAwesome.Sharp.IconButton();
+            this.panel_controles = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_decano)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel_controles.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,7 +87,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImage = global::Proyecto_DesarrolloSoftware.Properties.Resources.HorizontalFullColor;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -99,9 +102,9 @@
             this.label3.BackColor = System.Drawing.Color.Purple;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(256, 9);
+            this.label3.Location = new System.Drawing.Point(83, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(965, 23);
+            this.label3.Size = new System.Drawing.Size(828, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Justificación de Asistencias";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -123,9 +126,9 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_busqueda.Location = new System.Drawing.Point(384, 44);
+            this.txt_busqueda.Location = new System.Drawing.Point(384, 85);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(837, 20);
+            this.txt_busqueda.Size = new System.Drawing.Size(713, 20);
             this.txt_busqueda.TabIndex = 15;
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             // 
@@ -136,11 +139,11 @@
             this.dgv_decano.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_decano.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_decano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_decano.Location = new System.Drawing.Point(257, 121);
+            this.dgv_decano.Location = new System.Drawing.Point(257, 162);
             this.dgv_decano.Name = "dgv_decano";
             this.dgv_decano.ReadOnly = true;
             this.dgv_decano.RowHeadersWidth = 51;
-            this.dgv_decano.Size = new System.Drawing.Size(964, 359);
+            this.dgv_decano.Size = new System.Drawing.Size(840, 359);
             this.dgv_decano.TabIndex = 20;
             this.dgv_decano.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_decano_CellClick);
             // 
@@ -148,7 +151,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Khaki;
             this.groupBox1.Controls.Add(this.btn_observacion);
-            this.groupBox1.Location = new System.Drawing.Point(1237, 121);
+            this.groupBox1.Location = new System.Drawing.Point(1118, 162);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(121, 77);
             this.groupBox1.TabIndex = 21;
@@ -176,7 +179,7 @@
             // 
             // txt_idasis
             // 
-            this.txt_idasis.Location = new System.Drawing.Point(384, 491);
+            this.txt_idasis.Location = new System.Drawing.Point(384, 532);
             this.txt_idasis.Name = "txt_idasis";
             this.txt_idasis.ReadOnly = true;
             this.txt_idasis.Size = new System.Drawing.Size(100, 20);
@@ -184,7 +187,7 @@
             // 
             // txt_usu_decano
             // 
-            this.txt_usu_decano.Location = new System.Drawing.Point(384, 517);
+            this.txt_usu_decano.Location = new System.Drawing.Point(490, 532);
             this.txt_usu_decano.Name = "txt_usu_decano";
             this.txt_usu_decano.ReadOnly = true;
             this.txt_usu_decano.Size = new System.Drawing.Size(100, 20);
@@ -197,7 +200,7 @@
             this.cmb_filtro.FormattingEnabled = true;
             this.cmb_filtro.Items.AddRange(new object[] {
             "Nombre de clase"});
-            this.cmb_filtro.Location = new System.Drawing.Point(256, 79);
+            this.cmb_filtro.Location = new System.Drawing.Point(256, 120);
             this.cmb_filtro.Name = "cmb_filtro";
             this.cmb_filtro.Size = new System.Drawing.Size(121, 21);
             this.cmb_filtro.TabIndex = 59;
@@ -206,50 +209,11 @@
             // 
             this.lbl_id.AutoSize = true;
             this.lbl_id.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_id.Location = new System.Drawing.Point(262, 495);
+            this.lbl_id.Location = new System.Drawing.Point(262, 536);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(115, 13);
             this.lbl_id.TabIndex = 63;
             this.lbl_id.Text = "Registro seleccionado:";
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimizar.IconColor = System.Drawing.Color.Snow;
-            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMinimizar.IconSize = 20;
-            this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimizar.Location = new System.Drawing.Point(1658, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(28, 27);
-            this.btnMinimizar.TabIndex = 71;
-            this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMaximizar.IconColor = System.Drawing.Color.Snow;
-            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMaximizar.IconSize = 25;
-            this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaximizar.Location = new System.Drawing.Point(1684, 0);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(28, 27);
-            this.btnMaximizar.TabIndex = 70;
-            this.btnMaximizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMaximizar.UseVisualStyleBackColor = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // label1
             // 
@@ -259,21 +223,77 @@
             this.label1.BackColor = System.Drawing.Color.DarkBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(256, 40);
+            this.label1.Location = new System.Drawing.Point(256, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 25);
             this.label1.TabIndex = 72;
             this.label1.Text = "Busqueda:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Purple;
+            this.panel3.Controls.Add(this.panel_controles);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(233, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1018, 59);
+            this.panel3.TabIndex = 73;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.Purple;
+            this.btn_minimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_minimizar.FlatAppearance.BorderSize = 0;
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btn_minimizar.IconColor = System.Drawing.Color.Black;
+            this.btn_minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_minimizar.IconSize = 20;
+            this.btn_minimizar.Location = new System.Drawing.Point(-1, 0);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(42, 59);
+            this.btn_minimizar.TabIndex = 62;
+            this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.iconButton2_Click_1);
+            // 
+            // btn_maximizar
+            // 
+            this.btn_maximizar.BackColor = System.Drawing.Color.Purple;
+            this.btn_maximizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_maximizar.FlatAppearance.BorderSize = 0;
+            this.btn_maximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_maximizar.IconChar = FontAwesome.Sharp.IconChar.SquareMinus;
+            this.btn_maximizar.IconColor = System.Drawing.Color.Black;
+            this.btn_maximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_maximizar.IconSize = 20;
+            this.btn_maximizar.Location = new System.Drawing.Point(41, 0);
+            this.btn_maximizar.Name = "btn_maximizar";
+            this.btn_maximizar.Size = new System.Drawing.Size(43, 59);
+            this.btn_maximizar.TabIndex = 61;
+            this.btn_maximizar.UseVisualStyleBackColor = false;
+            this.btn_maximizar.Click += new System.EventHandler(this.btn_maximizar_Click);
+            // 
+            // panel_controles
+            // 
+            this.panel_controles.BackColor = System.Drawing.Color.Silver;
+            this.panel_controles.Controls.Add(this.btn_minimizar);
+            this.panel_controles.Controls.Add(this.btn_maximizar);
+            this.panel_controles.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_controles.Location = new System.Drawing.Point(934, 0);
+            this.panel_controles.Name = "panel_controles";
+            this.panel_controles.Size = new System.Drawing.Size(84, 59);
+            this.panel_controles.TabIndex = 61;
             // 
             // frmDecano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1370, 570);
+            this.ClientSize = new System.Drawing.Size(1251, 570);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnMinimizar);
-            this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.cmb_filtro);
             this.Controls.Add(this.txt_usu_decano);
@@ -281,7 +301,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_decano);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_busqueda);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -291,6 +310,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_decano)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel_controles.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,8 +332,12 @@
         public System.Windows.Forms.TextBox txt_idasis;
         public System.Windows.Forms.DataGridView dgv_decano;
         private System.Windows.Forms.Label lbl_id;
-        private FontAwesome.Sharp.IconButton btnMinimizar;
-        private FontAwesome.Sharp.IconButton btnMaximizar;
+        
+        
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_controles;
+        private FontAwesome.Sharp.IconButton btn_minimizar;
+        private FontAwesome.Sharp.IconButton btn_maximizar;
     }
 }

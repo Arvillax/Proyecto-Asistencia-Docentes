@@ -23,7 +23,7 @@ namespace Proyecto_DesarrolloSoftware
             txt_usu_decano.Text = usuario_decano.ToString();
             mtabla_decano();
             escondertablas();
-            btnMaximizar.Text = "🗖";
+          
 
         }
 
@@ -36,26 +36,6 @@ namespace Proyecto_DesarrolloSoftware
         {
             int usu_decano = Convert.ToInt32(txt_usu_decano.Text);
             con.visualizar_decano(usu_decano, dgv_decano);
-            
-        }
-
-        private void btn_cierre_sesion_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Close();
-        }
-
-        private void btn_justificado_Click(object sender, EventArgs e)
-        {
-           
-
-            
-        }
-
-        private void btn_nojustificado_Click(object sender, EventArgs e)
-        {
-           
             
         }
 
@@ -75,29 +55,12 @@ namespace Proyecto_DesarrolloSoftware
            
         }
 
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(1600, 700);
-                btnMaximizar.Text = "🗖";
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                btnMaximizar.Text = "🗗";
-            }
-        }
+       
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
+      
         private void frmDecano_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new Size(1600, 700);
+            this.MinimumSize = new Size(1267, 600);
         }
 
         private void txt_busqueda_TextChanged(object sender, EventArgs e)
@@ -122,6 +85,35 @@ namespace Proyecto_DesarrolloSoftware
                 DataGridViewRow fila = dgv_decano.Rows[e.RowIndex];
 
                 txt_idasis.Text = fila.Cells[1].Value?.ToString() ?? "";
+            }
+        }
+
+        private void btn_cierre_sesion_Click(object sender, EventArgs e)
+        {
+            Form1 frmLogin = new Form1();
+            frmLogin.Show();
+            this.Close();
+        }
+
+       
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(1267, 600);
+
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+
             }
         }
     }

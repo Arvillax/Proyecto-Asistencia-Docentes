@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\fredr\\documents\\github\\proyecto-asistencia-docentes\\proyecto-asistencia-docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\fredr\\documents\\github\\proyecto-asistencia-docentes\\proyecto-asistencia-docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\fredr\\documents\\github\\proyecto-asistencia-docentes\\proyecto-asistencia-docentes\\frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\fredr\\documents\\github\\proyecto-asistencia-docentes\\proyecto-asistencia-docentes\\frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,6 +83,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmDecano.cs",
+              "DocumentMoniker": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
+              "RelativeDocumentMoniker": "frmDecano.cs",
+              "ToolTip": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDecano.cs*",
+              "RelativeToolTip": "frmDecano.cs*",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAwG0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T03:51:06.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmDecano.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
               "RelativeDocumentMoniker": "frmDecano.cs",
@@ -86,25 +107,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmDecano.cs",
-              "DocumentMoniker": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
-              "RelativeDocumentMoniker": "frmDecano.cs",
-              "ToolTip": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDecano.cs*",
-              "RelativeToolTip": "frmDecano.cs*",
-              "ViewState": "AgIAACgAAAAAAAAAAAAWwDIAAAALAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "frmDocente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDocente.cs",
+              "RelativeDocumentMoniker": "frmDocente.cs",
+              "ToolTip": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDocente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmDocente.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T03:51:06.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T03:56:45.877Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frmDocente.cs",
+              "DocumentMoniker": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDocente.cs",
+              "RelativeDocumentMoniker": "frmDocente.cs",
+              "ToolTip": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\frmDocente.cs",
+              "RelativeToolTip": "frmDocente.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAtwLMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:31:01.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "conexionbd.cs",
               "DocumentMoniker": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\conexionbd.cs",
               "RelativeDocumentMoniker": "conexionbd.cs",
-              "ToolTip": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\conexionbd.cs*",
-              "RelativeToolTip": "conexionbd.cs*",
+              "ToolTip": "C:\\Users\\fredr\\Documents\\GitHub\\Proyecto-Asistencia-Docentes\\Proyecto-Asistencia-Docentes\\conexionbd.cs",
+              "RelativeToolTip": "conexionbd.cs",
               "ViewState": "AgIAAOYAAAAAAAAAAAD4v/IAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T07:48:57.241Z",
