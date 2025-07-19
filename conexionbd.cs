@@ -375,7 +375,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection conexion = Conectar())
                 {
-                    SqlCommand cmd = new SqlCommand("PA_TABLA_MATRIZ_ADMIN", conexion); //matriz
+                    SqlCommand cmd = new SqlCommand("PA_MOSTRAR_MATRIZ_ADMIN", conexion); //matriz
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);

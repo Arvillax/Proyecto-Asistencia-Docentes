@@ -28,6 +28,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = con.Conectar())
             {
+                conectar.Open();
                 SqlCommand cmd = new SqlCommand("PA_MOSTRAR_MODIFICAR_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
 
