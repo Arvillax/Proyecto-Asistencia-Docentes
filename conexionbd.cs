@@ -412,6 +412,140 @@ namespace Proyecto_DesarrolloSoftware
                 throw new Exception("Error al cerrar periodo: " + ex.Message);
             }
         }
+
+        public int MigrarDatos(DataTable tablaDatos)
+        {
+            int errores = 0;
+
+            using (SqlConnection conectar = con.Conectar())
+            {
+                conectar.Open();
+                SqlTransaction transaccion = conectar.BeginTransaction();
+
+                try
+                {
+                    foreach (DataRow row in tablaDatos.Rows)
+                    {
+                        try
+                        {
+                            using (SqlCommand cmdSql = new SqlCommand("PA_MIGRACION_EXCEL_ADMIN", conectar, transaccion))
+                            {
+                                cmdSql.CommandType = CommandType.StoredProcedure;
+
+                                cmdSql.Parameters.AddWithValue("@idFacultad", row["idFacultad"].ToString());
+                                cmdSql.Parameters.AddWithValue("@idClase", row["idClase"].ToString());
+                                cmdSql.Parameters.AddWithValue("@seccion", row["Seccion"].ToString());
+                                cmdSql.Parameters.AddWithValue("@desc_clases", row["Desc_Clases"].ToString());
+                                cmdSql.Parameters.AddWithValue("@idEmpleado", Convert.ToInt32(row["idEmpleado"]));
+                                cmdSql.Parameters.AddWithValue("@NuevoNombre_empleados", row["NombreEmpleado"].ToString());
+                                cmdSql.Parameters.AddWithValue("@Correo_Usuario_Nuevo", row["Correo"].ToString());
+                                cmdSql.Parameters.AddWithValue("@hora_inicio", TimeSpan.Parse(row["Hora_Inicio"].ToString()));
+                                cmdSql.Parameters.AddWithValue("@hora_final", TimeSpan.Parse(row["Hora_Final"].ToString()));
+                                cmdSql.Parameters.AddWithValue("@idEdificio", row["idEdificio"].ToString());
+
+                                string idAula = row["idAula"].ToString().Trim();
+                                if (string.IsNullOrWhiteSpace(idAula))
+                                    idAula = "SN";
+
+                                cmdSql.Parameters.AddWithValue("@idAula", idAula);
+
+
+                                cmdSql.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception exFila)
+                        {
+                            errores++;
+                            Console.WriteLine($"Error en la fila: {exFila.Message}");
+                            break; // Salimos del foreach al primer error
+                        }
+                    }
+
+                    if (errores == 0)
+                    {
+                        transaccion.Commit(); // Todo correcto
+                    }
+                    else
+                    {
+                        transaccion.Rollback(); // Hubo error
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaccion.Rollback();
+                    Console.WriteLine($"Error general durante la migración: {ex.Message}");
+                    errores++;
+                }
+            }
+
+            return errores;
+        }
+
+
+        static DataTable LeerExcel(string rutaArchivo)
+        {
+            DataTable dt = new DataTable();
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (ExcelPackage package = new ExcelPackage(new FileInfo(rutaArchivo)))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                if (worksheet == null)
+                    throw new Exception("No se encontró ninguna hoja en el archivo Excel.");
+
+
+                dt.Columns.Add("idFacultad");
+                dt.Columns.Add("idClase");
+                dt.Columns.Add("Seccion");
+                dt.Columns.Add("Desc_Clases");
+                dt.Columns.Add("idEmpleado");
+                dt.Columns.Add("NombreEmpleado");
+                dt.Columns.Add("Correo");
+                dt.Columns.Add("Hora_Inicio");
+                dt.Columns.Add("Hora_Final");
+                dt.Columns.Add("idEdificio");
+                dt.Columns.Add("idAula");
+
+                int totalFilas = worksheet.Dimension.End.Row;
+
+                for (int row = 2; row <= totalFilas; row++)
+                {
+
+                    bool filaVacia = true;
+                    for (int col = 1; col <= 10; col++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(worksheet.Cells[row, col].Text))
+                        {
+                            filaVacia = false;
+                            break;
+                        }
+                    }
+
+                    if (filaVacia)
+                        continue;
+
+
+                    DataRow newRow = dt.NewRow();
+                    newRow["idFacultad"] = worksheet.Cells[row, 1].Text.Trim();
+                    newRow["idClase"] = worksheet.Cells[row, 2].Text.Trim();
+                    newRow["Seccion"] = worksheet.Cells[row, 3].Text.Trim();
+                    newRow["Desc_Clases"] = worksheet.Cells[row, 4].Text.Trim();
+                    newRow["idEmpleado"] = worksheet.Cells[row, 5].Text.Trim();
+                    newRow["NombreEmpleado"] = worksheet.Cells[row, 6].Text.Trim();
+                    newRow["Correo"] = worksheet.Cells[row, 7].Text.Trim();
+                    newRow["Hora_Inicio"] = worksheet.Cells[row, 8].Text.Trim();
+                    newRow["Hora_Final"] = worksheet.Cells[row, 9].Text.Trim();
+                    newRow["idEdificio"] = worksheet.Cells[row, 10].Text.Trim();
+                    newRow["idAula"] = worksheet.Cells[row, 11].Text.Trim();
+
+                    dt.Rows.Add(newRow);
+                }
+            }
+
+            return dt;
+        }
+
+
     }
 
 }
