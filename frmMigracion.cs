@@ -13,7 +13,7 @@ using OfficeOpenXml;
 
 namespace Proyecto_DesarrolloSoftware
 {
-    public partial class frmMigracion : Form1
+    public partial class frmMigracion : Form
     {
         clsConexion con = new clsConexion();
 

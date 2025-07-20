@@ -78,7 +78,7 @@ namespace Proyecto_DesarrolloSoftware
                     conectar.Open();
 
                     // Validar si ya existe un período con esas fechas
-                    using (SqlCommand cmdValidar = new SqlCommand("sp_ValidarFechaPeriodo", conectar))
+                    using (SqlCommand cmdValidar = new SqlCommand("PA_VALIDAR_FECHA_PERIODO_ADMIN", conectar))
                     {
                         cmdValidar.CommandType = CommandType.StoredProcedure;
                         cmdValidar.Parameters.AddWithValue("@FechaInicio", fechaInicio);

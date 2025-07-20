@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using System.Windows;
 using System.Windows.Controls;
 using MessageBox = System.Windows.Forms.MessageBox;
+using OfficeOpenXml;
 
 namespace Proyecto_DesarrolloSoftware
 {
     using System;
     using System.Data;
     using System.Data.SqlClient;
+    using System.IO;
     using System.Windows.Forms;
     using Proyecto_DesarrolloSoftware;
 
@@ -417,7 +419,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             int errores = 0;
 
-            using (SqlConnection conectar = con.Conectar())
+            using (SqlConnection conectar = Conectar())
             {
                 conectar.Open();
                 SqlTransaction transaccion = conectar.BeginTransaction();
@@ -482,10 +484,11 @@ namespace Proyecto_DesarrolloSoftware
         }
 
 
-        static DataTable LeerExcel(string rutaArchivo)
+        public DataTable LeerExcel(string rutaArchivo)
         {
             DataTable dt = new DataTable();
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage.License.SetNonCommercialOrganization("Universidad Catolica de Honduras");
 
             using (ExcelPackage package = new ExcelPackage(new FileInfo(rutaArchivo)))
             {
@@ -545,8 +548,65 @@ namespace Proyecto_DesarrolloSoftware
             return dt;
         }
 
+        public DataTable CargarBitacora()
+        {
+            DataTable tablaBitacora = new DataTable();
+
+            try
+            {
+                using (SqlConnection conectar = Conectar())
+                {
+                    conectar.Open();
+                    using (SqlCommand comando = new SqlCommand("PA_MOSTRAR_BITA_ADMIN", conectar))
+                    {
+                        comando.CommandType = CommandType.StoredProcedure;
+                        SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                        adaptador.Fill(tablaBitacora);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar la bitácora: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return tablaBitacora;
+        }
+
+
+        public DataTable FiltrarBitacoraPorUsuario(int idUsuario)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                using (SqlConnection conectar = Conectar())
+                {
+                    conectar.Open();
+                    using (SqlCommand comando = new SqlCommand("PA_FILTRAR_BITA_ADMIN", conectar))
+                    {
+                        comando.CommandType = CommandType.StoredProcedure;
+                        comando.Parameters.AddWithValue("@idUsuarios", idUsuario);
+
+                        SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                        adaptador.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar bitácora: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return tabla;
+        }
+
+
+
 
     }
+
+
 
 }
 
