@@ -33,6 +33,8 @@ namespace Proyecto_DesarrolloSoftware
             lbl_permiso.Visible = false;
 
             btn_guardarc.Visible = false;
+
+
         }
 
         public void m_tabla_usuarios_admin()
@@ -55,7 +57,7 @@ namespace Proyecto_DesarrolloSoftware
             cmb_estado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
 
-        private void iconButton1_Click_1(object sender, EventArgs e)
+        private void btn_modificard_Click_1(object sender, EventArgs e)
         {
             txt_idempleado.Visible = true;
             txt_nombre.Visible = true;
@@ -70,7 +72,7 @@ namespace Proyecto_DesarrolloSoftware
             btn_guardarc.Visible = true;
         }
 
-        private void iconButton1_Click_2(object sender, EventArgs e)
+        private void btnAgregar_Click_2(object sender, EventArgs e)
         {
             frm_agregar_admin frm_Agregar = new frm_agregar_admin();
             frm_Agregar.Show();
@@ -232,5 +234,9 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
+        private void frmGestion_Usuarios_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

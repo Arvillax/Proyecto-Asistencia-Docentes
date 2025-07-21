@@ -16,6 +16,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             InitializeComponent();
             btnMaximizar.Text = "🗖";
+
             
         }
 
@@ -32,6 +33,7 @@ namespace Proyecto_DesarrolloSoftware
             
             PnlPadre.Controls.Add(childForm);
             childForm.Show();
+            
         }
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)
@@ -76,7 +78,6 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(1600, 700);
                 btnMaximizar.Text = "🗖";
             }
             else
@@ -93,7 +94,8 @@ namespace Proyecto_DesarrolloSoftware
 
         private void frm_Admin_Principal_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new Size(1700, 700);
+            this.MinimumSize = new Size(1024, 600);
+
         }
     }
 }
