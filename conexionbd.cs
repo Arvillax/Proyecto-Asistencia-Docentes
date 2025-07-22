@@ -127,9 +127,9 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_IDEMPLEADO_ADMIN", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_ID_CLASE_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_empleado", busqueda);
+                cmd.Parameters.AddWithValue("@id_CLASE", busqueda);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -143,7 +143,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_NOMCLASE_ADMIN", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_NOMBRE_CLASE_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nom_clase", busqueda);
 
@@ -159,7 +159,11 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
+<<<<<<< Updated upstream
                 SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);//xd
+=======
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);
+>>>>>>> Stashed changes
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@usuario", busqueda);
 
