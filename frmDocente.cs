@@ -180,7 +180,6 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(800, 600);
                 
             }
             else
@@ -193,11 +192,6 @@ namespace Proyecto_DesarrolloSoftware
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void frmDocente_Load(object sender, EventArgs e)
-        {
-            this.MinimumSize = new Size(800, 600);
         }
 
         private void panel_controles_Paint(object sender, PaintEventArgs e)

@@ -15,7 +15,6 @@ namespace Proyecto_DesarrolloSoftware
         public frm_Admin_Principal()
         {
             InitializeComponent();
-            btnMaximizar.Text = "🗖";
 
             
         }
@@ -78,12 +77,10 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                btnMaximizar.Text = "🗖";
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-                btnMaximizar.Text = "🗗";
             }
         }
 

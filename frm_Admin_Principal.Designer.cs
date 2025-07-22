@@ -237,9 +237,9 @@
             // 
             // PnlPadre
             // 
-            this.PnlPadre.Location = new System.Drawing.Point(247, 33);
+            this.PnlPadre.Location = new System.Drawing.Point(248, 33);
             this.PnlPadre.Name = "PnlPadre";
-            this.PnlPadre.Size = new System.Drawing.Size(1303, 661);
+            this.PnlPadre.Size = new System.Drawing.Size(1302, 661);
             this.PnlPadre.TabIndex = 67;
             // 
             // btnMinimizar
@@ -250,10 +250,10 @@
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
             this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnMinimizar.IconColor = System.Drawing.Color.Snow;
-            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 20;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimizar.Location = new System.Drawing.Point(1478, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1474, 0);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(37, 33);
@@ -268,12 +268,12 @@
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMaximizar.IconColor = System.Drawing.Color.Snow;
-            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.SquareMinus;
+            this.btnMaximizar.IconColor = System.Drawing.Color.White;
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             this.btnMaximizar.IconSize = 25;
             this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaximizar.Location = new System.Drawing.Point(1513, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(1509, 0);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(37, 33);
