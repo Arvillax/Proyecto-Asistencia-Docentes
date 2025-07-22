@@ -159,11 +159,11 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-<<<<<<< Updated upstream
-                SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);//xd
-=======
+
+
+
                 SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);
->>>>>>> Stashed changes
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@usuario", busqueda);
 
