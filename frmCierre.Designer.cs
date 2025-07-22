@@ -73,7 +73,7 @@
             this.pnMenuPrincipal.Location = new System.Drawing.Point(55, 103);
             this.pnMenuPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenuPrincipal.Name = "pnMenuPrincipal";
-            this.pnMenuPrincipal.Size = new System.Drawing.Size(1263, 581);
+            this.pnMenuPrincipal.Size = new System.Drawing.Size(1177, 501);
             this.pnMenuPrincipal.TabIndex = 30;
             // 
             // dgvMatriz
@@ -87,7 +87,7 @@
             this.dgvMatriz.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMatriz.Name = "dgvMatriz";
             this.dgvMatriz.RowHeadersWidth = 51;
-            this.dgvMatriz.Size = new System.Drawing.Size(1255, 577);
+            this.dgvMatriz.Size = new System.Drawing.Size(1169, 497);
             this.dgvMatriz.TabIndex = 0;
             // 
             // btn_cerrar_periodo
@@ -100,7 +100,7 @@
             this.btn_cerrar_periodo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cerrar_periodo.IconSize = 30;
             this.btn_cerrar_periodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cerrar_periodo.Location = new System.Drawing.Point(1236, 714);
+            this.btn_cerrar_periodo.Location = new System.Drawing.Point(1140, 677);
             this.btn_cerrar_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar_periodo.Name = "btn_cerrar_periodo";
             this.btn_cerrar_periodo.Size = new System.Drawing.Size(161, 46);
@@ -148,14 +148,14 @@
             this.txt_busqueda.Location = new System.Drawing.Point(144, 66);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(785, 26);
+            this.txt_busqueda.Size = new System.Drawing.Size(690, 26);
             this.txt_busqueda.TabIndex = 32;
             // 
             // dtpBitacora
             // 
             this.dtpBitacora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpBitacora.Location = new System.Drawing.Point(1114, 66);
+            this.dtpBitacora.Location = new System.Drawing.Point(937, 66);
             this.dtpBitacora.Name = "dtpBitacora";
             this.dtpBitacora.Size = new System.Drawing.Size(200, 22);
             this.dtpBitacora.TabIndex = 34;
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1395, 760);
+            this.ClientSize = new System.Drawing.Size(1300, 723);
             this.ControlBox = false;
             this.Controls.Add(this.dtpBitacora);
             this.Controls.Add(this.label3);

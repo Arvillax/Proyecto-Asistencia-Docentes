@@ -255,7 +255,7 @@
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 25;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(725, 593);
+            this.btnAgregar.Location = new System.Drawing.Point(725, 588);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(147, 37);
@@ -276,7 +276,7 @@
             this.btn_modificard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_modificard.IconSize = 25;
             this.btn_modificard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificard.Location = new System.Drawing.Point(556, 593);
+            this.btn_modificard.Location = new System.Drawing.Point(547, 588);
             this.btn_modificard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificard.Name = "btn_modificard";
             this.btn_modificard.Size = new System.Drawing.Size(147, 37);
