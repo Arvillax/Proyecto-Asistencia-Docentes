@@ -211,7 +211,7 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        public void agregar_usuario(int id_empleado, string nombre, int id_rol, string nombre_usuario, string contraseña)
+        public void agregar_usuario(int id_empleado, string nombre, int id_rol,/* string nombre_usuario,*/ string contraseña)
         {
             using (SqlConnection conectar = Conectar())
             {
@@ -221,7 +221,7 @@ namespace Proyecto_DesarrolloSoftware
                 cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
                 cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
                 cmd.Parameters.AddWithValue("@idRol", id_rol);
-                cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario); // campo eliminado en la nueva tabla
+                //cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario); // campo eliminado en la nueva tabla
                 cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
 
                 cmd.ExecuteNonQuery();
