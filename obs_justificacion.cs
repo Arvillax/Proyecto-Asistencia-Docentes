@@ -54,9 +54,9 @@ namespace Proyecto_DesarrolloSoftware
             bool filaEncontrada = false;
             foreach (DataGridViewRow row in decanoform.dgv_decano.Rows)
             {
-                if (row.Cells["idAsistencia"].Value != null && row.Cells["idAsistencia"].Value.ToString() == idBuscado)
+                if (row.Cells["id Asistencia"].Value != null && row.Cells["id Asistencia"].Value.ToString() == idBuscado)
                 {
-                    row.Cells["Obs_Justificaciones"].Value = observacion; // Guardar la observación
+                    row.Cells["Justificacion de Asistecia"].Value = observacion; // Guardar la observación
                     filaEncontrada = true;
                     break;
                 }

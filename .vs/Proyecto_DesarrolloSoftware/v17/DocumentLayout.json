@@ -3,7 +3,47 @@
   "WorkspaceRootPath": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\obs_justificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:obs_justificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\obs_justificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:obs_justificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\cadena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:cadena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,7 +51,7 @@
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frm_admin_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\frmadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\cadena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:cadena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:clsrecuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|c:\\users\\rolan\\documents\\proyecto-asistencia-docentes\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmmodificaciondoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmdecano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_agregar_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frm_agregar_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|solutionrelative:frmsupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AD790F9-8C3F-49E4-BE62-21938D22E44A}|Proyecto_DesarrolloSoftware.csproj|C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmcierre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -94,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 28,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -147,6 +171,94 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "obs_justificacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\obs_justificacion.cs",
+              "RelativeDocumentMoniker": "obs_justificacion.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\obs_justificacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "obs_justificacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:15:06.1Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmSupervisor.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs",
+              "RelativeDocumentMoniker": "frmSupervisor.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs",
+              "RelativeToolTip": "frmSupervisor.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:14:21.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmObservacion.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.cs",
+              "RelativeDocumentMoniker": "frmObservacion.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.cs",
+              "RelativeToolTip": "frmObservacion.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:13:29.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmObservacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.cs",
+              "RelativeDocumentMoniker": "frmObservacion.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmObservacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmObservacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:13:27.353Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDecano.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
+              "RelativeDocumentMoniker": "frmDecano.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
+              "RelativeToolTip": "frmDecano.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:13:18.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "obs_justificacion.cs",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\obs_justificacion.cs",
+              "RelativeDocumentMoniker": "obs_justificacion.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\obs_justificacion.cs",
+              "RelativeToolTip": "obs_justificacion.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:07:12.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T05:30:46.205Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "frmAdministrador.Designer.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.Designer.cs",
               "RelativeDocumentMoniker": "frmAdministrador.Designer.cs",
@@ -154,25 +266,24 @@
               "RelativeToolTip": "frmAdministrador.Designer.cs",
               "ViewState": "AgIAADkBAAAAAAAAAAAIwEwBAACAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T21:42:17.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T21:42:17.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "conexionbd.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\conexionbd.cs",
               "RelativeDocumentMoniker": "conexionbd.cs",
               "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\conexionbd.cs",
               "RelativeToolTip": "conexionbd.cs",
-              "ViewState": "AgIAALsAAAAAAAAAAAAnwMYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAkwFMBAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T07:48:57.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "frmAdministrador.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.cs",
               "RelativeDocumentMoniker": "frmAdministrador.cs",
@@ -180,12 +291,11 @@
               "RelativeToolTip": "frmAdministrador.cs",
               "ViewState": "AgIAABoAAAAAAAAAAADwvzAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T06:14:13.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T06:14:13.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "frmModificacionDoC.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmModificacionDoC.cs",
               "RelativeDocumentMoniker": "frmModificacionDoC.cs",
@@ -197,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "clsrecuperacion.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\clsrecuperacion.cs",
               "RelativeDocumentMoniker": "clsrecuperacion.cs",
@@ -205,25 +315,24 @@
               "RelativeToolTip": "clsrecuperacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:48:14.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T07:48:14.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Cadena.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Cadena.cs",
               "RelativeDocumentMoniker": "Cadena.cs",
               "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Cadena.cs",
               "RelativeToolTip": "Cadena.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBUAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T07:48:11.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "frmModificacionDoC.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmModificacionDoC.cs",
               "RelativeDocumentMoniker": "frmModificacionDoC.cs",
@@ -234,30 +343,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "frmAdministrador.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.cs",
               "RelativeDocumentMoniker": "frmAdministrador.cs",
               "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmAdministrador.cs [Dise\u00F1o]",
               "RelativeToolTip": "frmAdministrador.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:42:58.928Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-22T07:42:58.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 8,
               "Title": "frmSupervisor.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs",
               "RelativeDocumentMoniker": "frmSupervisor.cs",
               "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmSupervisor.cs [Dise\u00F1o]",
               "RelativeToolTip": "frmSupervisor.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:26:36.996Z"
+              "WhenOpened": "2025-07-22T07:26:36.996Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "frmDocente.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmDocente.cs",
               "RelativeDocumentMoniker": "frmDocente.cs",
@@ -268,18 +377,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "frmDecano.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmDecano.cs",
               "RelativeDocumentMoniker": "frmDecano.cs",
               "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmDecano.cs [Dise\u00F1o]",
               "RelativeToolTip": "frmDecano.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:24:39.395Z"
+              "WhenOpened": "2025-07-22T07:24:39.395Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "frmMigracion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmMigracion.cs",
               "RelativeDocumentMoniker": "frmMigracion.cs",
@@ -290,12 +400,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs*",
-              "RelativeToolTip": "Form1.Designer.cs*",
+              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAFQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T06:44:16.077Z",
@@ -303,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "frm_Admin_Principal.Designer.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.Designer.cs",
               "RelativeDocumentMoniker": "frm_Admin_Principal.Designer.cs",
@@ -311,12 +421,11 @@
               "RelativeToolTip": "frm_Admin_Principal.Designer.cs",
               "ViewState": "AgIAAPsAAAAAAAAAAAAAABABAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T06:04:37.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T06:04:37.577Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "frmCierre.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frmCierre.cs",
               "RelativeDocumentMoniker": "frmCierre.cs",
@@ -327,31 +436,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "frm_Admin_Principal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs",
               "RelativeDocumentMoniker": "frm_Admin_Principal.cs",
               "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs [Dise\u00F1o]",
               "RelativeToolTip": "frm_Admin_Principal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T05:27:54.481Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-21T05:27:54.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T05:30:46.205Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "frm_Bitacora.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Bitacora.cs",
               "RelativeDocumentMoniker": "frm_Bitacora.cs",
@@ -362,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "frm_Admin_Principal.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Admin_Principal.cs",
               "RelativeDocumentMoniker": "frm_Admin_Principal.cs",
@@ -370,12 +466,11 @@
               "RelativeToolTip": "frm_Admin_Principal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T05:28:27.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T05:28:27.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "frm_agregar_admin.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_agregar_admin.cs",
               "RelativeDocumentMoniker": "frm_agregar_admin.cs",
@@ -386,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "frm_Bitacora.cs",
               "DocumentMoniker": "C:\\Users\\rolan\\Documents\\Proyecto-Asistencia-Docentes\\frm_Bitacora.cs",
               "RelativeDocumentMoniker": "frm_Bitacora.cs",

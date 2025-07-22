@@ -133,7 +133,7 @@
             this.btn_cerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cerrar.IconSize = 25;
             this.btn_cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cerrar.Location = new System.Drawing.Point(0, 435);
+            this.btn_cerrar.Location = new System.Drawing.Point(-2, 435);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(119, 43);

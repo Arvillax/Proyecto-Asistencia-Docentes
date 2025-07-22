@@ -72,7 +72,7 @@
             this.btn_volver.IconColor = System.Drawing.Color.Black;
             this.btn_volver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_volver.Location = new System.Drawing.Point(95, 220);
-            this.btn_volver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_volver.Margin = new System.Windows.Forms.Padding(4);
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Size = new System.Drawing.Size(93, 37);
             this.btn_volver.TabIndex = 4;
@@ -96,7 +96,6 @@
             this.MinimizeBox = false;
             this.Name = "frmObservacion";
             this.ShowIcon = false;
-            this.Text = "";
             this.ResumeLayout(false);
             this.PerformLayout();
 
