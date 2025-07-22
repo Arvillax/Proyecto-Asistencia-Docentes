@@ -165,7 +165,7 @@ namespace Proyecto_DesarrolloSoftware
                 SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@usuario", busqueda);
+                cmd.Parameters.AddWithValue("@nombre", busqueda);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
