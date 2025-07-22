@@ -25,23 +25,25 @@ namespace Proyecto_DesarrolloSoftware
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            int idUsuario;
+            int idUsuario ;
 
             // Si el textbox está vacío, restauramos todo sin mostrar mensaje
             if (string.IsNullOrWhiteSpace(txtBuscar.Text))
             {
                 con.CargarBitacora(); 
-                return;
             }
 
             // Validamos si el texto es numérico
             if (int.TryParse(txtBuscar.Text.Trim(), out idUsuario))
             {
-                con.FiltrarBitacoraPorUsuario(idUsuario);
+                con.FiltrarBitacoraPorUsuario(idUsuario,dgvBitacora);
+                lbl_aviso.Text = "";
             }
             else
             {
-                MessageBox.Show("Por favor, ingresa un ID de usuario válido (solo números).", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lbl_aviso.Text = "Por favor, ingresa un ID de usuario válido (solo números)";
+                //MessageBox.Show("Por favor, ingresa un ID de usuario válido (solo números).", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.CargarBitacora();
             }
 
 
