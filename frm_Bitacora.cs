@@ -41,13 +41,10 @@ namespace Proyecto_DesarrolloSoftware
             }
             else
             {
-                lbl_aviso.Text = "Por favor, ingresa un ID de usuario válido (solo números)";
-                //MessageBox.Show("Por favor, ingresa un ID de usuario válido (solo números).", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 con.CargarBitacora();
+                lbl_aviso.Text = "Por favor, ingresa un ID de usuario válido (solo números)";
+               
             }
-
-
-
         }
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)

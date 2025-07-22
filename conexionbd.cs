@@ -577,10 +577,10 @@ namespace Proyecto_DesarrolloSoftware
             return tablaBitacora;
         }
 
-
-        public DataTable FiltrarBitacoraPorUsuario(int idUsuario)
+        
+        public void FiltrarBitacoraPorUsuario(int idUsuario, DataGridView dgvBitacora)
         {
-            DataTable tabla = new DataTable();
+
 
             try
             {
@@ -592,8 +592,12 @@ namespace Proyecto_DesarrolloSoftware
                         comando.CommandType = CommandType.StoredProcedure;
                         comando.Parameters.AddWithValue("@idUsuarios", idUsuario);
 
+
                         SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                        DataTable tabla = new DataTable();
+
                         adaptador.Fill(tabla);
+                        dgvBitacora.DataSource = tabla;
                     }
                 }
             }
@@ -601,8 +605,6 @@ namespace Proyecto_DesarrolloSoftware
             {
                 MessageBox.Show("Error al filtrar bitácora: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            return tabla;
         }
 
 
