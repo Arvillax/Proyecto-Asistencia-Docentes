@@ -241,6 +241,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection conectar = con.Conectar())
                 {
+                    conectar.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     DataTable contenedor = new DataTable();
                     SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);

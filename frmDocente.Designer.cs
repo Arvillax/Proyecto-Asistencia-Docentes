@@ -260,8 +260,8 @@
             this.cmb_filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_filtro.FormattingEnabled = true;
             this.cmb_filtro.Items.AddRange(new object[] {
-            "clase",
-            "fecha"});
+            "Clase",
+            "Fecha"});
             this.cmb_filtro.Location = new System.Drawing.Point(447, 149);
             this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";

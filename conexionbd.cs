@@ -159,9 +159,9 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);//xd
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);//xd
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombre", busqueda);
+                cmd.Parameters.AddWithValue("@usuario", busqueda);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
