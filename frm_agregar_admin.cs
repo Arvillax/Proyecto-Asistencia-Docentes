@@ -24,8 +24,11 @@ namespace Proyecto_DesarrolloSoftware
         {
             InitializeComponent();
             cmb_permiso.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.Font = new Font("Microsoft Sans Serif", 8.25F);
+            this.Size = new Size(800, 480);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,7 +56,7 @@ namespace Proyecto_DesarrolloSoftware
         {
   
             if (/*string.IsNullOrEmpty(txt_existe.Text) ||*/ string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_permiso.Text)
-                || string.IsNullOrEmpty(txt_usuarioempleado.Text) || string.IsNullOrEmpty(txt_contraseña.Text) || string.IsNullOrEmpty(cmb_permiso.Text) || 
+                || /*string.IsNullOrEmpty(txt_usuarioempleado.Text) || */string.IsNullOrEmpty(txt_contraseña.Text) || string.IsNullOrEmpty(cmb_permiso.Text) || 
                 string.IsNullOrEmpty(txt_idempleado.Text))
             {
                 MessageBox.Show("hay campos que estan vacios");
@@ -63,7 +66,7 @@ namespace Proyecto_DesarrolloSoftware
                 int id_rol = Convert.ToInt32(txt_permiso.Text);
                 int id_empleado = Convert.ToInt32(txt_idempleado.Text);
                 string nombre = txt_nombre.Text;
-                string nombre_usuario = txt_usuarioempleado.Text; // campo eliminado en la nueva tabla
+                //string nombre_usuario = txt_usuarioempleado.Text; // campo eliminado en la nueva tabla
                 string contraseña = txt_contraseña.Text;
 
 
@@ -77,7 +80,7 @@ namespace Proyecto_DesarrolloSoftware
                 else if(txt_existe.Text == "no existe")
                 {
                     
-                    con.agregar_usuario(id_empleado,nombre,id_rol,nombre_usuario,contraseña);
+                    con.agregar_usuario(id_empleado,nombre,id_rol,contraseña);
                     frmGestion_Usuarios admin = new frmGestion_Usuarios();
                     this.Hide();
                 }
