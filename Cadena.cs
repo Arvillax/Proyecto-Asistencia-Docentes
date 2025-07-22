@@ -9,7 +9,8 @@ namespace Proyecto_DesarrolloSoftware
 {
     internal class Cadena
     {
-        private readonly string conexionString = "Server=mssql-199159-0.cloudclusters.net,10002;Database=implementacion;User Id=freed;Password=Homofredus1;Encrypt=True;TrustServerCertificate=True;";
+        private readonly string conexionString = "Server=mssql-199159-0.cloudclusters.net,10002;" +
+            "Database=implementacion;User Id=freed;Password=Homofredus1;Encrypt=True;TrustServerCertificate=True;";
 
         public string ConexionString
         {
@@ -19,7 +20,9 @@ namespace Proyecto_DesarrolloSoftware
 
         public SqlConnection Conectar()
         {
-            return new SqlConnection(conexionString);
+            // time out
+            string conexionStringConTimeout = conexionString + ";Connection Timeout=30";
+            return new SqlConnection(conexionStringConTimeout);
         }
     }
 
