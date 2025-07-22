@@ -127,9 +127,9 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_IDEMPLEADO_ADMIN", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_ID_CLASE_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_empleado", busqueda);
+                cmd.Parameters.AddWithValue("@id_CLASE", busqueda);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -143,7 +143,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_NOMCLASE_ADMIN", conectar);
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_NOMBRE_CLASE_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nom_clase", busqueda);
 
@@ -159,9 +159,13 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_BUS_NOM_ADMIN", conectar);//xd
+
+
+
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);
+
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombre", busqueda);
+                cmd.Parameters.AddWithValue("@usuario", busqueda);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable contenedor = new DataTable();
@@ -211,7 +215,7 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        public void agregar_usuario(int id_empleado, string nombre, int id_rol, string nombre_usuario, string contraseña)
+        public void agregar_usuario(int id_empleado, string nombre, int id_rol,/* string nombre_usuario,*/ string contraseña)
         {
             using (SqlConnection conectar = Conectar())
             {
@@ -221,7 +225,7 @@ namespace Proyecto_DesarrolloSoftware
                 cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
                 cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
                 cmd.Parameters.AddWithValue("@idRol", id_rol);
-                cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario); // campo eliminado en la nueva tabla
+                //cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario); // campo eliminado en la nueva tabla
                 cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
 
                 cmd.ExecuteNonQuery();

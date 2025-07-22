@@ -141,15 +141,6 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Ingresar();
-                e.SuppressKeyPress = true;
-            }
-        }
-
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -167,6 +158,15 @@ namespace Proyecto_DesarrolloSoftware
             {
                 this.WindowState = FormWindowState.Maximized;
 
+            }
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Ingresar();
+                e.SuppressKeyPress = true;
             }
         }
     }
