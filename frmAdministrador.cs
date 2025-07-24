@@ -212,9 +212,9 @@ namespace Proyecto_DesarrolloSoftware
                     {
                         conectar.Open();
 
-                        SqlCommand cmd = new SqlCommand("PA_BUSCAR_ID_EMPLEADO_ADMIN", conectar);//admin
+                        SqlCommand cmd = new SqlCommand("PA_BUSCAR_ID_EMPLEADO_GESTION_ADMIN", conectar);//admin
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@id_empleado", busqueda);
+                        cmd.Parameters.AddWithValue("@usuario", busqueda);
 
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable contenedor = new DataTable();

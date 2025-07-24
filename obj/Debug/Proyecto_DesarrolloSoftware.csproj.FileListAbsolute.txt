@@ -505,7 +505,6 @@ C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Text.Json.xml
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.ValueTuple.xml
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\es\Microsoft.CodeAnalysis.resources.dll
@@ -942,3 +941,14 @@ C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\bin\Debug\ru\Microsoft.Cod
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\bin\Debug\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\bin\Debug\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\rolan\Documents\Proyecto-Asistencia-Docentes\bin\Debug\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\Microsoft.Bcl.Cryptography.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Drawing.Common.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Formats.Asn1.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.IO.Pipelines.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\Microsoft.Bcl.Cryptography.xml
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Drawing.Common.pdb
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Drawing.Common.xml
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Formats.Asn1.xml
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.IO.Pipelines.xml
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Security.Cryptography.Xml.xml

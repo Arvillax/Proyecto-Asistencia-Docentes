@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,8 +67,18 @@ namespace Proyecto_DesarrolloSoftware
                 txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
 
+        List<IconButton> botonesEdificio;
+
         private void frmSupervisor_Load(object sender, EventArgs e)
         {
+
+            botonesEdificio = new List<IconButton> {
+            iconButton1, iconButton2, iconButton3, iconButton4,
+            iconButton5, iconButton6, iconButton7, iconButton8,
+            iconButton9, iconButton10, iconButton11, iconButton12,
+            iconButton13, iconButton14, iconButton15
+            };
+
             this.MinimumSize = new Size(1600, 700);
         }
 
@@ -80,50 +91,62 @@ namespace Proyecto_DesarrolloSoftware
 
         // Métodos para botones de edificios (A, B, C, ...)
 
-        private void CargarEdificio(string id)
+        private void CargarEdificio(string id, IconButton botonPresionado)
         {
             txt_edificios.Text = id;
             con.mostrar_edificios(id, dataGridView1);
+
+            // Reiniciar el color de todos los botones
+            foreach (var boton in botonesEdificio)
+            {
+                boton.BackColor = Color.LightGray; // o el color original que usas
+                boton.ForeColor = Color.Black;
+            }
+
+            // Cambiar color del botón presionado
+            botonPresionado.BackColor = Color.FromArgb(0, 120, 215); // Azul, por ejemplo
+            botonPresionado.ForeColor = Color.White;
         }
 
-        private void iconButton1_Click(object sender, EventArgs e) => CargarEdificio("A");
-        private void iconButton2_Click(object sender, EventArgs e) => CargarEdificio("B");
-        private void iconButton3_Click(object sender, EventArgs e) => CargarEdificio("C");
-        private void iconButton4_Click(object sender, EventArgs e) => CargarEdificio("D");
-        private void iconButton5_Click(object sender, EventArgs e) => CargarEdificio("E");
-        private void iconButton6_Click(object sender, EventArgs e) => CargarEdificio("F");
-        private void iconButton7_Click(object sender, EventArgs e) => CargarEdificio("G");
-        private void iconButton8_Click(object sender, EventArgs e) => CargarEdificio("H");
-        private void iconButton9_Click(object sender, EventArgs e) => CargarEdificio("I");
-        private void iconButton10_Click(object sender, EventArgs e) => CargarEdificio("J");
-        private void iconButton11_Click(object sender, EventArgs e) => CargarEdificio("K");
-        private void iconButton12_Click(object sender, EventArgs e) => CargarEdificio("L");
-        private void iconButton13_Click(object sender, EventArgs e) => CargarEdificio("M");
-        private void iconButton14_Click(object sender, EventArgs e) => CargarEdificio("ND");
-        private void iconButton15_Click(object sender, EventArgs e) => CargarEdificio("P");
+        private void iconButton1_Click(object sender, EventArgs e) => CargarEdificio("A", (IconButton)sender);
+        private void iconButton2_Click(object sender, EventArgs e) => CargarEdificio("B", (IconButton)sender);
+        private void iconButton3_Click(object sender, EventArgs e) => CargarEdificio("C", (IconButton)sender);
+        private void iconButton4_Click(object sender, EventArgs e) => CargarEdificio("D", (IconButton)sender);
+        private void iconButton5_Click(object sender, EventArgs e) => CargarEdificio("E", (IconButton)sender);
+        private void iconButton6_Click(object sender, EventArgs e) => CargarEdificio("F", (IconButton)sender);
+        private void iconButton7_Click(object sender, EventArgs e) => CargarEdificio("G", (IconButton)sender);
+        private void iconButton8_Click(object sender, EventArgs e) => CargarEdificio("H", (IconButton)sender);
+        private void iconButton9_Click(object sender, EventArgs e) => CargarEdificio("I", (IconButton)sender);
+        private void iconButton10_Click(object sender, EventArgs e) => CargarEdificio("J", (IconButton)sender);
+        private void iconButton11_Click(object sender, EventArgs e) => CargarEdificio("K", (IconButton)sender);
+        private void iconButton12_Click(object sender, EventArgs e) => CargarEdificio("L", (IconButton)sender);
+        private void iconButton13_Click(object sender, EventArgs e) => CargarEdificio("M", (IconButton)sender);
+        private void iconButton14_Click(object sender, EventArgs e) => CargarEdificio("ND", (IconButton)sender);
+        private void iconButton15_Click(object sender, EventArgs e) => CargarEdificio("P", (IconButton)sender);
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_edificios.Text))
-            {
-                MessageBox.Show("Seleccione un edificio para empezar la búsqueda");
-                return;
-            }
-
             string edificio = txt_edificios.Text;
             string busqueda = txt_busqueda.Text;
 
-            if (cmb_filtro.SelectedIndex == -1)
+            if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoja un filtro para empezar la búsqueda");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Seleccione un edificio para empezar la búsqueda"; 
             }
-
-            if (cmb_filtro.SelectedIndex == 0)
+            else if (cmb_filtro.SelectedIndex == -1)
             {
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Escoja un filtro para empezar la búsqueda";
+            }
+            else if (cmb_filtro.SelectedIndex == 0)
+            {
+                
+                lbl_aviso.Text = "";
                 DataTable contenedor = new DataTable();
                 using (SqlConnection conectar = con.Conectar())
                 {
+                    conectar.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlCommand cmd = new SqlCommand("PA_BUSCAR_NOMBRE_SUPERV", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -136,6 +159,7 @@ namespace Proyecto_DesarrolloSoftware
                         adapter.SelectCommand = cmd;
                         adapter.Fill(contenedor);
                         dataGridView1.DataSource = contenedor;
+                        lbl_aviso.Text = "";
                     }
                     catch (SqlException ex)
                     {
@@ -146,116 +170,79 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void iconButton16_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_busqueda.Text))
-            {
-                MessageBox.Show("La búsqueda no puede estar vacía");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txt_edificios.Text))
-            {
-                MessageBox.Show("Seleccione un edificio para empezar la búsqueda");
-                return;
-            }
-
-            string edificio = txt_edificios.Text;
-            string busqueda = txt_busqueda.Text;
-
-            if (cmb_filtro.SelectedIndex == -1)
-            {
-                MessageBox.Show("Escoja un filtro para empezar la búsqueda");
-                return;
-            }
-
-            if (cmb_filtro.SelectedIndex == 0)
-            {
-                DataTable contenedor = new DataTable();
-                using (SqlConnection conectar = con.Conectar())
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_NOMBRE_SUPERV", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@nom_docente", busqueda);
-                    cmd.Parameters.AddWithValue("@id_edificio", edificio);
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        adapter.SelectCommand = cmd;
-                        adapter.Fill(contenedor);
-                        dataGridView1.DataSource = contenedor;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
-                }
-            }
-        }
-
+        //boton  de marcar asistio
         private void iconButton16_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoja un edificio para marcar o quitar asistencia");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Escoja un edificio para marcar o quitar asistencia";
+
             }
-            if (string.IsNullOrEmpty(txt_idasis.Text))
+            else if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show("Asegúrese de que se haya seleccionado un registro");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Asegúrese de que se haya seleccionado un registro";
+
             }
+            else
+            {
+                string est_asis = "A";
+                int id_asistencia = Convert.ToInt32(txt_idasis.Text);
+                string id_edificio = txt_edificios.Text;
 
-            string est_asis = "P";
-            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-            string id_edificio = txt_edificios.Text;
-
-            con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
+                con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
+                lbl_aviso.Text = "";
+            }  
         }
 
+        //boton para marcar que no asistio
         private void btn_noasistio_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoja un edificio para marcar o quitar asistencia");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Escoja un edificio para marcar o quitar asistencia";
+
             }
-            if (string.IsNullOrEmpty(txt_idasis.Text))
+            else if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show("Asegúrese de que se haya seleccionado un registro");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Asegúrese de que se haya seleccionado un registro";
+
             }
+            else 
+            {
+                string est_asis = "NA";
+                int id_asistencia = Convert.ToInt32(txt_idasis.Text);
+                string id_edificio = txt_edificios.Text;
 
-            string est_asis = "A";
-            int id_asistencia = Convert.ToInt32(txt_idasis.Text);
-            string id_edificio = txt_edificios.Text;
-
-            con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
+                con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
+                lbl_aviso.Text = "";
+            }
+                
         }
 
         private void btn_observacion_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_edificios.Text))
             {
-                MessageBox.Show("Escoja un edificio y seleccione un registro para agregar una observación");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Escoja un edificio y seleccione un registro para agregar una observación";
+
             }
-            if (string.IsNullOrEmpty(txt_idasis.Text))
+            else if (string.IsNullOrEmpty(txt_idasis.Text))
             {
-                MessageBox.Show("Asegúrese de que se haya seleccionado un registro");
-                return;
+                lbl_aviso.Text = "";
+                lbl_aviso.Text = "Asegúrese de que se haya seleccionado un registro";
+
             }
-
-            frmObservacion obsForm = new frmObservacion(this);
-            obsForm.ShowDialog();
-        }
-
-        private void btn_recargar_Click(object sender, EventArgs e)
-        {
-            mtabla_supervisor();
+            else
+            {
+                frmObservacion obsForm = new frmObservacion(this);
+                obsForm.ShowDialog();
+            }
+                
         }
 
         private void txt_busqueda_KeyPress(object sender, KeyPressEventArgs e)

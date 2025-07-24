@@ -244,9 +244,9 @@ namespace Proyecto_DesarrolloSoftware
                     conectar.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);
+                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_ID_CLASE_ADMIN", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id_clase", busqueda);
+                    cmd.Parameters.AddWithValue("@id_CLASE", busqueda);
 
                     try
                     {

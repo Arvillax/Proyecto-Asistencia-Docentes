@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,13 +15,13 @@ namespace Proyecto_DesarrolloSoftware
     public partial class frmObservacion : Form
     {
         private readonly frmSupervisor supervisorForm;
-        private readonly clsConexion conexion;
+        clsConexion con = new clsConexion();
 
         public frmObservacion(frmSupervisor form)
         {
             InitializeComponent();
             supervisorForm = form;
-            conexion = new clsConexion();
+            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -48,9 +49,9 @@ namespace Proyecto_DesarrolloSoftware
             bool filaEncontrada = false;
             foreach (DataGridViewRow row in supervisorForm.dataGridView1.Rows)
             {
-                if (row.Cells["idAsistencia"].Value != null && row.Cells["idAsistencia"].Value.ToString() == idBuscado)
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == idBuscado)
                 {
-                    row.Cells["Observaciones"].Value = observacion;
+                    row.Cells[12].Value = observacion;
                     filaEncontrada = true;
                     break;
                 }
@@ -62,25 +63,27 @@ namespace Proyecto_DesarrolloSoftware
                 return;
             }
 
-            try
+            using (SqlConnection conectar = con.Conectar())
             {
-                using (SqlConnection conn = conexion.Conectar())
-                {
-                    using (SqlCommand cmd = new SqlCommand("PA_AGREGAR_OBS_SUPERV", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@id", idBuscado);
-                        cmd.Parameters.AddWithValue("@observacion", observacion);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
+                conectar.Open();
+               
+                SqlCommand cmd = new SqlCommand("PA_AGREGAR_OBS_SUPERV", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", idBuscado);
+                cmd.Parameters.AddWithValue("@observacion", observacion);
 
-                MessageBox.Show("Observación guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al guardar la observación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Observación guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
             }
         }
         private void btn_volver_Click(object sender, EventArgs e)

@@ -160,8 +160,6 @@ namespace Proyecto_DesarrolloSoftware
             using (SqlConnection conectar = Conectar())
             {
 
-
-
                 SqlCommand cmd = new SqlCommand("PA_BUSCAR_GESTION_ADMIN", conectar);
 
                 cmd.CommandType = CommandType.StoredProcedure;

@@ -62,5 +62,9 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
+        private void txt_busqueda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
