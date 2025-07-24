@@ -21,7 +21,7 @@ namespace Proyecto_DesarrolloSoftware
         public SqlConnection Conectar()
         {
             // time out
-            string conexionStringConTimeout = conexionString + ";Connection Timeout=30";
+            string conexionStringConTimeout = conexionString + ";Connection Timeout=180";
             return new SqlConnection(conexionStringConTimeout);
         }
     }

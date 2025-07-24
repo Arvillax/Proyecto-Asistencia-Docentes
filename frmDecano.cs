@@ -72,11 +72,30 @@ namespace Proyecto_DesarrolloSoftware
             {
                 MessageBox.Show("Seleccione un filtro antes de iniciar la busqueda");
             }
+            switch (cmb_filtro.SelectedIndex) {
+                case 0:
+                    con.buscar_tabla_decano_clase(busqueda, id, dgv_decano);
+                break;
+                case 1:
+                    con.buscar_tabla_decano_empleado(busqueda, id, dgv_decano);
+                break;
+                case 2:
+                    con.buscar_tabla_decano_fecha(busqueda, id, dgv_decano);
+                    break;
+                default:
+                    MessageBox.Show("Filtro no reconocido.");
+                break;
+
+            }
+
+
+            /*      
             else if (cmb_filtro.SelectedIndex == 0)
             {
                 con.buscar_tabla_decano_clase(busqueda,id,dgv_decano);
-            }
+            }*/
         }
+        
 
         private void dgv_decano_CellClick(object sender, DataGridViewCellEventArgs e)
         {

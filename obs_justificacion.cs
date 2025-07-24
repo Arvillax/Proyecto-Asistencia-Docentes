@@ -56,7 +56,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 if (row.Cells["id Asistencia"].Value != null && row.Cells["id Asistencia"].Value.ToString() == idBuscado)
                 {
-                    row.Cells["Justificacion de Asistecia"].Value = observacion; // Guardar la observación
+                    row.Cells["Justificacion de Asistencia"].Value = observacion; // Guardar la observación y linea de la excepcion
                     filaEncontrada = true;
                     break;
                 }

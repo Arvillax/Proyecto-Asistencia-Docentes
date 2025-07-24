@@ -122,7 +122,67 @@ namespace Proyecto_DesarrolloSoftware
                 }
             } // La conexión se cierra automáticamente con using
         }
+        // BUSCAR POR NOMBRE DEL EMPLEADO
+        public void buscar_tabla_decano_empleado (String busqueda, int id, DataGridView dgv_decano)
+        {
+            // Usar el método Conectar() en lugar de conexionString
+            using (SqlConnection conectar = Conectar())
+            {
+                conectar.Open();
 
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataTable contenedor = new DataTable();
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_DATOS_DECANO_EMPLEADO", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombre_empleado", busqueda);
+                cmd.Parameters.AddWithValue("@id_decano", id);
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    adapter.SelectCommand = cmd;
+                    adapter.Fill(contenedor);
+                    dgv_decano.DataSource = contenedor;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+            } // La conexión se cierra automáticamente con using
+        }
+        //BUSQUEDA POR FECHA
+        public void buscar_tabla_decano_fecha(String busqueda, int id, DataGridView dgv_decano)
+        {
+
+            // Usar el método Conectar() en lugar de conexionString
+            using (SqlConnection conectar = Conectar())
+            {
+
+                conectar.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataTable contenedor = new DataTable();
+                SqlCommand cmd = new SqlCommand("PA_BUSCAR_DATOS_DECANO_FECHA", conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@fecha_busqueda", busqueda);
+                cmd.Parameters.AddWithValue("@id_decano", id);
+
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    adapter.SelectCommand = cmd;
+                    adapter.Fill(contenedor);
+                    dgv_decano.DataSource = contenedor;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+            } // La conexión se cierra automáticamente con using
+        }
         public void busqueda_idempleado_admin(string busqueda, DataGridView grid)
         {
             using (SqlConnection conectar = Conectar())
