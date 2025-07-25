@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnIngresarCod = new System.Windows.Forms.Button();
             this.lbmensaje = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_regrsar = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEnviarSoli = new System.Windows.Forms.Button();
@@ -42,8 +44,19 @@
             this.txtUsuario2 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnIngresarCod
+            // 
+            this.btnIngresarCod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnIngresarCod.FlatAppearance.BorderSize = 0;
+            this.btnIngresarCod.Location = new System.Drawing.Point(1028, 654);
+            this.btnIngresarCod.Name = "btnIngresarCod";
+            this.btnIngresarCod.Size = new System.Drawing.Size(1, 1);
+            this.btnIngresarCod.TabIndex = 35;
+            this.btnIngresarCod.Click += new System.EventHandler(this.btnIngresarCod_Click);
             // 
             // lbmensaje
             // 
@@ -90,7 +103,6 @@
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1107, 102);
             this.panel1.TabIndex = 30;
@@ -137,6 +149,17 @@
             this.btnMaximizar.UseVisualStyleBackColor = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_DesarrolloSoftware.Properties.Resources.d3d7b312_6a18_4bf1_ad9e_59d16cf61af9__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(94, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // btn_regrsar
             // 
             this.btn_regrsar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -147,7 +170,7 @@
             this.btn_regrsar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_regrsar.IconSize = 35;
             this.btn_regrsar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_regrsar.Location = new System.Drawing.Point(910, 606);
+            this.btn_regrsar.Location = new System.Drawing.Point(911, 611);
             this.btn_regrsar.Margin = new System.Windows.Forms.Padding(6);
             this.btn_regrsar.Name = "btn_regrsar";
             this.btn_regrsar.Size = new System.Drawing.Size(192, 69);
@@ -235,6 +258,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btn_regrsar);
             this.Controls.Add(this.lbmensaje);
+            this.Controls.Add(this.btnIngresarCod);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -251,6 +275,7 @@
             this.Load += new System.EventHandler(this.frmRecuperacion_De_Contraseñas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -258,11 +283,13 @@
         }
 
         #endregion
+        private System.Windows.Forms.Button btnIngresarCod;
         private System.Windows.Forms.Label lbmensaje;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEnviarSoli;
         private System.Windows.Forms.TextBox txtUsuario;

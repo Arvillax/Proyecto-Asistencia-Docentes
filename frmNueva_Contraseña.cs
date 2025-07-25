@@ -45,7 +45,37 @@ namespace Proyecto_DesarrolloSoftware
                 MessageBox.Show("Error al cambiar la contraseña.");
             }
         }
+        private bool contraseñaVisible = false;
+        private void MostrarContraseña1_Click(object sender, EventArgs e)
+        {
+            contraseñaVisible = !contraseñaVisible;
 
+            if (contraseñaVisible)
+            {
+                txtccon.PasswordChar = '\0'; // Mostrar texto normal
+                btnMostrarContraseña1.Text = "🙈";
+            }
+            else
+            {
+                txtccon.PasswordChar = '*'; // Ocultar con asteriscos
+                btnMostrarContraseña1.Text = "👁️";
+            }
+        }
+        private void MostrarContraseña2_Click(object sender, EventArgs e)
+        {
+            contraseñaVisible = !contraseñaVisible;
+
+            if (contraseñaVisible)
+            {
+                txtncon.PasswordChar = '\0'; // Mostrar texto normal
+                btnMostrarContraseña1.Text = "🙈";
+            }
+            else
+            {
+                txtncon.PasswordChar = '*'; // Ocultar con asteriscos
+                btnMostrarContraseña2.Text = "👁️";
+            }
+        }
         private void btn_regrsar_Click(object sender, EventArgs e)
         {
             Form1 frmLogin = new Form1();

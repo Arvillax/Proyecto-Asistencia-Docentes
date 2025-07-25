@@ -144,5 +144,10 @@ namespace Proyecto_DesarrolloSoftware
         {
             this.MinimumSize = new Size(800, 600);
         }
+
+        private void btnIngresarCod_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

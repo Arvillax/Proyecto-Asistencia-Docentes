@@ -30,19 +30,19 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.txtccon = new System.Windows.Forms.TextBox();
+            this.btnMostrarContraseña1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lnContraseña = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardarContra = new System.Windows.Forms.Button();
             this.txtncon = new System.Windows.Forms.TextBox();
+            this.btnMostrarContraseña2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_regrsar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,20 @@
             this.txtccon.Size = new System.Drawing.Size(312, 29);
             this.txtccon.TabIndex = 50;
             // 
+            // btnMostrarContraseña1
+            // 
+            this.btnMostrarContraseña1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnMostrarContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnMostrarContraseña1.Location = new System.Drawing.Point(659, 511);
+            this.btnMostrarContraseña1.Margin = new System.Windows.Forms.Padding(6);
+            this.btnMostrarContraseña1.MaximumSize = new System.Drawing.Size(40, 34);
+            this.btnMostrarContraseña1.Name = "btnMostrarContraseña1";
+            this.btnMostrarContraseña1.Size = new System.Drawing.Size(40, 34);
+            this.btnMostrarContraseña1.TabIndex = 23;
+            this.btnMostrarContraseña1.Text = "👁️";
+            this.btnMostrarContraseña1.UseVisualStyleBackColor = true;
+            this.btnMostrarContraseña1.Click += new System.EventHandler(this.MostrarContraseña1_Click);
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -87,7 +101,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(94)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnMaximizar);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-4, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
@@ -106,7 +119,7 @@
             this.btnMinimizar.IconSize = 20;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMinimizar.Location = new System.Drawing.Point(1002, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(6);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(52, 50);
             this.btnMinimizar.TabIndex = 54;
@@ -127,7 +140,7 @@
             this.btnMaximizar.IconSize = 25;
             this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMaximizar.Location = new System.Drawing.Point(1050, 0);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(6);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(52, 50);
             this.btnMaximizar.TabIndex = 53;
@@ -135,17 +148,6 @@
             this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMaximizar.UseVisualStyleBackColor = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proyecto_DesarrolloSoftware.Properties.Resources.d3d7b312_6a18_4bf1_ad9e_59d16cf61af9__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // lnContraseña
             // 
@@ -185,8 +187,23 @@
             this.txtncon.Location = new System.Drawing.Point(337, 432);
             this.txtncon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtncon.Name = "txtncon";
+            this.txtncon.PasswordChar = '*';
             this.txtncon.Size = new System.Drawing.Size(312, 29);
             this.txtncon.TabIndex = 43;
+            // 
+            // btnMostrarContraseña2
+            // 
+            this.btnMostrarContraseña2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnMostrarContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnMostrarContraseña2.Location = new System.Drawing.Point(659, 432);
+            this.btnMostrarContraseña2.Margin = new System.Windows.Forms.Padding(6);
+            this.btnMostrarContraseña2.MaximumSize = new System.Drawing.Size(40, 34);
+            this.btnMostrarContraseña2.Name = "btnMostrarContraseña2";
+            this.btnMostrarContraseña2.Size = new System.Drawing.Size(40, 34);
+            this.btnMostrarContraseña2.TabIndex = 23;
+            this.btnMostrarContraseña2.Text = "👁️";
+            this.btnMostrarContraseña2.UseVisualStyleBackColor = true;
+            this.btnMostrarContraseña2.Click += new System.EventHandler(this.MostrarContraseña2_Click);
             // 
             // pictureBox2
             // 
@@ -212,8 +229,8 @@
             this.btn_regrsar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_regrsar.IconSize = 35;
             this.btn_regrsar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_regrsar.Location = new System.Drawing.Point(910, 622);
-            this.btn_regrsar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_regrsar.Location = new System.Drawing.Point(906, 609);
+            this.btn_regrsar.Margin = new System.Windows.Forms.Padding(6);
             this.btn_regrsar.Name = "btn_regrsar";
             this.btn_regrsar.Size = new System.Drawing.Size(192, 69);
             this.btn_regrsar.TabIndex = 52;
@@ -233,6 +250,7 @@
             this.Controls.Add(this.btn_regrsar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtccon);
+            this.Controls.Add(this.btnMostrarContraseña1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -240,12 +258,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardarContra);
             this.Controls.Add(this.txtncon);
+            this.Controls.Add(this.btnMostrarContraseña2);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmNueva_Contraseña";
             this.Load += new System.EventHandler(this.frmNueva_Contraseña_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,14 +274,15 @@
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtccon;
+        private System.Windows.Forms.Button btnMostrarContraseña1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lnContraseña;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGuardarContra;
         private System.Windows.Forms.TextBox txtncon;
+        private System.Windows.Forms.Button btnMostrarContraseña2;
         private FontAwesome.Sharp.IconButton btn_regrsar;
         private FontAwesome.Sharp.IconButton btnMinimizar;
         private FontAwesome.Sharp.IconButton btnMaximizar;
