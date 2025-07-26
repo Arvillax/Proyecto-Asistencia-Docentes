@@ -237,6 +237,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
+                conectar.Open();
                 SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_aula", nueva_aula);

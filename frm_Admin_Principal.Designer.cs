@@ -167,7 +167,7 @@
             this.btnModificacion_Datos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnModificacion_Datos.Size = new System.Drawing.Size(187, 40);
             this.btnModificacion_Datos.TabIndex = 57;
-            this.btnModificacion_Datos.Text = "Modificación Datos";
+            this.btnModificacion_Datos.Text = "Modificación de Clases";
             this.btnModificacion_Datos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificacion_Datos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificacion_Datos.UseVisualStyleBackColor = false;

@@ -193,7 +193,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void cmb_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_estadoclase.Text = cmb_estado.SelectedIndex == 0 ? "A" : "I";
+            txt_estadoclase.Text = cmb_estado.SelectedIndex == 0 ? "ACTIVO" : "INACTIVO";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
