@@ -58,9 +58,9 @@
             this.pnMenuLateral.Controls.Add(this.btn_cierre_sesion);
             this.pnMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenuLateral.Location = new System.Drawing.Point(0, 0);
-            this.pnMenuLateral.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMenuLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnMenuLateral.Name = "pnMenuLateral";
-            this.pnMenuLateral.Size = new System.Drawing.Size(187, 564);
+            this.pnMenuLateral.Size = new System.Drawing.Size(343, 1041);
             this.pnMenuLateral.TabIndex = 66;
             // 
             // btnBitacora
@@ -74,10 +74,11 @@
             this.btnBitacora.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBitacora.IconSize = 40;
             this.btnBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBitacora.Location = new System.Drawing.Point(0, 281);
+            this.btnBitacora.Location = new System.Drawing.Point(0, 520);
+            this.btnBitacora.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBitacora.Name = "btnBitacora";
-            this.btnBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnBitacora.Size = new System.Drawing.Size(187, 40);
+            this.btnBitacora.Padding = new System.Windows.Forms.Padding(18, 0, 37, 0);
+            this.btnBitacora.Size = new System.Drawing.Size(343, 74);
             this.btnBitacora.TabIndex = 61;
             this.btnBitacora.Text = "Bitácora";
             this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,10 +97,11 @@
             this.btnMigracionDatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMigracionDatos.IconSize = 40;
             this.btnMigracionDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMigracionDatos.Location = new System.Drawing.Point(0, 241);
+            this.btnMigracionDatos.Location = new System.Drawing.Point(0, 446);
+            this.btnMigracionDatos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnMigracionDatos.Name = "btnMigracionDatos";
-            this.btnMigracionDatos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMigracionDatos.Size = new System.Drawing.Size(187, 40);
+            this.btnMigracionDatos.Padding = new System.Windows.Forms.Padding(18, 0, 37, 0);
+            this.btnMigracionDatos.Size = new System.Drawing.Size(343, 74);
             this.btnMigracionDatos.TabIndex = 60;
             this.btnMigracionDatos.Text = "Migración Datos";
             this.btnMigracionDatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,10 +120,11 @@
             this.btnCierrePeriodo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCierrePeriodo.IconSize = 40;
             this.btnCierrePeriodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCierrePeriodo.Location = new System.Drawing.Point(0, 201);
+            this.btnCierrePeriodo.Location = new System.Drawing.Point(0, 372);
+            this.btnCierrePeriodo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCierrePeriodo.Name = "btnCierrePeriodo";
-            this.btnCierrePeriodo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCierrePeriodo.Size = new System.Drawing.Size(187, 40);
+            this.btnCierrePeriodo.Padding = new System.Windows.Forms.Padding(18, 0, 37, 0);
+            this.btnCierrePeriodo.Size = new System.Drawing.Size(343, 74);
             this.btnCierrePeriodo.TabIndex = 59;
             this.btnCierrePeriodo.Text = "Cierre de Periodos";
             this.btnCierrePeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,10 +143,11 @@
             this.btnCreacionPeriodo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCreacionPeriodo.IconSize = 40;
             this.btnCreacionPeriodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreacionPeriodo.Location = new System.Drawing.Point(0, 161);
+            this.btnCreacionPeriodo.Location = new System.Drawing.Point(0, 298);
+            this.btnCreacionPeriodo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCreacionPeriodo.Name = "btnCreacionPeriodo";
-            this.btnCreacionPeriodo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCreacionPeriodo.Size = new System.Drawing.Size(187, 40);
+            this.btnCreacionPeriodo.Padding = new System.Windows.Forms.Padding(18, 0, 37, 0);
+            this.btnCreacionPeriodo.Size = new System.Drawing.Size(343, 74);
             this.btnCreacionPeriodo.TabIndex = 58;
             this.btnCreacionPeriodo.Text = "Creacion de Periodo";
             this.btnCreacionPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,10 +166,11 @@
             this.btnModificacion_Datos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificacion_Datos.IconSize = 40;
             this.btnModificacion_Datos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificacion_Datos.Location = new System.Drawing.Point(0, 121);
+            this.btnModificacion_Datos.Location = new System.Drawing.Point(0, 224);
+            this.btnModificacion_Datos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnModificacion_Datos.Name = "btnModificacion_Datos";
-            this.btnModificacion_Datos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnModificacion_Datos.Size = new System.Drawing.Size(187, 40);
+            this.btnModificacion_Datos.Padding = new System.Windows.Forms.Padding(18, 0, 37, 0);
+            this.btnModificacion_Datos.Size = new System.Drawing.Size(343, 74);
             this.btnModificacion_Datos.TabIndex = 57;
             this.btnModificacion_Datos.Text = "Modificación de Clases";
             this.btnModificacion_Datos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,10 +189,11 @@
             this.btnGestionUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGestionUsuarios.IconSize = 40;
             this.btnGestionUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionUsuarios.Location = new System.Drawing.Point(0, 81);
+            this.btnGestionUsuarios.Location = new System.Drawing.Point(0, 150);
+            this.btnGestionUsuarios.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnGestionUsuarios.Name = "btnGestionUsuarios";
-            this.btnGestionUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnGestionUsuarios.Size = new System.Drawing.Size(187, 40);
+            this.btnGestionUsuarios.Padding = new System.Windows.Forms.Padding(18, 0, 37, 0);
+            this.btnGestionUsuarios.Size = new System.Drawing.Size(343, 74);
             this.btnGestionUsuarios.TabIndex = 56;
             this.btnGestionUsuarios.Text = "Gestión Usuarios";
             this.btnGestionUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,8 +207,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(343, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
@@ -218,9 +225,10 @@
             this.btn_cierre_sesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cierre_sesion.IconSize = 40;
             this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 524);
+            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 967);
+            this.btn_cierre_sesion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_cierre_sesion.Name = "btn_cierre_sesion";
-            this.btn_cierre_sesion.Size = new System.Drawing.Size(187, 40);
+            this.btn_cierre_sesion.Size = new System.Drawing.Size(343, 74);
             this.btn_cierre_sesion.TabIndex = 54;
             this.btn_cierre_sesion.Text = "Cerrar Sesión";
             this.btn_cierre_sesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,10 +238,10 @@
             // 
             // PnlPadre
             // 
-            this.PnlPadre.Location = new System.Drawing.Point(186, 27);
-            this.PnlPadre.Margin = new System.Windows.Forms.Padding(2);
+            this.PnlPadre.Location = new System.Drawing.Point(341, 50);
+            this.PnlPadre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PnlPadre.Name = "PnlPadre";
-            this.PnlPadre.Size = new System.Drawing.Size(976, 537);
+            this.PnlPadre.Size = new System.Drawing.Size(1551, 991);
             this.PnlPadre.TabIndex = 67;
             // 
             // btnMinimizar
@@ -247,9 +255,10 @@
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 20;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimizar.Location = new System.Drawing.Point(1106, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1773, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(28, 27);
+            this.btnMinimizar.Size = new System.Drawing.Size(51, 50);
             this.btnMinimizar.TabIndex = 69;
             this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,9 +275,10 @@
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             this.btnMaximizar.IconSize = 25;
             this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaximizar.Location = new System.Drawing.Point(1132, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(1836, 0);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(28, 27);
+            this.btnMaximizar.Size = new System.Drawing.Size(56, 50);
             this.btnMaximizar.TabIndex = 68;
             this.btnMaximizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMaximizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -277,16 +287,16 @@
             // 
             // frm_Admin_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1028, 564);
+            this.ClientSize = new System.Drawing.Size(1885, 1041);
             this.ControlBox = false;
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.PnlPadre);
             this.Controls.Add(this.pnMenuLateral);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Admin_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_Admin_Principal_Load);
