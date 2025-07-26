@@ -250,7 +250,8 @@ namespace Proyecto_DesarrolloSoftware
         {
             using (SqlConnection conectar = Conectar())
             {
-                SqlCommand cmd = new SqlCommand("PA_VERIFICACION_USUARIO", conectar);
+                conectar.Open();
+                SqlCommand cmd = new SqlCommand("PA_VERIFICAR_USUARIO_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@usuario", id_empleado);
 
@@ -273,18 +274,19 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        public void agregar_usuario(int id_empleado, string nombre, int id_rol,/* string nombre_usuario,*/ string contraseña)
+        public void agregar_usuario(int id_empleado, string nombre, int id_rol,/* string nombre_usuario,*/ string contraseña,String correo)
         {
             using (SqlConnection conectar = Conectar())
             {
+                conectar.Open();
                 SqlCommand cmd = new SqlCommand("PA_AGREGAR_EMPLEADO_ADMIN", conectar);// admin
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
                 cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
                 cmd.Parameters.AddWithValue("@idRol", id_rol);
-                //cmd.Parameters.AddWithValue("@NombreUsuario", nombre_usuario); // campo eliminado en la nueva tabla
                 cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
+                cmd.Parameters.AddWithValue("@correo", correo); // campo eliminado en la nueva tabla
 
                 cmd.ExecuteNonQuery();
             }

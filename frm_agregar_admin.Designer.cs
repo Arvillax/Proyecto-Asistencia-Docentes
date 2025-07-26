@@ -40,32 +40,31 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.txt_existe = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_correo_usuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_idempleado
             // 
-            this.txt_idempleado.Location = new System.Drawing.Point(318, 81);
-            this.txt_idempleado.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_idempleado.Location = new System.Drawing.Point(159, 42);
             this.txt_idempleado.Name = "txt_idempleado";
-            this.txt_idempleado.Size = new System.Drawing.Size(352, 31);
+            this.txt_idempleado.Size = new System.Drawing.Size(178, 20);
             this.txt_idempleado.TabIndex = 0;
             // 
             // txt_contraseña
             // 
-            this.txt_contraseña.Location = new System.Drawing.Point(322, 244);
-            this.txt_contraseña.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_contraseña.Location = new System.Drawing.Point(161, 127);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(352, 31);
+            this.txt_contraseña.Size = new System.Drawing.Size(178, 20);
             this.txt_contraseña.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(76, 92);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(38, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "ID del Empleado:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -74,10 +73,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(76, 200);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(38, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 25);
+            this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Permiso del Empleado:";
             // 
@@ -85,10 +83,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(65, 247);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(32, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 25);
+            this.label4.Size = new System.Drawing.Size(120, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Contraseña del Usuario:";
             // 
@@ -96,19 +93,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(76, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(38, 77);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(230, 25);
+            this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Nombre del Empleado:";
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(318, 136);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_nombre.Location = new System.Drawing.Point(159, 71);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(352, 31);
+            this.txt_nombre.Size = new System.Drawing.Size(178, 20);
             this.txt_nombre.TabIndex = 11;
             // 
             // cmb_permiso
@@ -117,20 +112,18 @@
             this.cmb_permiso.Items.AddRange(new object[] {
             "Supervisor",
             "Administrador"});
-            this.cmb_permiso.Location = new System.Drawing.Point(318, 184);
-            this.cmb_permiso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmb_permiso.Location = new System.Drawing.Point(159, 98);
             this.cmb_permiso.Name = "cmb_permiso";
-            this.cmb_permiso.Size = new System.Drawing.Size(352, 33);
+            this.cmb_permiso.Size = new System.Drawing.Size(178, 21);
             this.cmb_permiso.TabIndex = 13;
             this.cmb_permiso.SelectedIndexChanged += new System.EventHandler(this.cmb_permiso_SelectedIndexChanged);
             // 
             // txt_permiso
             // 
-            this.txt_permiso.Location = new System.Drawing.Point(474, 23);
-            this.txt_permiso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_permiso.Location = new System.Drawing.Point(237, 12);
             this.txt_permiso.Name = "txt_permiso";
             this.txt_permiso.ReadOnly = true;
-            this.txt_permiso.Size = new System.Drawing.Size(196, 31);
+            this.txt_permiso.Size = new System.Drawing.Size(100, 20);
             this.txt_permiso.TabIndex = 14;
             this.txt_permiso.Visible = false;
             // 
@@ -143,10 +136,9 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(454, 347);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.iconButton1.Location = new System.Drawing.Point(227, 235);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(220, 58);
+            this.iconButton1.Size = new System.Drawing.Size(110, 30);
             this.iconButton1.TabIndex = 53;
             this.iconButton1.Text = "Agregar";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,10 +155,9 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(82, 347);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.iconButton2.Location = new System.Drawing.Point(35, 235);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(220, 58);
+            this.iconButton2.Size = new System.Drawing.Size(110, 30);
             this.iconButton2.TabIndex = 54;
             this.iconButton2.Text = "volver";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,21 +167,39 @@
             // 
             // txt_existe
             // 
-            this.txt_existe.Location = new System.Drawing.Point(240, 23);
-            this.txt_existe.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_existe.Location = new System.Drawing.Point(120, 12);
             this.txt_existe.Name = "txt_existe";
             this.txt_existe.ReadOnly = true;
-            this.txt_existe.Size = new System.Drawing.Size(196, 31);
+            this.txt_existe.Size = new System.Drawing.Size(100, 20);
             this.txt_existe.TabIndex = 55;
             this.txt_existe.Visible = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(32, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Correo del Usuario:";
+            // 
+            // txt_correo_usuario
+            // 
+            this.txt_correo_usuario.Location = new System.Drawing.Point(161, 159);
+            this.txt_correo_usuario.Name = "txt_correo_usuario";
+            this.txt_correo_usuario.Size = new System.Drawing.Size(178, 20);
+            this.txt_correo_usuario.TabIndex = 56;
+            // 
             // frm_agregar_admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(776, 439);
+            this.ClientSize = new System.Drawing.Size(417, 277);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txt_correo_usuario);
             this.Controls.Add(this.txt_existe);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
@@ -203,7 +212,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.txt_idempleado);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frm_agregar_admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
@@ -214,7 +222,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txt_idempleado;
-        //private System.Windows.Forms.TextBox txt_usuarioempleado;
+ 
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -227,5 +235,7 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.TextBox txt_existe;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_correo_usuario;
     }
 }

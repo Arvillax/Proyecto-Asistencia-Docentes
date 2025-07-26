@@ -66,9 +66,9 @@ namespace Proyecto_DesarrolloSoftware
                 int id_rol = Convert.ToInt32(txt_permiso.Text);
                 int id_empleado = Convert.ToInt32(txt_idempleado.Text);
                 string nombre = txt_nombre.Text;
-                //string nombre_usuario = txt_usuarioempleado.Text; // campo eliminado en la nueva tabla
+                
                 string contraseña = txt_contraseña.Text;
-
+                string correo = txt_correo_usuario.Text; // campo eliminado en la nueva tabla
 
                 bool existe = con.verificacionusuario(id_empleado);
                 txt_existe.Text = existe ? "existe" : "no existe";
@@ -80,7 +80,7 @@ namespace Proyecto_DesarrolloSoftware
                 else if(txt_existe.Text == "no existe")
                 {
                     
-                    con.agregar_usuario(id_empleado,nombre,id_rol,contraseña);
+                    con.agregar_usuario(id_empleado,nombre,id_rol,contraseña,correo);
                     frmGestion_Usuarios admin = new frmGestion_Usuarios();
                     this.Hide();
                 }

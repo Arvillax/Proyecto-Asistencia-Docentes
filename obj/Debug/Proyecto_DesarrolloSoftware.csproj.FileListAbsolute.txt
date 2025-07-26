@@ -952,3 +952,7 @@ C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Formats.Asn1.xml
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.IO.Pipelines.xml
 C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\fredr\Documents\GitHub\Proyecto-Asistencia-Docentes\Proyecto-Asistencia-Docentes\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll

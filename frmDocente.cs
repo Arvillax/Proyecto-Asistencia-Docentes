@@ -69,6 +69,9 @@ namespace Proyecto_DesarrolloSoftware
         {
             if (dgv_docente.Rows.Count > 0)
             {
+
+                
+
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
                 save.FileName = DateTime.Now.ToString("dd-MM-yyyy") + ".pdf";

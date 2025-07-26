@@ -99,7 +99,7 @@ namespace Proyecto_DesarrolloSoftware
                 using (SqlConnection conectar = con.Conectar())
                 {
                     conectar.Open();
-                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);// admin
+                    SqlCommand cmd = new SqlCommand("PA_MODIFICAR_USUARIO_ADMIN", conectar);// admin
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
@@ -156,12 +156,12 @@ namespace Proyecto_DesarrolloSoftware
             if (cmb_estado.SelectedIndex == 0)
             {
 
-                txt_estado.Text = "A";
+                txt_estado.Text = "ACTIVO";
             }
             else if (cmb_estado.SelectedIndex == 1)
             {
 
-                txt_estado.Text = "I";
+                txt_estado.Text = "INACTIVO";
             }
         }
 
