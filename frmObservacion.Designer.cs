@@ -76,7 +76,7 @@
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Size = new System.Drawing.Size(93, 37);
             this.btn_volver.TabIndex = 4;
-            this.btn_volver.Text = "volver";
+            this.btn_volver.Text = "Volver";
             this.btn_volver.UseVisualStyleBackColor = true;
             this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
@@ -96,6 +96,8 @@
             this.MinimizeBox = false;
             this.Name = "frmObservacion";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmObservacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -193,6 +193,7 @@ namespace Proyecto_DesarrolloSoftware
 
                 con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
                 lbl_aviso.Text = "";
+                MessageBox.Show("Asistencia marcada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }  
         }
 
@@ -219,6 +220,7 @@ namespace Proyecto_DesarrolloSoftware
 
                 con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
                 lbl_aviso.Text = "";
+                MessageBox.Show("Inasistencia marcada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
                 
         }
@@ -286,6 +288,26 @@ namespace Proyecto_DesarrolloSoftware
         private void txt_idasis_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new Size(800, 600);
+
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 

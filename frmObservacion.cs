@@ -99,6 +99,11 @@ namespace Proyecto_DesarrolloSoftware
         {
             // Opcional
         }
+
+        private void frmObservacion_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 
 }
