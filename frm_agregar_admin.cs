@@ -24,7 +24,7 @@ namespace Proyecto_DesarrolloSoftware
         {
             InitializeComponent();
             cmb_permiso.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.AutoScaleMode = AutoScaleMode.None;
+            //this.AutoScaleMode = AutoScaleMode.None;
             this.Font = new Font("Microsoft Sans Serif", 8.25F);
             this.Size = new Size(800, 480);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
