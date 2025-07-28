@@ -75,6 +75,7 @@ namespace Proyecto_DesarrolloSoftware
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
                 save.FileName = $"Reporte de Asistencias - {DateTime.Now:dd-MM-yyyy}.pdf";
+
                 if (save.ShowDialog() == DialogResult.OK)
                 {
                     try
@@ -94,17 +95,19 @@ namespace Proyecto_DesarrolloSoftware
                         // Crear tabla
                         Table table = new Table();
                         table.Borders.Width = 0.75;
-                        table.Format.Font.Size = 8; // Tamaño más pequeño para que todo quepa
+                        table.Format.Font.Size = 8;
 
                         // Calcular ancho dinámico de columna
                         double anchoDisponible = 27.0; // A4 landscape útil en cm
                         double anchoColumna = anchoDisponible / dgv_docente.Columns.Count;
 
-                        // Crear columnas con ancho calculado
+                        // Crear columnas
                         foreach (DataGridViewColumn col in dgv_docente.Columns)
                         {
                             Column column = table.AddColumn(Unit.FromCentimeter(anchoColumna));
                             column.Format.Alignment = ParagraphAlignment.Left;
+                            column.LeftPadding = Unit.FromCentimeter(0.2);
+                            column.RightPadding = Unit.FromCentimeter(0.2);
                         }
 
                         // Encabezado de tabla
@@ -112,9 +115,12 @@ namespace Proyecto_DesarrolloSoftware
                         headerRow.Shading.Color = Colors.LightGray;
                         headerRow.Format.Font.Bold = true;
                         headerRow.HeadingFormat = true;
+                        headerRow.Format.Alignment = ParagraphAlignment.Center;
+
                         for (int i = 0; i < dgv_docente.Columns.Count; i++)
                         {
                             headerRow.Cells[i].AddParagraph(dgv_docente.Columns[i].HeaderText);
+                            headerRow.Cells[i].Format.Alignment = ParagraphAlignment.Center;
                         }
 
                         // Filas de datos
@@ -126,7 +132,13 @@ namespace Proyecto_DesarrolloSoftware
                                 for (int i = 0; i < dgv_docente.Columns.Count; i++)
                                 {
                                     string value = dgvRow.Cells[i].Value?.ToString() ?? "";
-                                    row.Cells[i].AddParagraph(value);
+
+                                    Paragraph p = row.Cells[i].AddParagraph(value);
+                                    p.Format.Alignment = ParagraphAlignment.Left;
+                                    p.Format.Font.Size = 8;
+
+                                    row.Cells[i].Format.Alignment = ParagraphAlignment.Left;
+                                    row.Cells[i].VerticalAlignment = VerticalAlignment.Top;
                                 }
                             }
                         }
