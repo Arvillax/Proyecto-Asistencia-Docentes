@@ -126,7 +126,6 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(1267, 600);
 
             }
             else

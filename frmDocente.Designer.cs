@@ -172,7 +172,7 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_busqueda.Location = new System.Drawing.Point(447, 95);
+            this.txt_busqueda.Location = new System.Drawing.Point(446, 163);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txt_busqueda.Name = "txt_busqueda";
             this.txt_busqueda.Size = new System.Drawing.Size(852, 22);
@@ -231,7 +231,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(354, 99);
+            this.label1.Location = new System.Drawing.Point(353, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
@@ -246,7 +246,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(354, 149);
+            this.label4.Location = new System.Drawing.Point(354, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 20);
@@ -262,10 +262,10 @@
             this.cmb_filtro.Items.AddRange(new object[] {
             "Clase",
             "Fecha"});
-            this.cmb_filtro.Location = new System.Drawing.Point(447, 149);
+            this.cmb_filtro.Location = new System.Drawing.Point(447, 115);
             this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
-            this.cmb_filtro.Size = new System.Drawing.Size(160, 24);
+            this.cmb_filtro.Size = new System.Drawing.Size(174, 24);
             this.cmb_filtro.TabIndex = 39;
             this.cmb_filtro.SelectedIndexChanged += new System.EventHandler(this.cmb_filtro_SelectedIndexChanged);
             // 
@@ -275,12 +275,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(444, 129);
+            this.label5.Location = new System.Drawing.Point(444, 95);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 16);
+            this.label5.Size = new System.Drawing.Size(177, 16);
             this.label5.TabIndex = 58;
-            this.label5.Text = "Ejemplo de Fecha: 2025-04-10";
+            this.label5.Text = "Formato de fecha dd/mm/aa";
             // 
             // panel4
             // 
