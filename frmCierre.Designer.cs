@@ -49,20 +49,19 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(275, -55);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(367, -68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 37);
+            this.label1.Size = new System.Drawing.Size(350, 46);
             this.label1.TabIndex = 26;
             this.label1.Text = "Cierre de Período";
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(635, -62);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(847, -76);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 29);
+            this.button4.Size = new System.Drawing.Size(135, 36);
             this.button4.TabIndex = 25;
             this.button4.Text = "Cerrar Sesión";
             this.button4.UseVisualStyleBackColor = true;
@@ -71,10 +70,10 @@
             // 
             this.pnMenuPrincipal.AutoScroll = true;
             this.pnMenuPrincipal.Controls.Add(this.dgvMatriz);
-            this.pnMenuPrincipal.Location = new System.Drawing.Point(41, 84);
-            this.pnMenuPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMenuPrincipal.Location = new System.Drawing.Point(55, 103);
+            this.pnMenuPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenuPrincipal.Name = "pnMenuPrincipal";
-            this.pnMenuPrincipal.Size = new System.Drawing.Size(883, 407);
+            this.pnMenuPrincipal.Size = new System.Drawing.Size(1177, 501);
             this.pnMenuPrincipal.TabIndex = 30;
             // 
             // dgvMatriz
@@ -84,15 +83,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMatriz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMatriz.Location = new System.Drawing.Point(3, 0);
+            this.dgvMatriz.Location = new System.Drawing.Point(4, 0);
+            this.dgvMatriz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMatriz.Name = "dgvMatriz";
             this.dgvMatriz.RowHeadersWidth = 51;
-            this.dgvMatriz.Size = new System.Drawing.Size(877, 404);
+            this.dgvMatriz.Size = new System.Drawing.Size(1169, 497);
             this.dgvMatriz.TabIndex = 0;
             // 
             // btn_cerrar_periodo
             // 
-            this.btn_cerrar_periodo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cerrar_periodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_cerrar_periodo.BackColor = System.Drawing.Color.LightCoral;
             this.btn_cerrar_periodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar_periodo.IconChar = FontAwesome.Sharp.IconChar.RectangleXmark;
@@ -100,9 +101,10 @@
             this.btn_cerrar_periodo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cerrar_periodo.IconSize = 30;
             this.btn_cerrar_periodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cerrar_periodo.Location = new System.Drawing.Point(855, 550);
+            this.btn_cerrar_periodo.Location = new System.Drawing.Point(1140, 677);
+            this.btn_cerrar_periodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar_periodo.Name = "btn_cerrar_periodo";
-            this.btn_cerrar_periodo.Size = new System.Drawing.Size(121, 37);
+            this.btn_cerrar_periodo.Size = new System.Drawing.Size(161, 46);
             this.btn_cerrar_periodo.TabIndex = 28;
             this.btn_cerrar_periodo.Text = "Cerrar Periodo";
             this.btn_cerrar_periodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,9 +120,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(386, -2);
+            this.label2.Location = new System.Drawing.Point(515, -2);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(329, 31);
+            this.label2.Size = new System.Drawing.Size(415, 39);
             this.label2.TabIndex = 31;
             this.label2.Text = "Visualizacíon De Periodos";
             // 
@@ -132,10 +135,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(41, 57);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(55, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 33;
             this.label3.Text = "Búscar:";
             // 
@@ -144,10 +146,10 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busqueda.Location = new System.Drawing.Point(108, 54);
-            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_busqueda.Location = new System.Drawing.Point(144, 66);
+            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(559, 23);
+            this.txt_busqueda.Size = new System.Drawing.Size(744, 26);
             this.txt_busqueda.TabIndex = 32;
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             // 
@@ -155,18 +157,18 @@
             // 
             this.dtpBitacora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpBitacora.Location = new System.Drawing.Point(703, 54);
-            this.dtpBitacora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpBitacora.Location = new System.Drawing.Point(937, 66);
+            this.dtpBitacora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpBitacora.Name = "dtpBitacora";
-            this.dtpBitacora.Size = new System.Drawing.Size(151, 20);
+            this.dtpBitacora.Size = new System.Drawing.Size(200, 22);
             this.dtpBitacora.TabIndex = 34;
             // 
             // frmCierre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(975, 587);
+            this.ClientSize = new System.Drawing.Size(1300, 722);
             this.ControlBox = false;
             this.Controls.Add(this.dtpBitacora);
             this.Controls.Add(this.label3);
@@ -176,7 +178,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pnMenuPrincipal);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCierre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnMenuPrincipal.ResumeLayout(false);
