@@ -10,11 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
+using MigraDoc.DocumentObjectModel;
+using MigraDoc.DocumentObjectModel.Tables;
+using MigraDoc.Rendering;
 using System.IO;
 using System.Drawing.Drawing2D;
+using System.Windows.Media;
+using Column = MigraDoc.DocumentObjectModel.Tables.Column;
+using Colors = MigraDoc.DocumentObjectModel.Colors;
 
 namespace Proyecto_DesarrolloSoftware
 {
@@ -69,77 +72,85 @@ namespace Proyecto_DesarrolloSoftware
         {
             if (dgv_docente.Rows.Count > 0)
             {
-
-                
-
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
-                save.FileName = DateTime.Now.ToString("dd-MM-yyyy") + ".pdf";
-
-                bool errormessage = false;
+                save.FileName = $"Reporte de Asistencias - {DateTime.Now:dd-MM-yyyy}.pdf";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    if (File.Exists(save.FileName))
+                    try
                     {
-                        try
-                        {
-                            File.Delete(save.FileName);
+                        // Crear el documento
+                        Document document = new Document();
+                        Section section = document.AddSection();
+                        section.PageSetup.Orientation = MigraDoc.DocumentObjectModel.Orientation.Landscape;
 
+                        // Título del reporte
+                        Paragraph title = section.AddParagraph("Reporte de Docentes");
+                        title.Format.Font.Size = 14;
+                        title.Format.Font.Bold = true;
+                        title.Format.SpaceAfter = 10;
+                        title.Format.Alignment = ParagraphAlignment.Center;
+
+                        // Crear tabla
+                        Table table = new Table();
+                        table.Borders.Width = 0.75;
+                        table.Format.Font.Size = 8; // Tamaño más pequeño para que todo quepa
+
+                        // Calcular ancho dinámico de columna
+                        double anchoDisponible = 27.0; // A4 landscape útil en cm
+                        double anchoColumna = anchoDisponible / dgv_docente.Columns.Count;
+
+                        // Crear columnas con ancho calculado
+                        foreach (DataGridViewColumn col in dgv_docente.Columns)
+                        {
+                            Column column = table.AddColumn(Unit.FromCentimeter(anchoColumna));
+                            column.Format.Alignment = ParagraphAlignment.Left;
                         }
-                        catch (Exception ex)
-                        {
-                            errormessage = true;
-                            MessageBox.Show("No se puedo guardar el archivo" + ex.Message);
 
+                        // Encabezado de tabla
+                        Row headerRow = table.AddRow();
+                        headerRow.Shading.Color = Colors.LightGray;
+                        headerRow.Format.Font.Bold = true;
+                        headerRow.HeadingFormat = true;
+                        for (int i = 0; i < dgv_docente.Columns.Count; i++)
+                        {
+                            headerRow.Cells[i].AddParagraph(dgv_docente.Columns[i].HeaderText);
                         }
-                    }
-                    if (!errormessage)
-                    {
-                        try
+
+                        // Filas de datos
+                        foreach (DataGridViewRow dgvRow in dgv_docente.Rows)
                         {
-                            PdfPTable ptable = new PdfPTable(dgv_docente.Columns.Count);
-                            ptable.DefaultCell.Padding = 2;
-                            ptable.WidthPercentage = 100;
-                            ptable.HorizontalAlignment = Element.ALIGN_LEFT;
-
-                            foreach (DataGridViewColumn col in dgv_docente.Columns)
+                            if (!dgvRow.IsNewRow)
                             {
-                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
-                                ptable.AddCell(pCell);
-
-                            }
-                            foreach (DataGridViewRow viewRow in dgv_docente.Rows)
-                            {
-                                if (!viewRow.IsNewRow) 
+                                Row row = table.AddRow();
+                                for (int i = 0; i < dgv_docente.Columns.Count; i++)
                                 {
-                                    foreach (DataGridViewCell dcell in viewRow.Cells)
-                                    {
-                                        ptable.AddCell(dcell.Value != null ? dcell.Value.ToString() : "");
-                                    }
+                                    string value = dgvRow.Cells[i].Value?.ToString() ?? "";
+                                    row.Cells[i].AddParagraph(value);
                                 }
                             }
-                            using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
-                            {
-                                Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
-                                PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
-
-                                document.Open();
-                                document.Add(ptable);
-                                document.Close();
-                            }
-                            MessageBox.Show("Exportacion exitosa", "info");
-
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("error al exportar" + ex.Message);
-                        }
+
+                        // Agregar tabla al documento
+                        section.Add(table);
+
+                        // Crear y guardar PDF
+                        PdfDocumentRenderer renderer = new PdfDocumentRenderer(true);
+                        renderer.Document = document;
+                        renderer.RenderDocument();
+                        renderer.PdfDocument.Save(save.FileName);
+
+                        MessageBox.Show("Exportación exitosa", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al exportar: " + ex.Message);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("no encontrado","info");
+                MessageBox.Show("No hay datos para exportar", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
