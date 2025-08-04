@@ -275,23 +275,45 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        public void agregar_usuario(int id_empleado, string nombre, int id_rol,/* string nombre_usuario,*/ string contraseña,String correo)
+        public void agregar_usuario(int id_empleado, string nombre, int id_rol, string contraseña, string correo)
         {
-            using (SqlConnection conectar = Conectar())
+            try
             {
-                conectar.Open();
-                SqlCommand cmd = new SqlCommand("PA_AGREGAR_EMPLEADO_ADMIN", conectar);// admin
-                cmd.CommandType = CommandType.StoredProcedure;
+                using (SqlConnection conectar = Conectar())
+                {
+                    conectar.InfoMessage += (s, ev) =>
+                    {
+                        MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
 
-                cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
-                cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
-                cmd.Parameters.AddWithValue("@idRol", id_rol);
-                cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
-                cmd.Parameters.AddWithValue("@correo", correo); // campo eliminado en la nueva tabla
+                    conectar.Open();
 
-                cmd.ExecuteNonQuery();
+                    SqlCommand cmd = new SqlCommand("PA_AGREGAR_EMPLEADO_ADMIN", conectar);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@idEmpleado", id_empleado);
+                    cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
+                    cmd.Parameters.AddWithValue("@idRol", id_rol);
+                    cmd.Parameters.AddWithValue("@ContraUsuario", contraseña);
+                    cmd.Parameters.AddWithValue("@correo", correo);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Empleado agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (SqlException ex)
+            {
+                string mensaje = ex.Errors.Count > 0 ? ex.Errors[0].Message : ex.Message;
+                MessageBox.Show("Error al agregar empleado (SQL): " + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Captura cualquier otro error inesperado
+                MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         public void mostrar_usuarios_admin(DataGridView grid)
         {
