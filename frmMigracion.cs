@@ -23,70 +23,6 @@ namespace Proyecto_DesarrolloSoftware
         }
 
 
-
-        private void btnMGestion_Click(object sender, EventArgs e)
-        {
-            frm_Admin_Principal frmGestion = new frm_Admin_Principal();
-            frmGestion.Show();
-            this.Hide();
-        }
-
-        private void btnMdatos_Click(object sender, EventArgs e)
-        {
-            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
-            frmmodiDatos.Show();
-            this.Hide();
-        }
-
-        private void btnMCierre_Click(object sender, EventArgs e)
-        {
-            frmCierre cierre = new frmCierre();
-            cierre.Show();
-            this.Hide();
-        }
-
-        private void btnMMigra_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            frm_Admin_Principal frmGestion = new frm_Admin_Principal();
-            frmGestion.Show();
-            this.Hide();
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            frmModificacionDoC frmmodiDatos = new frmModificacionDoC();
-            frmmodiDatos.Show();
-            this.Hide();
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            frmCierre cierre = new frmCierre();
-            cierre.Show();
-            this.Hide();
-        }
-
-        private void btn_cierre_sesion_Click(object sender, EventArgs e)
-        {
-            Form1 frmLogin = new Form1();
-            frmLogin.Show();
-            this.Close();
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnImportar_Click(object sender, EventArgs e)
         {
             try
@@ -129,6 +65,9 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
+        private void frmMigracion_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

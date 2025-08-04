@@ -41,11 +41,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(133, 163);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(118, 130);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(965, 462);
+            this.dataGridView1.Size = new System.Drawing.Size(858, 370);
             this.dataGridView1.TabIndex = 32;
             // 
             // label1
@@ -57,9 +57,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(327, 9);
+            this.label1.Location = new System.Drawing.Point(291, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(587, 55);
+            this.label1.Size = new System.Drawing.Size(493, 46);
             this.label1.TabIndex = 25;
             this.label1.Text = "Migración Nuevo Período";
             // 
@@ -72,10 +72,10 @@
             this.btnImportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportar.IconSize = 30;
             this.btnImportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportar.Location = new System.Drawing.Point(133, 102);
-            this.btnImportar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnImportar.Location = new System.Drawing.Point(118, 82);
+            this.btnImportar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(202, 51);
+            this.btnImportar.Size = new System.Drawing.Size(180, 41);
             this.btnImportar.TabIndex = 75;
             this.btnImportar.Text = "Importar Excel";
             this.btnImportar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,10 +85,10 @@
             // 
             // frmMigracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1375, 660);
+            this.ClientSize = new System.Drawing.Size(1222, 528);
             this.ControlBox = false;
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.dataGridView1);
@@ -96,6 +96,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMigracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmMigracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -238,7 +238,7 @@ namespace Proyecto_DesarrolloSoftware
             using (SqlConnection conectar = Conectar())
             {
                 conectar.Open();
-                SqlCommand cmd = new SqlCommand("PA_VERIFICACION_AULA", conectar);
+                SqlCommand cmd = new SqlCommand("PA_VERIFICAR_AULA_ADMIN", conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_aula", nueva_aula);
 
@@ -463,6 +463,7 @@ namespace Proyecto_DesarrolloSoftware
             {
                 using (SqlConnection con = Conectar())
                 {
+                    con.Open();
                     con.InfoMessage += (s, ev) =>
                     {
                         MessageBox.Show(ev.Message, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);

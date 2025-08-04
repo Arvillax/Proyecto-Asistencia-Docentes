@@ -60,57 +60,6 @@ namespace Proyecto_DesarrolloSoftware
             pan_modificardatos.Visible = true;
         }
 
-        private void btn_busqueda_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_busqueda.Text))
-            {
-                MessageBox.Show("lo busqueda no puede estar vacia");
-                return;
-            }
-
-            string busqueda = txt_busqueda.Text;
-
-            if (cmb_filtro.SelectedIndex == -1)
-            {
-                MessageBox.Show("Elija un filtro antes de empezar la busqueda");
-            }
-            else if (cmb_filtro.SelectedIndex == 0)
-            {
-                using (SqlConnection conectar = con.Conectar())
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable contenedor = new DataTable();
-                    SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id_clase", busqueda);
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        adapter.SelectCommand = cmd;
-                        adapter.Fill(contenedor);
-                        dataGridView1.DataSource = contenedor;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
-                }
-                txt_busqueda.Clear();
-            }
-            else if (cmb_filtro.SelectedIndex == 1)
-            {
-                con.busqueda_nomclase_admin(busqueda, dataGridView1);
-                txt_busqueda.Clear();
-            }
-            else if (cmb_filtro.SelectedIndex == 2)
-            {
-                con.busqueda_idempleado_admin(busqueda, dataGridView1);
-                txt_busqueda.Clear();
-            }
-        }
-
         private void btn_concambios_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_estadoclase.Text) || string.IsNullOrEmpty(txt_horafinal.Text) || string.IsNullOrEmpty(txt_idclase.Text)
@@ -158,7 +107,8 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     using (SqlConnection conectar = con.Conectar())
                     {
-                        SqlCommand cmd = new SqlCommand("PA_BUSCAR_MODIFICAR_ADMIN", conectar);
+                        conectar.Open();
+                        SqlCommand cmd = new SqlCommand("PA_MODIFICAR_CLASES_ADMIN", conectar);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@idClase", id_clase);
                         cmd.Parameters.AddWithValue("@Nueva_Aula", nueva_aula);
@@ -196,15 +146,7 @@ namespace Proyecto_DesarrolloSoftware
             txt_estadoclase.Text = cmb_estado.SelectedIndex == 0 ? "ACTIVO" : "INACTIVO";
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txt_idclase.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txt_nuevaula.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txt_idempleado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            cmb_estado.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txt_nuevahora.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txt_horafinal.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-        }
+
 
         private void txt_busqueda_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -246,7 +188,7 @@ namespace Proyecto_DesarrolloSoftware
                     DataTable contenedor = new DataTable();
                     SqlCommand cmd = new SqlCommand("PA_BUSCAR_ID_CLASE_ADMIN", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id_CLASE", busqueda);
+                    cmd.Parameters.AddWithValue("@id_clase", busqueda);
 
                     try
                     {
@@ -270,6 +212,16 @@ namespace Proyecto_DesarrolloSoftware
             {
                 con.busqueda_idempleado_admin(busqueda, dataGridView1);
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_idclase.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txt_nuevaula.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_idempleado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            cmb_estado.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txt_nuevahora.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txt_horafinal.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
     }
 
