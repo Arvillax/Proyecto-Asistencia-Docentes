@@ -30,7 +30,6 @@
         {
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpBitacora = new System.Windows.Forms.DateTimePicker();
             this.dgvBitacora = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_aviso = new System.Windows.Forms.Label();
@@ -61,16 +60,6 @@
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Buscar:";
-            // 
-            // dtpBitacora
-            // 
-            this.dtpBitacora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpBitacora.Location = new System.Drawing.Point(853, 81);
-            this.dtpBitacora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpBitacora.Name = "dtpBitacora";
-            this.dtpBitacora.Size = new System.Drawing.Size(200, 22);
-            this.dtpBitacora.TabIndex = 6;
             // 
             // dgvBitacora
             // 
@@ -127,7 +116,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpBitacora);
             this.Controls.Add(this.dgvBitacora);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_Bitacora";
@@ -142,7 +130,6 @@
 
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpBitacora;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dgvBitacora;
         private System.Windows.Forms.Label lbl_aviso;
