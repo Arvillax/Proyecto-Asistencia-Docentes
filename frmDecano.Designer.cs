@@ -134,7 +134,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(951, 156);
+            this.label4.Location = new System.Drawing.Point(613, 82);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(247, 24);

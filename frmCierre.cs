@@ -68,10 +68,5 @@ namespace Proyecto_DesarrolloSoftware
                 MessageBox.Show("Cierre del período cancelado.", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void txt_busqueda_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

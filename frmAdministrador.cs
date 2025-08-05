@@ -44,20 +44,6 @@ namespace Proyecto_DesarrolloSoftware
             con.mostrar_usuarios_admin(dataGridView1);
         }
 
-
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txt_idempleado.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-
-            txt_nombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-
-            cmb_permiso.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
-            cmb_estado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-        }
-
         private void btn_modificard_Click_1(object sender, EventArgs e)
         {
             txt_idempleado.Visible = true;
@@ -243,9 +229,15 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void frmGestion_Usuarios_Load(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            txt_idempleado.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+            txt_nombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            cmb_permiso.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            cmb_estado.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }

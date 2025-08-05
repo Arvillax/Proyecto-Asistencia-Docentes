@@ -149,7 +149,6 @@
             this.txt_busqueda.Name = "txt_busqueda";
             this.txt_busqueda.Size = new System.Drawing.Size(233, 26);
             this.txt_busqueda.TabIndex = 32;
-            this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             // 
             // txt_usuario
             // 

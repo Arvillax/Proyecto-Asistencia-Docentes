@@ -76,7 +76,7 @@
             "ADMINISTRADOR",
             "DECANO"});
             this.cmb_permiso.Location = new System.Drawing.Point(193, 95);
-            this.cmb_permiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_permiso.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_permiso.Name = "cmb_permiso";
             this.cmb_permiso.Size = new System.Drawing.Size(188, 24);
             this.cmb_permiso.TabIndex = 46;
@@ -96,7 +96,7 @@
             // txt_nombre
             // 
             this.txt_nombre.Location = new System.Drawing.Point(193, 63);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.ReadOnly = true;
             this.txt_nombre.Size = new System.Drawing.Size(188, 22);
@@ -127,7 +127,7 @@
             // txt_idempleado
             // 
             this.txt_idempleado.Location = new System.Drawing.Point(193, 26);
-            this.txt_idempleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idempleado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idempleado.Name = "txt_idempleado";
             this.txt_idempleado.ReadOnly = true;
             this.txt_idempleado.Size = new System.Drawing.Size(188, 22);
@@ -152,7 +152,7 @@
             "ACTIVO",
             "INACTIVO"});
             this.cmb_estado.Location = new System.Drawing.Point(193, 134);
-            this.cmb_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_estado.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estado.Name = "cmb_estado";
             this.cmb_estado.Size = new System.Drawing.Size(188, 24);
             this.cmb_estado.TabIndex = 49;
@@ -161,7 +161,7 @@
             // txtpermiso
             // 
             this.txtpermiso.Location = new System.Drawing.Point(91, 273);
-            this.txtpermiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpermiso.Margin = new System.Windows.Forms.Padding(4);
             this.txtpermiso.Name = "txtpermiso";
             this.txtpermiso.Size = new System.Drawing.Size(132, 22);
             this.txtpermiso.TabIndex = 54;
@@ -170,7 +170,7 @@
             // txt_estado
             // 
             this.txt_estado.Location = new System.Drawing.Point(249, 273);
-            this.txt_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_estado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(132, 22);
             this.txt_estado.TabIndex = 55;
@@ -184,7 +184,7 @@
             "ID de Empleado",
             "Nombre de Empleado"});
             this.cmb_filtro.Location = new System.Drawing.Point(113, 60);
-            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
             this.cmb_filtro.Size = new System.Drawing.Size(233, 24);
             this.cmb_filtro.TabIndex = 60;
@@ -220,7 +220,7 @@
             this.panel1.Controls.Add(this.btn_guardarc);
             this.panel1.Controls.Add(this.cmb_estado);
             this.panel1.Location = new System.Drawing.Point(867, 160);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(405, 356);
             this.panel1.TabIndex = 62;
@@ -236,7 +236,7 @@
             this.btn_guardarc.IconSize = 25;
             this.btn_guardarc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardarc.Location = new System.Drawing.Point(264, 178);
-            this.btn_guardarc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_guardarc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_guardarc.Name = "btn_guardarc";
             this.btn_guardarc.Size = new System.Drawing.Size(117, 37);
             this.btn_guardarc.TabIndex = 53;
@@ -257,7 +257,7 @@
             this.btnAgregar.IconSize = 25;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.Location = new System.Drawing.Point(653, 546);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(147, 37);
             this.btnAgregar.TabIndex = 52;
@@ -278,7 +278,7 @@
             this.btn_modificard.IconSize = 25;
             this.btn_modificard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_modificard.Location = new System.Drawing.Point(475, 546);
-            this.btn_modificard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modificard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificard.Name = "btn_modificard";
             this.btn_modificard.Size = new System.Drawing.Size(147, 37);
             this.btn_modificard.TabIndex = 51;
@@ -328,18 +328,18 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(27, 160);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(773, 356);
             this.dataGridView1.TabIndex = 18;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txt_usuario
             // 
             this.txt_usuario.Location = new System.Drawing.Point(27, 546);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.ReadOnly = true;
             this.txt_usuario.Size = new System.Drawing.Size(132, 22);
@@ -367,7 +367,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestion_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmGestion_Usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
