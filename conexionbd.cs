@@ -315,6 +315,25 @@ namespace Proyecto_DesarrolloSoftware
         }
 
 
+        public void Registro_bitacora(int id_usuario, String accion)
+        {
+            using (SqlConnection conectar = Conectar())
+            {
+
+                conectar.Open();
+                SqlCommand cmd = new SqlCommand("PA_BITA_REGISTRO", conectar);// admin
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id_usuario", id_usuario);
+                cmd.Parameters.AddWithValue("@accion", accion);
+
+                cmd.ExecuteNonQuery();
+
+
+
+            }
+        }
+
         public void mostrar_usuarios_admin(DataGridView grid)
         {
             using (SqlConnection conectar = Conectar())

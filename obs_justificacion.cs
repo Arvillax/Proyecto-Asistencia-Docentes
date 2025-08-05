@@ -20,13 +20,16 @@ namespace Proyecto_DesarrolloSoftware
         SqlConnection conectar = new SqlConnection();
         clsConexion con = new clsConexion();
 
-        public obs_justificacion(frmDecano form)
+        public obs_justificacion(frmDecano form, int numero)
         {
             InitializeComponent();
             decanoform = form;
             conexion = new clsConexion();
 
+            txt_usuario.Text = numero.ToString();
+
         }
+
 
         private void btn_volver_Click(object sender, EventArgs e)
         {
@@ -83,6 +86,12 @@ namespace Proyecto_DesarrolloSoftware
             }
 
             MessageBox.Show("Observación guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int id_usuario = int.Parse(txt_usuario.Text);
+            String Accion = "Justificación agregada";
+
+            con.Registro_bitacora(id_usuario, Accion);
+
             this.Close();
         }
     }

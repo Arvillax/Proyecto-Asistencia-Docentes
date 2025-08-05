@@ -19,14 +19,19 @@ namespace Proyecto_DesarrolloSoftware
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
 
-        public frmSupervisor()
+
+        public frmSupervisor(int numero)
         {
             InitializeComponent();
             customdesign();
             mtabla_supervisor();
             escondertablas();
             btnMaximizar.Text = "🗖";
+
+            txt_usuario.Text = numero.ToString();
         }
+
+
 
         public void mtabla_supervisor()
         {
@@ -194,7 +199,13 @@ namespace Proyecto_DesarrolloSoftware
                 con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
                 lbl_aviso.Text = "";
                 MessageBox.Show("Asistencia marcada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }  
+
+                int id_usuario = int.Parse(txt_usuario.Text);
+                String Accion = "Marca de asistencia";
+
+                con.Registro_bitacora(id_usuario, Accion);
+
+            }
         }
 
         //boton para marcar que no asistio
@@ -221,8 +232,15 @@ namespace Proyecto_DesarrolloSoftware
                 con.marcar_asistencia(est_asis, id_asistencia, id_edificio, dataGridView1);
                 lbl_aviso.Text = "";
                 MessageBox.Show("Inasistencia marcada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                int id_usuario = int.Parse(txt_usuario.Text);
+                String Accion = "Marca de Inasistencia";
+
+                con.Registro_bitacora(id_usuario, Accion);
+
+
             }
-                
+
         }
 
         private void btn_observacion_Click(object sender, EventArgs e)
@@ -241,7 +259,9 @@ namespace Proyecto_DesarrolloSoftware
             }
             else
             {
-                frmObservacion obsForm = new frmObservacion(this);
+                int id_usuario = int.Parse(txt_usuario.Text);
+
+                frmObservacion obsForm = new frmObservacion(this, id_usuario);
                 obsForm.ShowDialog();
             }
                 

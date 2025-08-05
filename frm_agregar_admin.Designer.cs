@@ -42,26 +42,25 @@
             this.txt_existe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_correo_usuario = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_idempleado
             // 
             this.txt_idempleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_idempleado.Location = new System.Drawing.Point(244, 55);
-            this.txt_idempleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idempleado.Location = new System.Drawing.Point(183, 45);
             this.txt_idempleado.Name = "txt_idempleado";
-            this.txt_idempleado.Size = new System.Drawing.Size(236, 22);
+            this.txt_idempleado.Size = new System.Drawing.Size(178, 20);
             this.txt_idempleado.TabIndex = 0;
             // 
             // txt_contraseña
             // 
             this.txt_contraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_contraseña.Location = new System.Drawing.Point(247, 159);
-            this.txt_contraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_contraseña.Location = new System.Drawing.Point(185, 129);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(236, 22);
+            this.txt_contraseña.Size = new System.Drawing.Size(178, 20);
             this.txt_contraseña.TabIndex = 3;
             // 
             // label1
@@ -69,10 +68,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(27, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 16);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "ID del Empleado:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -82,10 +80,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(27, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 16);
+            this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Permiso del Empleado:";
             // 
@@ -94,10 +91,9 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(28, 159);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(21, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 16);
+            this.label4.Size = new System.Drawing.Size(120, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Contraseña del Usuario:";
             // 
@@ -106,10 +102,9 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(27, 94);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(20, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 16);
+            this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Nombre del Empleado:";
             // 
@@ -117,10 +112,9 @@
             // 
             this.txt_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_nombre.Location = new System.Drawing.Point(244, 90);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre.Location = new System.Drawing.Point(183, 73);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(236, 22);
+            this.txt_nombre.Size = new System.Drawing.Size(178, 20);
             this.txt_nombre.TabIndex = 11;
             // 
             // cmb_permiso
@@ -131,20 +125,18 @@
             this.cmb_permiso.Items.AddRange(new object[] {
             "Supervisor",
             "Administrador"});
-            this.cmb_permiso.Location = new System.Drawing.Point(244, 124);
-            this.cmb_permiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_permiso.Location = new System.Drawing.Point(183, 101);
             this.cmb_permiso.Name = "cmb_permiso";
-            this.cmb_permiso.Size = new System.Drawing.Size(236, 24);
+            this.cmb_permiso.Size = new System.Drawing.Size(178, 21);
             this.cmb_permiso.TabIndex = 13;
             this.cmb_permiso.SelectedIndexChanged += new System.EventHandler(this.cmb_permiso_SelectedIndexChanged);
             // 
             // txt_permiso
             // 
-            this.txt_permiso.Location = new System.Drawing.Point(316, 15);
-            this.txt_permiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_permiso.Location = new System.Drawing.Point(237, 12);
             this.txt_permiso.Name = "txt_permiso";
             this.txt_permiso.ReadOnly = true;
-            this.txt_permiso.Size = new System.Drawing.Size(132, 22);
+            this.txt_permiso.Size = new System.Drawing.Size(100, 20);
             this.txt_permiso.TabIndex = 14;
             this.txt_permiso.Visible = false;
             // 
@@ -157,10 +149,9 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(303, 289);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Location = new System.Drawing.Point(227, 235);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(147, 37);
+            this.iconButton1.Size = new System.Drawing.Size(110, 30);
             this.iconButton1.TabIndex = 53;
             this.iconButton1.Text = "Agregar";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,10 +168,9 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(47, 289);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton2.Location = new System.Drawing.Point(35, 235);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(147, 37);
+            this.iconButton2.Size = new System.Drawing.Size(110, 30);
             this.iconButton2.TabIndex = 54;
             this.iconButton2.Text = "Volver";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,11 +180,10 @@
             // 
             // txt_existe
             // 
-            this.txt_existe.Location = new System.Drawing.Point(160, 15);
-            this.txt_existe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_existe.Location = new System.Drawing.Point(120, 12);
             this.txt_existe.Name = "txt_existe";
             this.txt_existe.ReadOnly = true;
-            this.txt_existe.Size = new System.Drawing.Size(132, 22);
+            this.txt_existe.Size = new System.Drawing.Size(100, 20);
             this.txt_existe.TabIndex = 55;
             this.txt_existe.Visible = false;
             // 
@@ -203,10 +192,9 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(28, 199);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(21, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 16);
+            this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 57;
             this.label3.Text = "Correo del Usuario:";
             // 
@@ -214,19 +202,28 @@
             // 
             this.txt_correo_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_correo_usuario.Location = new System.Drawing.Point(247, 199);
-            this.txt_correo_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_correo_usuario.Location = new System.Drawing.Point(185, 162);
             this.txt_correo_usuario.Name = "txt_correo_usuario";
-            this.txt_correo_usuario.Size = new System.Drawing.Size(236, 22);
+            this.txt_correo_usuario.Size = new System.Drawing.Size(178, 20);
             this.txt_correo_usuario.TabIndex = 56;
+            // 
+            // txt_usuario
+            // 
+            this.txt_usuario.Location = new System.Drawing.Point(8, 12);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.ReadOnly = true;
+            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
+            this.txt_usuario.TabIndex = 64;
+            this.txt_usuario.Visible = false;
             // 
             // frm_agregar_admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(556, 341);
+            this.ClientSize = new System.Drawing.Size(417, 277);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_correo_usuario);
             this.Controls.Add(this.txt_existe);
@@ -241,8 +238,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.txt_idempleado);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(578, 363);
+            this.MaximumSize = new System.Drawing.Size(438, 298);
             this.Name = "frm_agregar_admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
@@ -268,5 +264,6 @@
         private System.Windows.Forms.TextBox txt_existe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_correo_usuario;
+        private System.Windows.Forms.TextBox txt_usuario;
     }
 }

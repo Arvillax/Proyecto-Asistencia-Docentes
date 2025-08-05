@@ -19,13 +19,14 @@ namespace Proyecto_DesarrolloSoftware
         public frmDecano(int usuario_decano)
         {
             InitializeComponent();
-            
+
             txt_usu_decano.Text = usuario_decano.ToString();
             mtabla_decano();
             escondertablas();
-          
+
 
         }
+
 
         public void escondertablas()
         {
@@ -48,7 +49,10 @@ namespace Proyecto_DesarrolloSoftware
             }
             else
             {
-                obs_justificacion con = new obs_justificacion(this);
+
+                int id_usuario = int.Parse(txt_usu_decano.Text);
+
+                obs_justificacion con = new obs_justificacion(this, id_usuario);
                 con.ShowDialog();
             }
 

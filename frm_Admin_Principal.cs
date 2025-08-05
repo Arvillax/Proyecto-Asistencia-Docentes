@@ -12,12 +12,16 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frm_Admin_Principal : Form
     {
-        public frm_Admin_Principal()
+
+        public frm_Admin_Principal(int numero)
         {
             InitializeComponent();
+            txt_usuario.Text = numero.ToString();
 
-            
         }
+
+
+
 
         private void AbrirFormularioHijo(Form childForm)
         {
@@ -37,8 +41,11 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new frmGestion_Usuarios());
+            int usuario = int.Parse(txt_usuario.Text);
+
+            AbrirFormularioHijo(new frmGestion_Usuarios(usuario));
         }
+
 
         private void btnCreacionPeriodo_Click(object sender, EventArgs e)
         {
@@ -47,7 +54,9 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnModificacion_Datos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new frmModificacionDoC());
+            int usuario = int.Parse(txt_usuario.Text);
+
+            AbrirFormularioHijo(new frmModificacionDoC(usuario));
         }
 
         private void btnCierrePeriodo_Click(object sender, EventArgs e)
@@ -57,7 +66,9 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnMigracionDatos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new frmMigracion());
+            int usuario = int.Parse(txt_usuario.Text);
+
+            AbrirFormularioHijo(new frmMigracion(usuario));
         }
 
         private void btn_cierre_sesion_Click(object sender, EventArgs e)

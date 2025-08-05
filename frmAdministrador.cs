@@ -17,7 +17,7 @@ namespace Proyecto_DesarrolloSoftware
         
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
-        public frmGestion_Usuarios()
+        public frmGestion_Usuarios(int numero)
         {
             InitializeComponent();
             m_tabla_usuarios_admin();
@@ -34,8 +34,9 @@ namespace Proyecto_DesarrolloSoftware
 
             btn_guardarc.Visible = false;
 
-
+            txt_usuario.Text = numero.ToString();
         }
+
 
         public void m_tabla_usuarios_admin()
         {
@@ -74,9 +75,12 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnAgregar_Click_2(object sender, EventArgs e)
         {
-            frm_agregar_admin frm_Agregar = new frm_agregar_admin();
+            int usuario = int.Parse(txt_usuario.Text);
+
+            frm_agregar_admin frm_Agregar = new frm_agregar_admin(usuario);
             frm_Agregar.Show();
         }
+
 
         private void btn_guardarc_Click(object sender, EventArgs e)
         {
@@ -109,6 +113,11 @@ namespace Proyecto_DesarrolloSoftware
 
                     cmd.ExecuteNonQuery();
                 }
+
+                int id_usuario = int.Parse(txt_usuario.Text);
+                String Accion = "Usuario modificado";
+
+                con.Registro_bitacora(id_usuario, Accion);
 
                 // Ocultar controles
                 txt_idempleado.Visible = false;

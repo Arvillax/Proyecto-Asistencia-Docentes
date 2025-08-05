@@ -17,11 +17,13 @@ namespace Proyecto_DesarrolloSoftware
         clsConexion con = new clsConexion();
         Validaciones vali = new Validaciones();
 
-        public frmModificacionDoC()
+        public frmModificacionDoC(int numero)
         {
             InitializeComponent();
             m_tabla();
             pan_modificardatos.Visible = false;
+
+            txt_usuario.Text = numero.ToString();
         }
 
         public void m_tabla()
@@ -120,6 +122,14 @@ namespace Proyecto_DesarrolloSoftware
                         try
                         {
                             cmd.ExecuteNonQuery();
+
+                            int id_usuario = int.Parse(txt_usuario.Text);
+                            String Accion = "Clase modificada";
+
+                            con.Registro_bitacora(id_usuario, Accion);
+
+                            MessageBox.Show("Clase modificada con exito");
+
                         }
                         catch (SqlException ex)
                         {

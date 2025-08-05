@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,7 +50,13 @@ namespace Proyecto_DesarrolloSoftware
             {
                 try
                 {
+                    int id_usuario = int.Parse(txt_usuario.Text);
+                    String Accion = "Periodo cerrado";
+
+                    cn.Registro_bitacora(id_usuario, Accion);
+
                     cn.CerrarPeriodo(DateTime.Now.Date);
+
                 }
                 catch (Exception ex)
                 {

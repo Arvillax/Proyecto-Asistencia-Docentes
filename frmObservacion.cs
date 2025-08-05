@@ -17,12 +17,14 @@ namespace Proyecto_DesarrolloSoftware
         private readonly frmSupervisor supervisorForm;
         clsConexion con = new clsConexion();
 
-        public frmObservacion(frmSupervisor form)
+        public frmObservacion(frmSupervisor form, int numero)
         {
             InitializeComponent();
             supervisorForm = form;
-            
+            txt_usuario.Text = numero.ToString();
+
         }
+
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
@@ -76,6 +78,12 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Observación guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    int id_usuario = int.Parse(txt_usuario.Text);
+                    String Accion = "Observación agregada";
+
+                    con.Registro_bitacora(id_usuario, Accion);
+
                     this.Hide();
 
                 }

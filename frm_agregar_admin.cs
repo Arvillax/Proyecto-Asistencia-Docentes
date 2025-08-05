@@ -16,11 +16,11 @@ namespace Proyecto_DesarrolloSoftware
       
         clsConexion con = new clsConexion();
         SqlConnection conectar = new SqlConnection();
-        
 
-       
 
-        public frm_agregar_admin()
+
+
+        public frm_agregar_admin(int numero)
         {
             InitializeComponent();
             cmb_permiso.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -28,8 +28,10 @@ namespace Proyecto_DesarrolloSoftware
             this.Font = new Font("Microsoft Sans Serif", 8.25F);
             this.Size = new Size(800, 480);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            txt_usuario.Text = numero.ToString();
 
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -81,7 +83,13 @@ namespace Proyecto_DesarrolloSoftware
                 {
                     
                     con.agregar_usuario(id_empleado,nombre,id_rol,contraseña,correo);
-                    frmGestion_Usuarios admin = new frmGestion_Usuarios();
+
+                    int id_usuario = int.Parse(txt_usuario.Text);
+                    String Accion = "Usuario nuevo agregado";
+
+                    con.Registro_bitacora(id_usuario, Accion);
+
+                    frmGestion_Usuarios admin = new frmGestion_Usuarios(id_usuario);
                     this.Hide();
                 }
                 

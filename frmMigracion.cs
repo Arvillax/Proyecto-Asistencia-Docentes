@@ -17,9 +17,11 @@ namespace Proyecto_DesarrolloSoftware
     {
         clsConexion con = new clsConexion();
 
-        public frmMigracion()
+        public frmMigracion(int numero)
         {
             InitializeComponent();
+
+            txt_usuario.Text = numero.ToString();
         }
 
 
@@ -51,6 +53,12 @@ namespace Proyecto_DesarrolloSoftware
                     if (errores == 0)
                     {
                         dataGridView1.DataSource = tablaDatos;
+
+                        int id_usuario = int.Parse(txt_usuario.Text);
+                        String Accion = "Clases migradas";
+
+                        con.Registro_bitacora(id_usuario, Accion);
+
                         MessageBox.Show("Migración completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
