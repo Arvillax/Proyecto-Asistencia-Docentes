@@ -108,7 +108,7 @@
             this.btn_modificard.IconSize = 25;
             this.btn_modificard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_modificard.Location = new System.Drawing.Point(20, 542);
-            this.btn_modificard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modificard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificard.Name = "btn_modificard";
             this.btn_modificard.Size = new System.Drawing.Size(180, 37);
             this.btn_modificard.TabIndex = 58;
@@ -128,7 +128,7 @@
             this.btn_concambios.IconSize = 30;
             this.btn_concambios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_concambios.Location = new System.Drawing.Point(256, 258);
-            this.btn_concambios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_concambios.Margin = new System.Windows.Forms.Padding(4);
             this.btn_concambios.Name = "btn_concambios";
             this.btn_concambios.Size = new System.Drawing.Size(180, 41);
             this.btn_concambios.TabIndex = 74;
@@ -141,7 +141,7 @@
             // txt_horafinal
             // 
             this.txt_horafinal.Location = new System.Drawing.Point(145, 175);
-            this.txt_horafinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_horafinal.Margin = new System.Windows.Forms.Padding(4);
             this.txt_horafinal.Name = "txt_horafinal";
             this.txt_horafinal.Size = new System.Drawing.Size(248, 22);
             this.txt_horafinal.TabIndex = 73;
@@ -160,7 +160,7 @@
             // txt_estadoclase
             // 
             this.txt_estadoclase.Location = new System.Drawing.Point(27, 230);
-            this.txt_estadoclase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_estadoclase.Margin = new System.Windows.Forms.Padding(4);
             this.txt_estadoclase.Name = "txt_estadoclase";
             this.txt_estadoclase.ReadOnly = true;
             this.txt_estadoclase.Size = new System.Drawing.Size(132, 22);
@@ -175,7 +175,7 @@
             "ACTIVO",
             "INACTIVO"});
             this.cmb_estado.Location = new System.Drawing.Point(145, 110);
-            this.cmb_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_estado.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estado.Name = "cmb_estado";
             this.cmb_estado.Size = new System.Drawing.Size(248, 24);
             this.cmb_estado.TabIndex = 70;
@@ -195,7 +195,7 @@
             // txt_nuevahora
             // 
             this.txt_nuevahora.Location = new System.Drawing.Point(145, 143);
-            this.txt_nuevahora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nuevahora.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nuevahora.Name = "txt_nuevahora";
             this.txt_nuevahora.Size = new System.Drawing.Size(248, 22);
             this.txt_nuevahora.TabIndex = 68;
@@ -203,7 +203,7 @@
             // txt_idempleado
             // 
             this.txt_idempleado.Location = new System.Drawing.Point(145, 78);
-            this.txt_idempleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idempleado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idempleado.Name = "txt_idempleado";
             this.txt_idempleado.Size = new System.Drawing.Size(248, 22);
             this.txt_idempleado.TabIndex = 67;
@@ -211,7 +211,7 @@
             // txt_nuevaula
             // 
             this.txt_nuevaula.Location = new System.Drawing.Point(145, 44);
-            this.txt_nuevaula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nuevaula.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nuevaula.Name = "txt_nuevaula";
             this.txt_nuevaula.Size = new System.Drawing.Size(248, 22);
             this.txt_nuevaula.TabIndex = 66;
@@ -219,7 +219,7 @@
             // txt_idclase
             // 
             this.txt_idclase.Location = new System.Drawing.Point(145, 12);
-            this.txt_idclase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idclase.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idclase.Name = "txt_idclase";
             this.txt_idclase.ReadOnly = true;
             this.txt_idclase.Size = new System.Drawing.Size(248, 22);
@@ -302,7 +302,7 @@
             this.pan_modificardatos.Controls.Add(this.txt_nuevahora);
             this.pan_modificardatos.Controls.Add(this.txt_idempleado);
             this.pan_modificardatos.Location = new System.Drawing.Point(915, 153);
-            this.pan_modificardatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan_modificardatos.Margin = new System.Windows.Forms.Padding(4);
             this.pan_modificardatos.Name = "pan_modificardatos";
             this.pan_modificardatos.Size = new System.Drawing.Size(444, 324);
             this.pan_modificardatos.TabIndex = 75;
@@ -310,7 +310,7 @@
             // txt_existencia_usuario
             // 
             this.txt_existencia_usuario.Location = new System.Drawing.Point(27, 287);
-            this.txt_existencia_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_existencia_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_existencia_usuario.Name = "txt_existencia_usuario";
             this.txt_existencia_usuario.Size = new System.Drawing.Size(132, 22);
             this.txt_existencia_usuario.TabIndex = 76;
@@ -319,7 +319,7 @@
             // txt_existencia_aula
             // 
             this.txt_existencia_aula.Location = new System.Drawing.Point(27, 258);
-            this.txt_existencia_aula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_existencia_aula.Margin = new System.Windows.Forms.Padding(4);
             this.txt_existencia_aula.Name = "txt_existencia_aula";
             this.txt_existencia_aula.Size = new System.Drawing.Size(132, 22);
             this.txt_existencia_aula.TabIndex = 75;
@@ -332,9 +332,9 @@
             this.cmb_filtro.Items.AddRange(new object[] {
             "ID de clase"});
             this.cmb_filtro.Location = new System.Drawing.Point(108, 55);
-            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
-            this.cmb_filtro.Size = new System.Drawing.Size(160, 24);
+            this.cmb_filtro.Size = new System.Drawing.Size(233, 24);
             this.cmb_filtro.TabIndex = 76;
             this.cmb_filtro.SelectedIndexChanged += new System.EventHandler(this.cmb_filtro_SelectedIndexChanged);
             // 
@@ -360,7 +360,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 153);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -371,7 +371,7 @@
             // txt_usuario
             // 
             this.txt_usuario.Location = new System.Drawing.Point(1, -2);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.ReadOnly = true;
             this.txt_usuario.Size = new System.Drawing.Size(132, 22);

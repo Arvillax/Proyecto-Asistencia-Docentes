@@ -172,7 +172,7 @@
             this.txt_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_busqueda.Location = new System.Drawing.Point(446, 163);
+            this.txt_busqueda.Location = new System.Drawing.Point(477, 163);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txt_busqueda.Name = "txt_busqueda";
             this.txt_busqueda.Size = new System.Drawing.Size(233, 22);
@@ -199,7 +199,7 @@
             // txt_usu_docente
             // 
             this.txt_usu_docente.Enabled = false;
-            this.txt_usu_docente.Location = new System.Drawing.Point(358, 582);
+            this.txt_usu_docente.Location = new System.Drawing.Point(388, 658);
             this.txt_usu_docente.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usu_docente.Name = "txt_usu_docente";
             this.txt_usu_docente.ReadOnly = true;
@@ -209,18 +209,20 @@
             // 
             // dgv_docente
             // 
+            this.dgv_docente.AllowUserToAddRows = false;
+            this.dgv_docente.AllowUserToDeleteRows = false;
             this.dgv_docente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_docente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_docente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_docente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_docente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_docente.Location = new System.Drawing.Point(358, 208);
+            this.dgv_docente.Location = new System.Drawing.Point(389, 208);
             this.dgv_docente.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_docente.Name = "dgv_docente";
             this.dgv_docente.ReadOnly = true;
             this.dgv_docente.RowHeadersWidth = 51;
-            this.dgv_docente.Size = new System.Drawing.Size(1096, 355);
+            this.dgv_docente.Size = new System.Drawing.Size(1096, 417);
             this.dgv_docente.TabIndex = 16;
             // 
             // label1
@@ -231,7 +233,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(353, 167);
+            this.label1.Location = new System.Drawing.Point(384, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
@@ -246,7 +248,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(354, 115);
+            this.label4.Location = new System.Drawing.Point(385, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 20);
@@ -255,14 +257,12 @@
             // 
             // cmb_filtro
             // 
-            this.cmb_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_filtro.FormattingEnabled = true;
             this.cmb_filtro.Items.AddRange(new object[] {
             "Clase",
             "Fecha"});
-            this.cmb_filtro.Location = new System.Drawing.Point(447, 115);
+            this.cmb_filtro.Location = new System.Drawing.Point(478, 115);
             this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
             this.cmb_filtro.Size = new System.Drawing.Size(232, 24);
@@ -275,7 +275,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(444, 95);
+            this.label5.Location = new System.Drawing.Point(475, 95);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 16);
