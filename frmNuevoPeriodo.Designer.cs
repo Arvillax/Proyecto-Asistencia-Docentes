@@ -44,7 +44,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(69, 277);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(132, 22);
             this.txtDescripcion.TabIndex = 48;
@@ -64,7 +64,7 @@
             // dtpFechaFinal
             // 
             this.dtpFechaFinal.Location = new System.Drawing.Point(69, 190);
-            this.dtpFechaFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaFinal.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
             this.dtpFechaFinal.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaFinal.TabIndex = 46;
@@ -86,7 +86,7 @@
             this.dtpFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpFechaInicio.Location = new System.Drawing.Point(69, 108);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaInicio.TabIndex = 44;
@@ -115,11 +115,11 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(291, 7);
+            this.label2.Location = new System.Drawing.Point(401, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(451, 51);
+            this.label2.Size = new System.Drawing.Size(341, 39);
             this.label2.TabIndex = 51;
             this.label2.Text = "Creacion de periodos";
             // 
@@ -128,7 +128,7 @@
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.Location = new System.Drawing.Point(436, 95);
+            this.monthCalendar1.Location = new System.Drawing.Point(526, 92);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 52;
@@ -140,7 +140,7 @@
             this.lblPeriodoActivo.AutoSize = true;
             this.lblPeriodoActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodoActivo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPeriodoActivo.Location = new System.Drawing.Point(436, 338);
+            this.lblPeriodoActivo.Location = new System.Drawing.Point(526, 335);
             this.lblPeriodoActivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeriodoActivo.Name = "lblPeriodoActivo";
             this.lblPeriodoActivo.Size = new System.Drawing.Size(286, 22);
@@ -157,7 +157,7 @@
             this.btn_AgregarP.IconSize = 25;
             this.btn_AgregarP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_AgregarP.Location = new System.Drawing.Point(69, 331);
-            this.btn_AgregarP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_AgregarP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AgregarP.Name = "btn_AgregarP";
             this.btn_AgregarP.Size = new System.Drawing.Size(196, 37);
             this.btn_AgregarP.TabIndex = 59;

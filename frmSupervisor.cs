@@ -26,7 +26,6 @@ namespace Proyecto_DesarrolloSoftware
             customdesign();
             mtabla_supervisor();
             escondertablas();
-            btnMaximizar.Text = "🗖";
 
             txt_usuario.Text = numero.ToString();
         }
@@ -83,8 +82,6 @@ namespace Proyecto_DesarrolloSoftware
             iconButton9, iconButton10, iconButton11, iconButton12,
             iconButton13, iconButton14, iconButton15
             };
-
-            this.MinimumSize = new Size(1600, 700);
         }
 
         private void btn_cierre_sesion_Click(object sender, EventArgs e)
@@ -283,19 +280,11 @@ namespace Proyecto_DesarrolloSoftware
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(1600, 700);
-                btnMaximizar.Text = "🗖";
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-                btnMaximizar.Text = "🗗";
             }
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
         private void panel_btn_edificios_Paint(object sender, PaintEventArgs e)
         {
@@ -308,21 +297,6 @@ namespace Proyecto_DesarrolloSoftware
         private void txt_idasis_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_maximizar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(800, 600);
-
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-
-            }
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)

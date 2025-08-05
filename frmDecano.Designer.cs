@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 702);
             this.panel1.TabIndex = 18;
@@ -79,7 +79,7 @@
             this.btn_cierre_sesion.IconSize = 40;
             this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 653);
-            this.btn_cierre_sesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cierre_sesion.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cierre_sesion.Name = "btn_cierre_sesion";
             this.btn_cierre_sesion.Size = new System.Drawing.Size(311, 49);
             this.btn_cierre_sesion.TabIndex = 55;
@@ -95,7 +95,7 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(311, 123);
             this.panel2.TabIndex = 0;
@@ -105,12 +105,12 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(91)))), ((int)(((byte)(78)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(111, 26);
+            this.label3.Location = new System.Drawing.Point(114, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1110, 28);
+            this.label3.Size = new System.Drawing.Size(1110, 36);
             this.label3.TabIndex = 17;
             this.label3.Text = "Justificación de Asistencias";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -147,9 +147,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_busqueda.Location = new System.Drawing.Point(445, 156);
-            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(468, 22);
+            this.txt_busqueda.Size = new System.Drawing.Size(233, 22);
             this.txt_busqueda.TabIndex = 15;
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             // 
@@ -161,7 +161,7 @@
             this.dgv_decano.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_decano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_decano.Location = new System.Drawing.Point(343, 199);
-            this.dgv_decano.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_decano.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_decano.Name = "dgv_decano";
             this.dgv_decano.ReadOnly = true;
             this.dgv_decano.RowHeadersWidth = 51;
@@ -174,9 +174,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.Khaki;
             this.groupBox1.Controls.Add(this.btn_observacion);
             this.groupBox1.Location = new System.Drawing.Point(1491, 199);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(161, 95);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
@@ -192,7 +192,7 @@
             this.btn_observacion.IconSize = 35;
             this.btn_observacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_observacion.Location = new System.Drawing.Point(4, 7);
-            this.btn_observacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_observacion.Margin = new System.Windows.Forms.Padding(4);
             this.btn_observacion.Name = "btn_observacion";
             this.btn_observacion.Size = new System.Drawing.Size(153, 68);
             this.btn_observacion.TabIndex = 27;
@@ -206,7 +206,7 @@
             // 
             this.txt_idasis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_idasis.Location = new System.Drawing.Point(529, 657);
-            this.txt_idasis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idasis.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idasis.Name = "txt_idasis";
             this.txt_idasis.ReadOnly = true;
             this.txt_idasis.Size = new System.Drawing.Size(132, 22);
@@ -216,7 +216,7 @@
             // 
             this.txt_usu_decano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_usu_decano.Location = new System.Drawing.Point(670, 657);
-            this.txt_usu_decano.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usu_decano.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usu_decano.Name = "txt_usu_decano";
             this.txt_usu_decano.ReadOnly = true;
             this.txt_usu_decano.Size = new System.Drawing.Size(132, 22);
@@ -232,7 +232,7 @@
             "Nombre de empleado",
             "Fecha"});
             this.cmb_filtro.Location = new System.Drawing.Point(445, 81);
-            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
             this.cmb_filtro.Size = new System.Drawing.Size(160, 24);
             this.cmb_filtro.TabIndex = 59;
@@ -271,7 +271,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(311, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1363, 73);
             this.panel3.TabIndex = 73;
@@ -283,7 +283,7 @@
             this.panel_controles.Controls.Add(this.btn_maximizar);
             this.panel_controles.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel_controles.Location = new System.Drawing.Point(1251, 0);
-            this.panel_controles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_controles.Margin = new System.Windows.Forms.Padding(4);
             this.panel_controles.Name = "panel_controles";
             this.panel_controles.Size = new System.Drawing.Size(112, 73);
             this.panel_controles.TabIndex = 61;
@@ -299,7 +299,7 @@
             this.btn_minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_minimizar.IconSize = 20;
             this.btn_minimizar.Location = new System.Drawing.Point(-3, 0);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(56, 73);
             this.btn_minimizar.TabIndex = 62;
@@ -318,7 +318,7 @@
             this.btn_maximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_maximizar.IconSize = 20;
             this.btn_maximizar.Location = new System.Drawing.Point(53, 0);
-            this.btn_maximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maximizar.Name = "btn_maximizar";
             this.btn_maximizar.Size = new System.Drawing.Size(59, 73);
             this.btn_maximizar.TabIndex = 61;

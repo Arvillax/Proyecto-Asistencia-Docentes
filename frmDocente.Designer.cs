@@ -175,7 +175,7 @@
             this.txt_busqueda.Location = new System.Drawing.Point(446, 163);
             this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(852, 22);
+            this.txt_busqueda.Size = new System.Drawing.Size(233, 22);
             this.txt_busqueda.TabIndex = 10;
             this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
             this.txt_busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_busqueda_KeyPress);
@@ -185,12 +185,12 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Silver;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(113, 23);
+            this.label3.Location = new System.Drawing.Point(114, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(805, 28);
+            this.label3.Size = new System.Drawing.Size(805, 38);
             this.label3.TabIndex = 14;
             this.label3.Text = "Visualización de Asistencias";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
