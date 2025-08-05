@@ -85,7 +85,7 @@
             this.panel_edificios.Controls.Add(this.panel2);
             this.panel_edificios.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_edificios.Location = new System.Drawing.Point(0, 0);
-            this.panel_edificios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_edificios.Margin = new System.Windows.Forms.Padding(4);
             this.panel_edificios.Name = "panel_edificios";
             this.panel_edificios.Size = new System.Drawing.Size(333, 772);
             this.panel_edificios.TabIndex = 24;
@@ -102,7 +102,7 @@
             this.btn_cierre_sesion.IconSize = 40;
             this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 723);
-            this.btn_cierre_sesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cierre_sesion.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cierre_sesion.Name = "btn_cierre_sesion";
             this.btn_cierre_sesion.Size = new System.Drawing.Size(333, 49);
             this.btn_cierre_sesion.TabIndex = 56;
@@ -132,11 +132,10 @@
             this.panel_btn_edificios.Controls.Add(this.iconButton1);
             this.panel_btn_edificios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_btn_edificios.Location = new System.Drawing.Point(0, 178);
-            this.panel_btn_edificios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_btn_edificios.Margin = new System.Windows.Forms.Padding(4);
             this.panel_btn_edificios.Name = "panel_btn_edificios";
             this.panel_btn_edificios.Size = new System.Drawing.Size(333, 585);
             this.panel_btn_edificios.TabIndex = 2;
-            this.panel_btn_edificios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_btn_edificios_Paint);
             // 
             // iconButton15
             // 
@@ -147,7 +146,7 @@
             this.iconButton15.IconSize = 25;
             this.iconButton15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton15.Location = new System.Drawing.Point(0, 518);
-            this.iconButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton15.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton15.Name = "iconButton15";
             this.iconButton15.Size = new System.Drawing.Size(333, 37);
             this.iconButton15.TabIndex = 31;
@@ -166,7 +165,7 @@
             this.iconButton14.IconSize = 25;
             this.iconButton14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton14.Location = new System.Drawing.Point(0, 481);
-            this.iconButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton14.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton14.Name = "iconButton14";
             this.iconButton14.Size = new System.Drawing.Size(333, 37);
             this.iconButton14.TabIndex = 30;
@@ -185,7 +184,7 @@
             this.iconButton13.IconSize = 25;
             this.iconButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton13.Location = new System.Drawing.Point(0, 444);
-            this.iconButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton13.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton13.Name = "iconButton13";
             this.iconButton13.Size = new System.Drawing.Size(333, 37);
             this.iconButton13.TabIndex = 29;
@@ -204,7 +203,7 @@
             this.iconButton12.IconSize = 25;
             this.iconButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton12.Location = new System.Drawing.Point(0, 407);
-            this.iconButton12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton12.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton12.Name = "iconButton12";
             this.iconButton12.Size = new System.Drawing.Size(333, 37);
             this.iconButton12.TabIndex = 28;
@@ -223,7 +222,7 @@
             this.iconButton11.IconSize = 25;
             this.iconButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton11.Location = new System.Drawing.Point(0, 370);
-            this.iconButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton11.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton11.Name = "iconButton11";
             this.iconButton11.Size = new System.Drawing.Size(333, 37);
             this.iconButton11.TabIndex = 27;
@@ -242,7 +241,7 @@
             this.iconButton10.IconSize = 25;
             this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton10.Location = new System.Drawing.Point(0, 333);
-            this.iconButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton10.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Size = new System.Drawing.Size(333, 37);
             this.iconButton10.TabIndex = 26;
@@ -261,7 +260,7 @@
             this.iconButton9.IconSize = 25;
             this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton9.Location = new System.Drawing.Point(0, 296);
-            this.iconButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton9.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Size = new System.Drawing.Size(333, 37);
             this.iconButton9.TabIndex = 25;
@@ -280,7 +279,7 @@
             this.iconButton8.IconSize = 25;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton8.Location = new System.Drawing.Point(0, 259);
-            this.iconButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton8.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Size = new System.Drawing.Size(333, 37);
             this.iconButton8.TabIndex = 24;
@@ -299,7 +298,7 @@
             this.iconButton7.IconSize = 25;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton7.Location = new System.Drawing.Point(0, 222);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(333, 37);
             this.iconButton7.TabIndex = 23;
@@ -318,7 +317,7 @@
             this.iconButton6.IconSize = 25;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton6.Location = new System.Drawing.Point(0, 185);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(333, 37);
             this.iconButton6.TabIndex = 22;
@@ -337,7 +336,7 @@
             this.iconButton5.IconSize = 25;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton5.Location = new System.Drawing.Point(0, 148);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(333, 37);
             this.iconButton5.TabIndex = 21;
@@ -356,7 +355,7 @@
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.Location = new System.Drawing.Point(0, 111);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(333, 37);
             this.iconButton4.TabIndex = 20;
@@ -375,7 +374,7 @@
             this.iconButton3.IconSize = 25;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.Location = new System.Drawing.Point(0, 74);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(333, 37);
             this.iconButton3.TabIndex = 19;
@@ -394,7 +393,7 @@
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.Location = new System.Drawing.Point(0, 37);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(333, 37);
             this.iconButton2.TabIndex = 18;
@@ -413,7 +412,7 @@
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(333, 37);
             this.iconButton1.TabIndex = 17;
@@ -429,7 +428,7 @@
             this.btn_edificios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_edificios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edificios.Location = new System.Drawing.Point(0, 123);
-            this.btn_edificios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_edificios.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edificios.Name = "btn_edificios";
             this.btn_edificios.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btn_edificios.Size = new System.Drawing.Size(333, 55);
@@ -444,7 +443,7 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(333, 123);
             this.panel2.TabIndex = 0;
@@ -454,7 +453,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 123);
             this.panel1.TabIndex = 20;
@@ -489,7 +488,6 @@
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Buscar:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_busqueda
             // 
@@ -497,7 +495,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_busqueda.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_busqueda.Location = new System.Drawing.Point(452, 123);
-            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_busqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txt_busqueda.Name = "txt_busqueda";
             this.txt_busqueda.Size = new System.Drawing.Size(233, 22);
             this.txt_busqueda.TabIndex = 21;
@@ -512,13 +510,13 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(369, 178);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1175, 545);
             this.dataGridView1.TabIndex = 28;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox1
             // 
@@ -527,9 +525,9 @@
             this.groupBox1.Controls.Add(this.btn_noasistio);
             this.groupBox1.Controls.Add(this.btn_asistio);
             this.groupBox1.Location = new System.Drawing.Point(1603, 178);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(157, 151);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
@@ -544,7 +542,7 @@
             this.btn_observacion.IconSize = 20;
             this.btn_observacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_observacion.Location = new System.Drawing.Point(12, 86);
-            this.btn_observacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_observacion.Margin = new System.Windows.Forms.Padding(4);
             this.btn_observacion.Name = "btn_observacion";
             this.btn_observacion.Size = new System.Drawing.Size(137, 50);
             this.btn_observacion.TabIndex = 35;
@@ -564,7 +562,7 @@
             this.btn_noasistio.IconSize = 20;
             this.btn_noasistio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_noasistio.Location = new System.Drawing.Point(12, 50);
-            this.btn_noasistio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_noasistio.Margin = new System.Windows.Forms.Padding(4);
             this.btn_noasistio.Name = "btn_noasistio";
             this.btn_noasistio.Size = new System.Drawing.Size(137, 28);
             this.btn_noasistio.TabIndex = 34;
@@ -584,7 +582,7 @@
             this.btn_asistio.IconSize = 20;
             this.btn_asistio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_asistio.Location = new System.Drawing.Point(12, 16);
-            this.btn_asistio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_asistio.Margin = new System.Windows.Forms.Padding(4);
             this.btn_asistio.Name = "btn_asistio";
             this.btn_asistio.Size = new System.Drawing.Size(137, 28);
             this.btn_asistio.TabIndex = 33;
@@ -597,17 +595,16 @@
             // txt_idasis
             // 
             this.txt_idasis.Location = new System.Drawing.Point(571, 738);
-            this.txt_idasis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idasis.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idasis.Name = "txt_idasis";
             this.txt_idasis.ReadOnly = true;
             this.txt_idasis.Size = new System.Drawing.Size(132, 22);
             this.txt_idasis.TabIndex = 33;
-            this.txt_idasis.TextChanged += new System.EventHandler(this.txt_idasis_TextChanged);
             // 
             // txt_edificios
             // 
             this.txt_edificios.Location = new System.Drawing.Point(535, 778);
-            this.txt_edificios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_edificios.Margin = new System.Windows.Forms.Padding(4);
             this.txt_edificios.Name = "txt_edificios";
             this.txt_edificios.ReadOnly = true;
             this.txt_edificios.Size = new System.Drawing.Size(132, 22);
@@ -622,7 +619,7 @@
             this.cmb_filtro.Items.AddRange(new object[] {
             "Nombre del docente"});
             this.cmb_filtro.Location = new System.Drawing.Point(452, 60);
-            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
             this.cmb_filtro.Size = new System.Drawing.Size(233, 24);
             this.cmb_filtro.TabIndex = 60;
@@ -663,7 +660,7 @@
             this.btnMinimizar.IconSize = 20;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMinimizar.Location = new System.Drawing.Point(1740, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(37, 33);
             this.btnMinimizar.TabIndex = 71;
@@ -682,7 +679,7 @@
             this.btnMaximizar.IconSize = 25;
             this.btnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMaximizar.Location = new System.Drawing.Point(1775, 0);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(37, 33);
             this.btnMaximizar.TabIndex = 70;
@@ -713,7 +710,7 @@
             this.btn_minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_minimizar.IconSize = 20;
             this.btn_minimizar.Location = new System.Drawing.Point(2127, 0);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(56, 44);
             this.btn_minimizar.TabIndex = 74;
@@ -733,7 +730,7 @@
             this.btn_maximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_maximizar.IconSize = 20;
             this.btn_maximizar.Location = new System.Drawing.Point(2183, 0);
-            this.btn_maximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maximizar.Name = "btn_maximizar";
             this.btn_maximizar.Size = new System.Drawing.Size(57, 44);
             this.btn_maximizar.TabIndex = 73;
@@ -742,7 +739,7 @@
             // txt_usuario
             // 
             this.txt_usuario.Location = new System.Drawing.Point(341, 0);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.ReadOnly = true;
             this.txt_usuario.Size = new System.Drawing.Size(132, 22);

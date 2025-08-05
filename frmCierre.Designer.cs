@@ -70,10 +70,10 @@
             // 
             this.pnMenuPrincipal.AutoScroll = true;
             this.pnMenuPrincipal.Controls.Add(this.dgvMatriz);
-            this.pnMenuPrincipal.Location = new System.Drawing.Point(49, 125);
+            this.pnMenuPrincipal.Location = new System.Drawing.Point(52, 129);
             this.pnMenuPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenuPrincipal.Name = "pnMenuPrincipal";
-            this.pnMenuPrincipal.Size = new System.Drawing.Size(1177, 501);
+            this.pnMenuPrincipal.Size = new System.Drawing.Size(1121, 477);
             this.pnMenuPrincipal.TabIndex = 30;
             // 
             // dgvMatriz
@@ -83,10 +83,10 @@
             this.dgvMatriz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatriz.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMatriz.Location = new System.Drawing.Point(0, 0);
-            this.dgvMatriz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMatriz.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMatriz.Name = "dgvMatriz";
             this.dgvMatriz.RowHeadersWidth = 51;
-            this.dgvMatriz.Size = new System.Drawing.Size(1177, 501);
+            this.dgvMatriz.Size = new System.Drawing.Size(1121, 477);
             this.dgvMatriz.TabIndex = 0;
             // 
             // btn_cerrar_periodo
@@ -100,7 +100,7 @@
             this.btn_cerrar_periodo.IconSize = 30;
             this.btn_cerrar_periodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cerrar_periodo.Location = new System.Drawing.Point(1140, 677);
-            this.btn_cerrar_periodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar_periodo.Name = "btn_cerrar_periodo";
             this.btn_cerrar_periodo.Size = new System.Drawing.Size(161, 46);
             this.btn_cerrar_periodo.TabIndex = 28;
@@ -154,7 +154,7 @@
             // txt_usuario
             // 
             this.txt_usuario.Location = new System.Drawing.Point(16, 12);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.ReadOnly = true;
             this.txt_usuario.Size = new System.Drawing.Size(132, 22);

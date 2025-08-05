@@ -43,7 +43,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(117, 130);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(859, 370);
@@ -58,7 +58,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(291, 7);
+            this.label1.Location = new System.Drawing.Point(416, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(400, 39);
             this.label1.TabIndex = 25;
@@ -74,7 +74,7 @@
             this.btnImportar.IconSize = 30;
             this.btnImportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImportar.Location = new System.Drawing.Point(117, 82);
-            this.btnImportar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImportar.Margin = new System.Windows.Forms.Padding(4);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(180, 41);
             this.btnImportar.TabIndex = 75;
@@ -87,7 +87,7 @@
             // txt_usuario
             // 
             this.txt_usuario.Location = new System.Drawing.Point(28, 15);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.ReadOnly = true;
             this.txt_usuario.Size = new System.Drawing.Size(132, 22);

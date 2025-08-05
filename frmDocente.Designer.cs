@@ -45,8 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel_controles = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_docente)).BeginInit();
@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 695);
+            this.panel1.Size = new System.Drawing.Size(333, 694);
             this.panel1.TabIndex = 13;
             // 
             // panel3
@@ -133,7 +133,7 @@
             this.btn_cierre_sesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cierre_sesion.IconSize = 40;
             this.btn_cierre_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 646);
+            this.btn_cierre_sesion.Location = new System.Drawing.Point(0, 645);
             this.btn_cierre_sesion.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cierre_sesion.Name = "btn_cierre_sesion";
             this.btn_cierre_sesion.Size = new System.Drawing.Size(333, 49);
@@ -190,7 +190,7 @@
             this.label3.Location = new System.Drawing.Point(114, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(805, 38);
+            this.label3.Size = new System.Drawing.Size(960, 38);
             this.label3.TabIndex = 14;
             this.label3.Text = "Visualización de Asistencias";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -220,7 +220,7 @@
             this.dgv_docente.Name = "dgv_docente";
             this.dgv_docente.ReadOnly = true;
             this.dgv_docente.RowHeadersWidth = 51;
-            this.dgv_docente.Size = new System.Drawing.Size(941, 356);
+            this.dgv_docente.Size = new System.Drawing.Size(1096, 355);
             this.dgv_docente.TabIndex = 16;
             // 
             // label1
@@ -265,7 +265,7 @@
             this.cmb_filtro.Location = new System.Drawing.Point(447, 115);
             this.cmb_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_filtro.Name = "cmb_filtro";
-            this.cmb_filtro.Size = new System.Drawing.Size(174, 24);
+            this.cmb_filtro.Size = new System.Drawing.Size(232, 24);
             this.cmb_filtro.TabIndex = 39;
             this.cmb_filtro.SelectedIndexChanged += new System.EventHandler(this.cmb_filtro_SelectedIndexChanged);
             // 
@@ -291,64 +291,63 @@
             this.panel4.Location = new System.Drawing.Point(333, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1039, 82);
+            this.panel4.Size = new System.Drawing.Size(1194, 82);
             this.panel4.TabIndex = 59;
             // 
             // panel_controles
             // 
             this.panel_controles.BackColor = System.Drawing.Color.Silver;
-            this.panel_controles.Controls.Add(this.iconButton2);
-            this.panel_controles.Controls.Add(this.iconButton1);
+            this.panel_controles.Controls.Add(this.btnMinimizar);
+            this.panel_controles.Controls.Add(this.btnMaximizar);
             this.panel_controles.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_controles.Location = new System.Drawing.Point(927, 0);
+            this.panel_controles.Location = new System.Drawing.Point(1082, 0);
             this.panel_controles.Margin = new System.Windows.Forms.Padding(4);
             this.panel_controles.Name = "panel_controles";
             this.panel_controles.Size = new System.Drawing.Size(112, 82);
             this.panel_controles.TabIndex = 60;
-            this.panel_controles.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_controles_Paint);
             // 
-            // iconButton2
+            // btnMinimizar
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.Silver;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(-1, 0);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(56, 82);
-            this.iconButton2.TabIndex = 62;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.btnMinimizar.BackColor = System.Drawing.Color.Silver;
+            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimizar.IconColor = System.Drawing.Color.Black;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimizar.IconSize = 20;
+            this.btnMinimizar.Location = new System.Drawing.Point(-1, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(56, 82);
+            this.btnMinimizar.TabIndex = 62;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
-            // iconButton1
+            // btnMaximizar
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Silver;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SquareMinus;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(55, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(57, 82);
-            this.iconButton1.TabIndex = 61;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnMaximizar.BackColor = System.Drawing.Color.Silver;
+            this.btnMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.SquareMinus;
+            this.btnMaximizar.IconColor = System.Drawing.Color.Black;
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximizar.IconSize = 20;
+            this.btnMaximizar.Location = new System.Drawing.Point(55, 0);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(57, 82);
+            this.btnMaximizar.TabIndex = 61;
+            this.btnMaximizar.UseVisualStyleBackColor = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // frmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1372, 695);
+            this.ClientSize = new System.Drawing.Size(1527, 694);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label5);
@@ -392,8 +391,8 @@
         private FontAwesome.Sharp.IconButton btn_reportes;
         private FontAwesome.Sharp.IconButton btn_asistencias;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnMaximizar;
         private System.Windows.Forms.Panel panel_controles;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnMinimizar;
     }
 }

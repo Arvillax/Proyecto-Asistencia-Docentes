@@ -201,7 +201,7 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnMaximizar_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -215,14 +215,9 @@ namespace Proyecto_DesarrolloSoftware
             }
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panel_controles_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

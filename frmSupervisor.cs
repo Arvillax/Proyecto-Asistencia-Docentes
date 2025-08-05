@@ -65,11 +65,6 @@ namespace Proyecto_DesarrolloSoftware
             showsubmenu(panel_btn_edificios);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells[0].Value != null)
-                txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-        }
 
         List<IconButton> botonesEdificio;
 
@@ -286,22 +281,18 @@ namespace Proyecto_DesarrolloSoftware
                 this.WindowState = FormWindowState.Maximized;
             }
         }
-        private void panel_btn_edificios_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void txt_idasis_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells[0].Value != null)
+                txt_idasis.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
     }
 
