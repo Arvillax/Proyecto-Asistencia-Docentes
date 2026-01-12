@@ -12,6 +12,23 @@ namespace Proyecto_DesarrolloSoftware
 {
     public partial class frmCodigo_Acceso : Form
     {
+        public frmCodigo_Acceso()
+        {
+            InitializeComponent();
+            // fijar pantalla
+            this.MinimumSize = new Size(1130, 761);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Resize += Form1_Resize;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)// forzar que la aventana conserve el tamaño
+        {
+            if (this.Width < 1130)
+                this.Width = 1130;
+
+            if (this.Height < 761)
+                this.Height = 761;
+        }
         clsrecuperacion rec = new clsrecuperacion();
         private int idUsuario;
 
@@ -30,7 +47,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnVerificarCod_Click(object sender, EventArgs e)
         {
-            if (rec.ValidarCodigo(idUsuario, txtUsuario.Text))
+            if (rec.ValidarCodigo(idUsuario, txtUsuario2.Text))
             {
                 frmNueva_Contraseña frm = new frmNueva_Contraseña(idUsuario);
                 frm.Show();
@@ -40,6 +57,11 @@ namespace Proyecto_DesarrolloSoftware
             {
                 MessageBox.Show("Código incorrecto o expirado.");
             }
+        }
+
+        private void txtUsuario2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

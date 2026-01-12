@@ -56,7 +56,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void btnMGestion_Click(object sender, EventArgs e)
         {
-            frmGestion_Usuarios frmGestion = new frmGestion_Usuarios();
+            Admin frmGestion = new Admin();
             frmGestion.Show();
             this.Hide();
         }
@@ -111,7 +111,7 @@ namespace Proyecto_DesarrolloSoftware
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            frmGestion_Usuarios frmGestion = new frmGestion_Usuarios();
+            Admin frmGestion = new Admin();
             frmGestion.Show();
             this.Hide();
         }

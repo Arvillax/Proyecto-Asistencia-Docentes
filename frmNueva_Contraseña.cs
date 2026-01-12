@@ -10,8 +10,26 @@ using System.Windows.Forms;
 
 namespace Proyecto_DesarrolloSoftware
 {
+
     public partial class frmNueva_Contraseña : Form
     {
+        public frmNueva_Contraseña()
+        {
+            InitializeComponent();
+            // fijar pantalla
+            this.MinimumSize = new Size(1130, 761);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Resize += Form1_Resize;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)// forzar que la aventana conserve el tamaño
+        {
+            if (this.Width < 1130)
+                this.Width = 1130;
+
+            if (this.Height < 761)
+                this.Height = 761;
+        }
         clsrecuperacion rec = new clsrecuperacion();
         private int idUsuario;
         public frmNueva_Contraseña(int usuario)
